@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dimit\\Downloads\\project_final\\Project_final_2022_2023\\Project_final_2022_2023.csproj",
+      "projectUniqueName": "C:\\Users\\dimit\\Desktop\\project_final\\Project_final_2022_2023\\Project_final_2022_2023.csproj",
       "projectName": "Project_final_2022_2023",
-      "projectPath": "C:\\Users\\dimit\\Downloads\\project_final\\Project_final_2022_2023\\Project_final_2022_2023.csproj",
+      "projectPath": "C:\\Users\\dimit\\Desktop\\project_final\\Project_final_2022_2023\\Project_final_2022_2023.csproj",
       "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dimit\\Downloads\\project_final\\Project_final_2022_2023\\obj\\",
+      "outputPath": "C:\\Users\\dimit\\Desktop\\project_final\\Project_final_2022_2023\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\dimit\\AppData\\Roaming\\NuGet\\NuGet.Config",
