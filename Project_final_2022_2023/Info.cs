@@ -10,19 +10,16 @@ using System.Windows.Forms;
 
 namespace Project_final_2022_2023
 {
-    public partial class Info : Form
+    public partial class info_form : Form
     {
-        public Info()
+        public info_form()
         {
             InitializeComponent();
         }
 
         private void Info_Load(object sender, EventArgs e)
         {
-            int main_form_width = main_form.getWidth;
-            int main_form_height = main_form.getHeight;
-
-            this.Size = new Size(main_form_width-200, main_form_height-200);
+            this.FormBorderStyle = FormBorderStyle.None;
         }
     }
 }

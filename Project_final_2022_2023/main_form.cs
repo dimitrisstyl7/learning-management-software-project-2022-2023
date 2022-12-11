@@ -2,8 +2,6 @@ namespace Project_final_2022_2023
 {
     public partial class main_form : Form
     {
-        private static int max_width, max_height;
-
         public main_form()
         {
             InitializeComponent();
@@ -11,29 +9,33 @@ namespace Project_final_2022_2023
 
         private void main_form_Load(object sender, EventArgs e)
         {
-            max_width = this.Width;
-            max_height = this.Height;
             this.FormBorderStyle = FormBorderStyle.None;
-        }
-
-        public static int getWidth
-        {
-            get { return max_width; }
+            alignButtons();
+            alignTitle();
         }
 
         private void exitButton_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void startButton_Click(object sender, EventArgs e)
         {
-            new Info().ShowDialog();
+            new info_form().ShowDialog();
+            this.WindowState = FormWindowState.Minimized;
+        }
+        private void alignButtons()
+        {
+            int X = this.Width / 2 - start_button.Width / 2;
+            int Y = this.Height / 2 - start_button.Height / 2;
+            start_button.Location = new Point(X, Y);
+            exit_button.Location = new Point(X, Y + 100);
         }
 
-        public static int getHeight
+        private void alignTitle()
         {
-            get { return max_height; }
+            int X = this.Width / 2 - title_label.Width / 2;
+            title_label.Location = new Point(X, 300);
         }
     }
 }
