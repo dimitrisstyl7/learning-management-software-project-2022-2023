@@ -1,6 +1,6 @@
 ﻿namespace Project_final_2022_2023
 {
-    partial class Form1
+    partial class main
     {
         /// <summary>
         ///  Required designer variable.

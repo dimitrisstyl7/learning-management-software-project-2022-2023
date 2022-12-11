@@ -1,0 +1,17 @@
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\bin\Debug\net6.0-windows\Project_final_2022_2023.exe
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\bin\Debug\net6.0-windows\Project_final_2022_2023.deps.json
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\bin\Debug\net6.0-windows\Project_final_2022_2023.runtimeconfig.json
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\bin\Debug\net6.0-windows\Project_final_2022_2023.dll
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\bin\Debug\net6.0-windows\Project_final_2022_2023.pdb
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.csproj.AssemblyReference.cache
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.main.resources
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.csproj.GenerateResource.cache
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.AssemblyInfoInputs.cache
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.AssemblyInfo.cs
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.csproj.CoreCompileInputs.cache
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.dll
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\refint\Project_final_2022_2023.dll
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.pdb
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.genruntimeconfig.cache
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\ref\Project_final_2022_2023.dll
