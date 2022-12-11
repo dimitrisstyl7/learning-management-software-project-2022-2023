@@ -16,4 +16,4 @@ C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-wi
 C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\ref\Project_final_2022_2023.dll
 C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.Properties.Resources.resources
 C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.main_form.resources
-C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.info_form.resources
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.Info.resources

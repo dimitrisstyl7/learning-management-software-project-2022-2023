@@ -29,7 +29,29 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_form));
+            this.start_button = new System.Windows.Forms.Button();
+            this.exit_button = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // start_button
+            // 
+            this.start_button.Location = new System.Drawing.Point(854, 314);
+            this.start_button.Name = "start_button";
+            this.start_button.Size = new System.Drawing.Size(112, 34);
+            this.start_button.TabIndex = 0;
+            this.start_button.Text = "Έναρξη";
+            this.start_button.UseVisualStyleBackColor = true;
+            this.start_button.Click += new System.EventHandler(this.startButton_Click);
+            // 
+            // exit_button
+            // 
+            this.exit_button.Location = new System.Drawing.Point(854, 410);
+            this.exit_button.Name = "exit_button";
+            this.exit_button.Size = new System.Drawing.Size(112, 34);
+            this.exit_button.TabIndex = 1;
+            this.exit_button.Text = "Έξοδος";
+            this.exit_button.UseVisualStyleBackColor = true;
+            this.exit_button.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // main_form
             // 
@@ -39,6 +61,8 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1776, 887);
+            this.Controls.Add(this.exit_button);
+            this.Controls.Add(this.start_button);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -53,5 +77,8 @@
         }
 
         #endregion
+
+        private Button start_button;
+        private Button exit_button;
     }
 }
