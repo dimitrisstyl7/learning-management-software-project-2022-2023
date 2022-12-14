@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_final_2022_2023
 {
-    public partial class info_form : Form
+    public partial class Test_form : Form
     {
-        public info_form()
+        public Test_form()
         {
             InitializeComponent();
-        }
-
-        private void Info_Load(object sender, EventArgs e)
-        {
-            this.FormBorderStyle = FormBorderStyle.None;
         }
     }
 }

@@ -22,7 +22,6 @@ namespace Project_final_2022_2023
         private void startButton_Click(object sender, EventArgs e)
         {
             new info_form().ShowDialog();
-            this.WindowState = FormWindowState.Minimized;
         }
         private void alignButtons()
         {

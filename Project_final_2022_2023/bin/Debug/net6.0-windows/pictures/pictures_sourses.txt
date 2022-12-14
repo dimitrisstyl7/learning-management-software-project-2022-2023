@@ -1,0 +1,17 @@
+submit_button: https://pixabay.com/vectors/accept-yes-checkmark-symbol-sign-47587/
+
+application_logo: https://icon-icons.com/icon/math-operations/175083
+
+arrow_button_back: https://pixabay.com/vectors/back-button-computer-left-blue-24838/
+
+arrow_button_forward: https://pixabay.com/vectors/back-button-computer-left-blue-24838/
+
+help_button: https://pixabay.com/vectors/questionmark-info-help-faq-support-308636/
+
+cancel_button: https://pixabay.com/vectors/cancel-no-symbol-sign-wrong-mark-47588/
+
+refresh_button: https://all-free-download.com/free-icon/download/refresh_97252.html
+
+start button: https://pixabay.com/vectors/start-button-play-power-circle-305427/
+
+tip button: https://pixabay.com/vectors/dialog-tip-advice-hint-speaking-148815/
