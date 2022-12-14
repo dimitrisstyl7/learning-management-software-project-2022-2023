@@ -63,6 +63,8 @@
             // info_richTextBox
             // 
             this.info_richTextBox.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.info_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.info_richTextBox.CausesValidation = false;
             this.info_richTextBox.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.info_richTextBox.Location = new System.Drawing.Point(538, 12);
             this.info_richTextBox.Margin = new System.Windows.Forms.Padding(2);
@@ -70,6 +72,7 @@
             this.info_richTextBox.ReadOnly = true;
             this.info_richTextBox.Size = new System.Drawing.Size(626, 520);
             this.info_richTextBox.TabIndex = 0;
+            this.info_richTextBox.TabStop = false;
             this.info_richTextBox.Text = resources.GetString("info_richTextBox.Text");
             // 
             // pictureBox1
