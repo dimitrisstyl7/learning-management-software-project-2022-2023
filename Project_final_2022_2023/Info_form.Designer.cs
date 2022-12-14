@@ -264,9 +264,9 @@
             // 
             // start_pictureBox
             // 
-            this.start_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.start_pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.start_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("start_pictureBox.Image")));
-            this.start_pictureBox.Location = new System.Drawing.Point(1521, 7);
+            this.start_pictureBox.Location = new System.Drawing.Point(809, 725);
             this.start_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.start_pictureBox.Name = "start_pictureBox";
             this.start_pictureBox.Size = new System.Drawing.Size(66, 52);
@@ -280,7 +280,7 @@
             // 
             this.cancel_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cancel_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("cancel_pictureBox.Image")));
-            this.cancel_pictureBox.Location = new System.Drawing.Point(1604, 7);
+            this.cancel_pictureBox.Location = new System.Drawing.Point(1573, 42);
             this.cancel_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.cancel_pictureBox.Name = "cancel_pictureBox";
             this.cancel_pictureBox.Size = new System.Drawing.Size(66, 52);
