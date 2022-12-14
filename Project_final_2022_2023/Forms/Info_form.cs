@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_final_2022_2023.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -41,7 +42,7 @@ namespace Project_final_2022_2023
 
         private void start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            //////////////////////
+            new Question_1();
         }
 
         private void start_pictureBox_MouseHover(object sender, EventArgs e)
