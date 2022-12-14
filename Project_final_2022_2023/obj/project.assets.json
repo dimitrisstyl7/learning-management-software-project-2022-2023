@@ -8,19 +8,24 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\dimit\\.nuget\\packages\\": {}
+    "C:\\Users\\theok\\.nuget\\packages\\": {},
+    "F:\\University\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dimit\\Desktop\\project_final\\Project_final_2022_2023\\Project_final_2022_2023.csproj",
+      "projectUniqueName": "C:\\Users\\theok\\OneDrive\\5o Εξάμηνο\\Λογισμικό Διαχείρισης Μάθησης\\Απαλλακτική Εργασία 2022\\Project\\project_final\\Project_final_2022_2023\\Project_final_2022_2023.csproj",
       "projectName": "Project_final_2022_2023",
-      "projectPath": "C:\\Users\\dimit\\Desktop\\project_final\\Project_final_2022_2023\\Project_final_2022_2023.csproj",
-      "packagesPath": "C:\\Users\\dimit\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dimit\\Desktop\\project_final\\Project_final_2022_2023\\obj\\",
+      "projectPath": "C:\\Users\\theok\\OneDrive\\5o Εξάμηνο\\Λογισμικό Διαχείρισης Μάθησης\\Απαλλακτική Εργασία 2022\\Project\\project_final\\Project_final_2022_2023\\Project_final_2022_2023.csproj",
+      "packagesPath": "C:\\Users\\theok\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\theok\\OneDrive\\5o Εξάμηνο\\Λογισμικό Διαχείρισης Μάθησης\\Απαλλακτική Εργασία 2022\\Project\\project_final\\Project_final_2022_2023\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "F:\\University\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\dimit\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\theok\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
