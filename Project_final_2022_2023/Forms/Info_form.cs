@@ -21,9 +21,6 @@ namespace Project_final_2022_2023
         {
             this.FormBorderStyle = FormBorderStyle.None;
 
-            int info_panel_x = this.Width / 2 + this.Width / 4;
-            int info_panel_y = this.Height / 2 + this.Width / 4;
-
             //set the position of the panel
             info_panel.Location = new Point(this.Width / 2 - info_panel.Width/2, this.Height / 2 - info_panel.Height/2);
 
