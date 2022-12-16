@@ -10,8 +10,5 @@
     <Compile Update="Forms\Questions_layout_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Test_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

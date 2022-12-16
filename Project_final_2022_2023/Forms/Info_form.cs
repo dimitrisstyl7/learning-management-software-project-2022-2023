@@ -40,16 +40,12 @@ namespace Project_final_2022_2023
 
         private void start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
+            new Load_questions(info_richTextBox);
         }
 
         private void start_pictureBox_MouseHover(object sender, EventArgs e)
         {
             start_pictureBox.Cursor = Cursors.Hand;
-        }
-
-        public void closeForm()
-        {
-            this.Close();
         }
     }
 }
