@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project_final_2022_2023.Classes
 {
-    internal class Question_1
+    internal class Question_2
     {
     }
 }

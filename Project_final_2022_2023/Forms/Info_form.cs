@@ -25,14 +25,11 @@ namespace Project_final_2022_2023
 
             //set the position of the panel
             info_panel.Location = new Point(this.Width / 2 - info_panel.Width/2, this.Height / 2 - info_panel.Height/2);
-
-
-
         }
 
         private void cancel_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void cancel_pictureBox_MouseHover(object sender, EventArgs e)
@@ -43,7 +40,6 @@ namespace Project_final_2022_2023
 
         private void start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            new Question_1(this);
         }
 
         private void start_pictureBox_MouseHover(object sender, EventArgs e)
@@ -52,8 +48,7 @@ namespace Project_final_2022_2023
         }
 
         public void closeForm()
-        { //info_form.Visible = false;
-            //info_form.Dispose(true);
+        {
             this.Close();
         }
     }
