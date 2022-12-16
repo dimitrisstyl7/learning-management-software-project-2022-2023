@@ -40,7 +40,8 @@ namespace Project_final_2022_2023
 
         private void start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            new Load_questions(info_richTextBox);
+            ImportData.Import_Data(); // το ξανά σκέφτομαι.
+            info_richTextBox.Text = ImportData.getQuestions()[0].QText; // προσπάθεια εμφάνισης εκφώνησης πρώτης ερώτησης (δοκιμαστικά).
         }
 
         private void start_pictureBox_MouseHover(object sender, EventArgs e)
