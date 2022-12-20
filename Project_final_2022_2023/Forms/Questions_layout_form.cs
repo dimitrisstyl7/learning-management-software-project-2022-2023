@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project_final_2022_2023
+namespace Project_final_2022_2023.Forms
 {
-    public partial class Test_form : Form
+    public partial class Questions_layout_form : Form
     {
-        public Test_form()
+        public Questions_layout_form()
         {
             InitializeComponent();
+        }
+
+        private void Questions_layout_form_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.None;
         }
     }
 }

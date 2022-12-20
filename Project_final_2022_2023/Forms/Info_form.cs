@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project_final_2022_2023.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace Project_final_2022_2023
 {
@@ -23,14 +25,11 @@ namespace Project_final_2022_2023
 
             //set the position of the panel
             info_panel.Location = new Point(this.Width / 2 - info_panel.Width/2, this.Height / 2 - info_panel.Height/2);
-
-            //set the position of the start button
-
         }
 
         private void cancel_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            this.Close();
+            this.Dispose();
         }
 
         private void cancel_pictureBox_MouseHover(object sender, EventArgs e)
@@ -41,7 +40,8 @@ namespace Project_final_2022_2023
 
         private void start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            //////////////////////
+            ImportData.Import_Data(); // το ξανά σκέφτομαι.
+            info_richTextBox.Text = ImportData.getQuestions()[0].QText; // προσπάθεια εμφάνισης εκφώνησης πρώτης ερώτησης (δοκιμαστικά).
         }
 
         private void start_pictureBox_MouseHover(object sender, EventArgs e)
