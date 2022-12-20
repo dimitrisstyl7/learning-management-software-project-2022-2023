@@ -7,23 +7,23 @@ namespace Project_final_2022_2023
             InitializeComponent();
         }
 
-        private void main_form_Load(object sender, EventArgs e)
+        private void Main_form_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
-            alignButtons();
-            alignTitle();
+            AlignButtons();
+            AlignTitle();
         }
 
-        private void exitButton_Click(object sender, EventArgs e)
+        private void ExitButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void startButton_Click(object sender, EventArgs e)
+        private void StartButton_Click(object sender, EventArgs e)
         {
             new info_form().ShowDialog();
         }
-        private void alignButtons()
+        private void AlignButtons()
         {
             int X = this.Width / 2 - start_button.Width / 2;
             int Y = this.Height / 2 - start_button.Height / 2;
@@ -31,7 +31,7 @@ namespace Project_final_2022_2023
             exit_button.Location = new Point(X, Y + 100);
         }
 
-        private void alignTitle()
+        private void AlignTitle()
         {
             int X = this.Width / 2 - title_label.Width / 2;
             title_label.Location = new Point(X, 300);

@@ -1,14 +1,5 @@
 ﻿using Project_final_2022_2023.Classes;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
 
 namespace Project_final_2022_2023
 {
@@ -19,7 +10,7 @@ namespace Project_final_2022_2023
             InitializeComponent();
         }
 
-        private void info_form_Load(object sender, EventArgs e)
+        private void Info_form_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
 
@@ -27,24 +18,26 @@ namespace Project_final_2022_2023
             info_panel.Location = new Point(this.Width / 2 - info_panel.Width/2, this.Height / 2 - info_panel.Height/2);
         }
 
-        private void cancel_pictureBox_MouseClick(object sender, MouseEventArgs e)
+        private void Cancel_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
             this.Dispose();
         }
 
-        private void cancel_pictureBox_MouseHover(object sender, EventArgs e)
+        private void Cancel_pictureBox_MouseHover(object sender, EventArgs e)
         {
             cancel_pictureBox.Cursor = Cursors.Hand;
             
         }
 
-        private void start_pictureBox_MouseClick(object sender, MouseEventArgs e)
+        private void Start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            ImportData.Import_Data(); // το ξανά σκέφτομαι.
-            info_richTextBox.Text = ImportData.getQuestions()[0].QText; // προσπάθεια εμφάνισης εκφώνησης πρώτης ερώτησης (δοκιμαστικά).
+            StringBuilder s = new();
+            foreach (var q in ImportData.Questions)
+                s.Append(q.QText + " " + q.QType + " " + q.QAnswers + " " + q.QCorrectAns + Environment.NewLine);
+            info_richTextBox.Text = s.ToString();
         }
 
-        private void start_pictureBox_MouseHover(object sender, EventArgs e)
+        private void Start_pictureBox_MouseHover(object sender, EventArgs e)
         {
             start_pictureBox.Cursor = Cursors.Hand;
         }
