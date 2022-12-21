@@ -44,7 +44,7 @@
             this.start_button.TabIndex = 0;
             this.start_button.Text = "Έναρξη";
             this.start_button.UseVisualStyleBackColor = true;
-            this.start_button.Click += new System.EventHandler(this.startButton_Click);
+            this.start_button.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // exit_button
             // 
@@ -56,7 +56,7 @@
             this.exit_button.TabIndex = 1;
             this.exit_button.Text = "Έξοδος";
             this.exit_button.UseVisualStyleBackColor = true;
-            this.exit_button.Click += new System.EventHandler(this.exitButton_Click);
+            this.exit_button.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // title_label
             // 
@@ -89,7 +89,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ερωτηματολόγιο Μαθηματικών";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.main_form_Load);
+            this.Load += new System.EventHandler(this.Main_form_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

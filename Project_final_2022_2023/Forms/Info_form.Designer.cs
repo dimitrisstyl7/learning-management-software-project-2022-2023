@@ -279,8 +279,8 @@
             this.start_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.start_pictureBox.TabIndex = 17;
             this.start_pictureBox.TabStop = false;
-            this.start_pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.start_pictureBox_MouseClick);
-            this.start_pictureBox.MouseHover += new System.EventHandler(this.start_pictureBox_MouseHover);
+            this.start_pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Start_pictureBox_MouseClick);
+            this.start_pictureBox.MouseHover += new System.EventHandler(this.Start_pictureBox_MouseHover);
             // 
             // cancel_pictureBox
             // 
@@ -293,8 +293,8 @@
             this.cancel_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cancel_pictureBox.TabIndex = 16;
             this.cancel_pictureBox.TabStop = false;
-            this.cancel_pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cancel_pictureBox_MouseClick);
-            this.cancel_pictureBox.MouseHover += new System.EventHandler(this.cancel_pictureBox_MouseHover);
+            this.cancel_pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Cancel_pictureBox_MouseClick);
+            this.cancel_pictureBox.MouseHover += new System.EventHandler(this.Cancel_pictureBox_MouseHover);
             // 
             // info_form
             // 
@@ -315,7 +315,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Οδηγίες ερωτηματολογίου";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.info_form_Load);
+            this.Load += new System.EventHandler(this.Info_form_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
