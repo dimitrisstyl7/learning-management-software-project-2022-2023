@@ -16,7 +16,7 @@ namespace Project_final_2022_2023.Classes
             try
             {
                 _Application excel = new _Excel.Application();
-                string path = Path.GetFullPath("Questions.xlsx");
+                string path = Path.GetFullPath("questions.xlsx");
                 Workbook workbook = excel.Workbooks.Open(path);
                 Worksheet worksheet = workbook.Worksheets.get_Item(1);
                 var xlRange = worksheet.UsedRange;
