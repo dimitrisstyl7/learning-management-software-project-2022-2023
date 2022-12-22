@@ -6,14 +6,12 @@ namespace Project_final_2022_2023.Classes
     internal static class ImportData
     {
         //one list for each type of Question
-        public static List<Question> QuestionsType1 = new();
-        public static List<Question> QuestionsType2 = new();
-        public static List<Question> QuestionsType3 = new();
-        public static List<Question> QuestionsType4 = new();
-        public static List<Question> QuestionsType5 = new();
-        public static List<Question> QuestionsType6 = new();
-
-
+        public static List<Question> questionsType1 = new();
+        public static List<Question> questionsType2 = new();
+        public static List<Question> questionsType3 = new();
+        public static List<Question> questionsType4 = new();
+        public static List<Question> questionsType5 = new();
+        public static List<Question> questionsType6 = new();
 
         static ImportData()
         {
@@ -50,19 +48,19 @@ namespace Project_final_2022_2023.Classes
                                 question.QType = value;
                                 break;
                             case 3:
-                                List<String[]> list = new();
+                                List<string[]> list = new();
 
                                 // Example : 10+5=|6-3=|9x3=!9÷3|25-10|15+12
-                                String[] listElement = value.Split("!");
+                                string[] listElement = value.Split("!");
                                 // listElement[0] = 10+5=|6-3=|9x3=
                                 // listElement[1] = 9÷3|25-10|15+12
 
-                                String[] colA = listElement[0].Split("|"); // colA = { 10+5=,6-3=,9x3= }
+                                string[] colA = listElement[0].Split("|"); // colA = { 10+5=,6-3=,9x3= }
                                 list.Add(colA);
 
                                 if (listElement.Length == 2) // Type 5,6.
                                 {
-                                    String[] colB = listElement[1].Split("|"); // colB = { 9÷3,25-10,15+12 }
+                                    string[] colB = listElement[1].Split("|"); // colB = { 9÷3,25-10,15+12 }
                                     list.Add(colB);
                                 }
                                 question.QAnswers = list;
@@ -75,22 +73,22 @@ namespace Project_final_2022_2023.Classes
                     switch(question.QType)
                     {
                         case "1":
-                            QuestionsType1.Add(question);
+                            questionsType1.Add(question);
                             break;
                         case "2":
-                            QuestionsType2.Add(question);
+                            questionsType2.Add(question);
                             break;
                         case "3":
-                            QuestionsType3.Add(question);
+                            questionsType3.Add(question);
                             break;
                         case "4":
-                            QuestionsType4.Add(question);
+                            questionsType4.Add(question);
                             break;
                         case "5":
-                            QuestionsType5.Add(question);
+                            questionsType5.Add(question);
                             break;
                         case "6":
-                            QuestionsType6.Add(question);
+                            questionsType6.Add(question);
                             break;
                     }
                 }
@@ -103,6 +101,11 @@ namespace Project_final_2022_2023.Classes
             {
                 excel.Quit();
             }
+        }
+        
+        private static void ReadData()
+        {
+
         }
     }
 }
