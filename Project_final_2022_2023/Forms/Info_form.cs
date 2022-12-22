@@ -32,8 +32,21 @@ namespace Project_final_2022_2023
         private void Start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
             StringBuilder s = new();
-            foreach (var q in ImportData.Questions)
-                s.Append(q.QText + " " + q.QType + " " + q.QAnswers + " " + q.QCorrectAns + Environment.NewLine);
+            var q = ImportData.Questions[ImportData.Questions.Count-3];
+            s.Append("Ekfwnhsh : " + q.QText + Environment.NewLine + "Eidos erwthshs : " + q.QType + Environment.NewLine + "Answers : " + Environment.NewLine);
+
+            foreach (var x in q.QAnswers)
+            {
+                s.Append("Column : ");
+                foreach (var y in x)
+                    s.Append(y + " , ");
+                s.Append(Environment.NewLine);
+            }
+
+            s.Append("Correct Answers : ");
+            foreach (var x in q.QCorrectAns)
+                s.Append(x + " , ");
+
             info_richTextBox.Text = s.ToString();
         }
 
