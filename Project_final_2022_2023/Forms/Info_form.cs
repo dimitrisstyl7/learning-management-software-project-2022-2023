@@ -3,9 +3,9 @@ using System.Text;
 
 namespace Project_final_2022_2023
 {
-    public partial class info_form : Form
+    public partial class Info_form : Form
     {
-        public info_form()
+        public Info_form()
         {
             InitializeComponent();
         }
