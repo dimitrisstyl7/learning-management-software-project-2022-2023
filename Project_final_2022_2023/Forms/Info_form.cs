@@ -32,7 +32,7 @@ namespace Project_final_2022_2023
         private void Start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
             StringBuilder s = new();
-            var q = ImportData.questionsType6[^3];
+            var q = ImportData.finalQuestions[0];
             s.Append("Ekfwnhsh : " + q.QText + Environment.NewLine + "Eidos erwthshs : " + q.QType + Environment.NewLine + "Answers : " + Environment.NewLine);
 
             foreach (var x in q.QAnswers)

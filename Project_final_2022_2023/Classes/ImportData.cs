@@ -6,17 +6,21 @@ namespace Project_final_2022_2023.Classes
 {
     internal static class ImportData
     {
+        //one list with the 6 final questions
+        public static List<Question> finalQuestions = new();
+
         //one list for each type of Question
-        public static List<Question> questionsType1 = new();
-        public static List<Question> questionsType2 = new();
-        public static List<Question> questionsType3 = new();
-        public static List<Question> questionsType4 = new();
-        public static List<Question> questionsType5 = new();
-        public static List<Question> questionsType6 = new();
+        private static List<Question> questionsType1 = new();
+        private static List<Question> questionsType2 = new();
+        private static List<Question> questionsType3 = new();
+        private static List<Question> questionsType4 = new();
+        private static List<Question> questionsType5 = new();
+        private static List<Question> questionsType6 = new();
 
         static ImportData()
         {
             ReadFile();
+            SelectQuestions();
         }
         
         private static void ReadFile()
@@ -118,6 +122,21 @@ namespace Project_final_2022_2023.Classes
                     questionsType6.Add(question);
                     break;
             }
+        }
+
+        private static void SelectQuestions()
+        {
+            finalQuestions.Add(questionsType1[RndIndex(questionsType1.Count)]); 
+            finalQuestions.Add(questionsType2[RndIndex(questionsType2.Count)]);
+            finalQuestions.Add(questionsType3[RndIndex(questionsType3.Count)]);
+            finalQuestions.Add(questionsType4[RndIndex(questionsType4.Count)]);
+            finalQuestions.Add(questionsType5[RndIndex(questionsType5.Count)]);
+            finalQuestions.Add(questionsType6[RndIndex(questionsType6.Count)]);
+        }
+
+        private static int RndIndex(int length)
+        {
+            return new Random().Next(length);
         }
     }
 }
