@@ -3,9 +3,9 @@ using System.Text;
 
 namespace Project_final_2022_2023
 {
-    public partial class info_form : Form
+    public partial class Info_form : Form
     {
-        public info_form()
+        public Info_form()
         {
             InitializeComponent();
         }
@@ -32,7 +32,7 @@ namespace Project_final_2022_2023
         private void Start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
             StringBuilder s = new();
-            var q = ImportData.Questions[ImportData.Questions.Count-3];
+            var q = ImportData.finalQuestions[0];
             s.Append("Ekfwnhsh : " + q.QText + Environment.NewLine + "Eidos erwthshs : " + q.QType + Environment.NewLine + "Answers : " + Environment.NewLine);
 
             foreach (var x in q.QAnswers)

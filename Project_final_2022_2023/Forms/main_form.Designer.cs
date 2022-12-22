@@ -1,6 +1,6 @@
 ﻿namespace Project_final_2022_2023
 {
-    partial class main_form
+    partial class Main_form
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main_form));
             this.start_button = new System.Windows.Forms.Button();
             this.exit_button = new System.Windows.Forms.Button();
             this.title_label = new System.Windows.Forms.Label();

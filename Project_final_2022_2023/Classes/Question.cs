@@ -5,8 +5,8 @@
         public string QType { get; set; }
         public string QText { get; set; }
         public string QTip { get; set; }
-        public List<String[]> QAnswers { get; set; }
-        public String[] QCorrectAns { get; set; }
+        public List<string[]> QAnswers { get; set; }
+        public string[] QCorrectAns { get; set; }
         public int QTimeLimit { get; set; }
         public int QTimeRemaining { get; set; }
 

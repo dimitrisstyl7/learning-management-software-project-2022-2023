@@ -7,6 +7,8 @@
             InitializeComponent();
         }
 
+
+
         private void Questions_layout_form_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;

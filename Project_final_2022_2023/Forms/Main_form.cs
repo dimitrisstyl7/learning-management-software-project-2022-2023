@@ -1,8 +1,8 @@
 namespace Project_final_2022_2023
 {
-    public partial class main_form : Form
+    public partial class Main_form : Form
     {
-        public main_form()
+        public Main_form()
         {
             InitializeComponent();
         }
@@ -21,7 +21,7 @@ namespace Project_final_2022_2023
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            new info_form().ShowDialog();
+            new Info_form().ShowDialog();
         }
         private void AlignButtons()
         {
