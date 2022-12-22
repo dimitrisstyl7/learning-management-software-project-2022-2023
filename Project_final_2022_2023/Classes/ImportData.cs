@@ -5,22 +5,32 @@ namespace Project_final_2022_2023.Classes
 {
     internal static class ImportData
     {
-        public static List<Question> Questions { get; set; }
+        //one list for each type of Question
+        public static List<Question> QuestionsType1 = new();
+        public static List<Question> QuestionsType2 = new();
+        public static List<Question> QuestionsType3 = new();
+        public static List<Question> QuestionsType4 = new();
+        public static List<Question> QuestionsType5 = new();
+        public static List<Question> QuestionsType6 = new();
+
+
 
         static ImportData()
         {
             Import_Data();
         }
+
         private static void Import_Data()
         {
             _Application excel = new _Excel.Application();
             try
             {
-                string path = Path.GetFullPath("questions.xlsx");
-                Workbook workbook = excel.Workbooks.Open(path);
-                Worksheet worksheet = workbook.Worksheets.get_Item(1);
-                var xlRange = worksheet.UsedRange;
-                List<Question> questionsList = new();
+                //open and read the file
+                
+                string path = Path.GetFullPath("questions.xlsx"); //copy relative path of excel file
+                Workbook workbook = excel.Workbooks.Open(path); //open it
+                Worksheet worksheet = workbook.Worksheets.get_Item(1); //open the first sheet
+                _Excel.Range xlRange = worksheet.UsedRange; //save the range value of saved data of the first worksheet
 
                 for (int i = 2; i <= xlRange.Rows.Count; i++)
                 {
@@ -62,9 +72,28 @@ namespace Project_final_2022_2023.Classes
                                 break;
                         }
                     }
-                    questionsList.Add(question);
+                    switch(question.QType)
+                    {
+                        case "1":
+                            QuestionsType1.Add(question);
+                            break;
+                        case "2":
+                            QuestionsType2.Add(question);
+                            break;
+                        case "3":
+                            QuestionsType3.Add(question);
+                            break;
+                        case "4":
+                            QuestionsType4.Add(question);
+                            break;
+                        case "5":
+                            QuestionsType5.Add(question);
+                            break;
+                        case "6":
+                            QuestionsType6.Add(question);
+                            break;
+                    }
                 }
-                Questions = questionsList;
                 workbook.Close(false);
             }
             catch {
