@@ -57,7 +57,7 @@
             this.left_arrow_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.left_arrow_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.left_arrow_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("left_arrow_pictureBox.Image")));
-            this.left_arrow_pictureBox.Location = new System.Drawing.Point(13, 845);
+            this.left_arrow_pictureBox.Location = new System.Drawing.Point(16, 928);
             this.left_arrow_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.left_arrow_pictureBox.Name = "left_arrow_pictureBox";
             this.left_arrow_pictureBox.Size = new System.Drawing.Size(66, 52);
@@ -70,7 +70,7 @@
             this.refresh_pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.refresh_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.refresh_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("refresh_pictureBox.Image")));
-            this.refresh_pictureBox.Location = new System.Drawing.Point(772, 845);
+            this.refresh_pictureBox.Location = new System.Drawing.Point(772, 928);
             this.refresh_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.refresh_pictureBox.Name = "refresh_pictureBox";
             this.refresh_pictureBox.Size = new System.Drawing.Size(66, 52);
@@ -83,7 +83,7 @@
             this.right_arrow_pictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.right_arrow_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.right_arrow_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("right_arrow_pictureBox.Image")));
-            this.right_arrow_pictureBox.Location = new System.Drawing.Point(1659, 845);
+            this.right_arrow_pictureBox.Location = new System.Drawing.Point(1696, 928);
             this.right_arrow_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.right_arrow_pictureBox.Name = "right_arrow_pictureBox";
             this.right_arrow_pictureBox.Size = new System.Drawing.Size(66, 52);
@@ -96,7 +96,7 @@
             this.tip_pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tip_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.tip_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("tip_pictureBox.Image")));
-            this.tip_pictureBox.Location = new System.Drawing.Point(885, 845);
+            this.tip_pictureBox.Location = new System.Drawing.Point(898, 928);
             this.tip_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.tip_pictureBox.Name = "tip_pictureBox";
             this.tip_pictureBox.Size = new System.Drawing.Size(66, 52);
@@ -141,10 +141,10 @@
             this.background_panel.Controls.Add(this.question_time_label);
             this.background_panel.Controls.Add(this.right_arrow_pictureBox);
             this.background_panel.Controls.Add(this.label2);
-            this.background_panel.Location = new System.Drawing.Point(11, 11);
+            this.background_panel.Location = new System.Drawing.Point(98, 59);
             this.background_panel.Margin = new System.Windows.Forms.Padding(2);
             this.background_panel.Name = "background_panel";
-            this.background_panel.Size = new System.Drawing.Size(1737, 910);
+            this.background_panel.Size = new System.Drawing.Size(1800, 1000);
             this.background_panel.TabIndex = 21;
             // 
             // panel1
@@ -152,9 +152,9 @@
             this.panel1.BackColor = System.Drawing.Color.Lavender;
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(275, 83);
+            this.panel1.Location = new System.Drawing.Point(122, 75);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1287, 691);
+            this.panel1.Size = new System.Drawing.Size(1600, 800);
             this.panel1.TabIndex = 22;
             // 
             // richTextBox1
@@ -207,7 +207,7 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1759, 949);
+            this.ClientSize = new System.Drawing.Size(2163, 1217);
             this.Controls.Add(this.background_panel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
