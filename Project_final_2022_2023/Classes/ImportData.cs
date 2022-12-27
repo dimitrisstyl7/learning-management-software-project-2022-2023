@@ -1,5 +1,4 @@
 ﻿using Microsoft.Office.Interop.Excel;
-using System;
 using _Excel = Microsoft.Office.Interop.Excel;
 
 namespace Project_final_2022_2023.Classes
@@ -94,6 +93,9 @@ namespace Project_final_2022_2023.Classes
                     case 4:
                         question.QCorrectAns = value.Split("|");
                         break;
+                    case 5:
+                        question.QTime = Int32.Parse(value);
+                        break;
                 }
             }
             return question;
@@ -126,17 +128,44 @@ namespace Project_final_2022_2023.Classes
 
         private static void SelectQuestions()
         {
-            finalQuestions.Add(questionsType1[RndIndex(questionsType1.Count)]); 
-            finalQuestions.Add(questionsType2[RndIndex(questionsType2.Count)]);
-            finalQuestions.Add(questionsType3[RndIndex(questionsType3.Count)]);
-            finalQuestions.Add(questionsType4[RndIndex(questionsType4.Count)]);
-            finalQuestions.Add(questionsType5[RndIndex(questionsType5.Count)]);
-            finalQuestions.Add(questionsType6[RndIndex(questionsType6.Count)]);
+            int duration = 0;
+            Question question;
+
+            question = questionsType1[RndIndex(questionsType1.Count)];
+            finalQuestions.Add(question);
+            duration += question.QTime;
+
+            question = questionsType2[RndIndex(questionsType2.Count)];
+            finalQuestions.Add(question);
+            duration += question.QTime;
+
+            question = questionsType3[RndIndex(questionsType3.Count)];
+            finalQuestions.Add(question);
+            duration += question.QTime;
+
+            question = questionsType4[RndIndex(questionsType4.Count)];
+            finalQuestions.Add(question);
+            duration += question.QTime;
+
+            question = questionsType5[RndIndex(questionsType5.Count)];
+            finalQuestions.Add(question);
+            duration += question.QTime;
+
+            question = questionsType6[RndIndex(questionsType6.Count)];
+            finalQuestions.Add(question);
+            duration += question.QTime;
+
+            SetTotalTime(duration);
         }
 
         private static int RndIndex(int length)
         {
             return new Random().Next(length);
+        }
+
+        private static void SetTotalTime(int duration)
+        {
+            Question.QTotalTime = duration;
         }
     }
 }
