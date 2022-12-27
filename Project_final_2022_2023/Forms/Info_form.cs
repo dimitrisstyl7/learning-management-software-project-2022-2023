@@ -1,4 +1,5 @@
 ﻿using Project_final_2022_2023.Classes;
+using Project_final_2022_2023.Forms;
 using System.Text;
 
 namespace Project_final_2022_2023
@@ -31,23 +32,7 @@ namespace Project_final_2022_2023
 
         private void Start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            StringBuilder s = new();
-            var q = ImportData.finalQuestions[0];
-            s.Append("Ekfwnhsh : " + q.QText + Environment.NewLine + "Eidos erwthshs : " + q.QType + Environment.NewLine + "Answers : " + Environment.NewLine);
-
-            foreach (var x in q.QAnswers)
-            {
-                s.Append("Column : ");
-                foreach (var y in x)
-                    s.Append(y + " , ");
-                s.Append(Environment.NewLine);
-            }
-
-            s.Append("Correct Answers : ");
-            foreach (var x in q.QCorrectAns)
-                s.Append(x + " , ");
-
-            info_richTextBox.Text = s.ToString();
+            new Questions_layout_form(this).ShowDialog();
         }
 
         private void Start_pictureBox_MouseHover(object sender, EventArgs e)
