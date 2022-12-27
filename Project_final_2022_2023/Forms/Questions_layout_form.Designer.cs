@@ -36,8 +36,8 @@
             this.tip_pictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.totalTimer = new System.Windows.Forms.Timer(this.components);
+            this.QuestionTimer = new System.Windows.Forms.Timer(this.components);
             this.background_panel = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
@@ -238,8 +238,8 @@
         private PictureBox tip_pictureBox;
         private Label label1;
         private Label label2;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer totalTimer;
+        private System.Windows.Forms.Timer QuestionTimer;
         private Panel background_panel;
         private Label question_time_label;
         private Label total_time_label;
