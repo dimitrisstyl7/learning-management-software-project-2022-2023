@@ -25,7 +25,7 @@ namespace Project_final_2022_2023.Forms
             //set the position of the panel
             /*background_panel.Location = new Point(this.Width / 2 - info_panel.Width / 2, this.Height / 2 - info_panel.Height / 2);*/
 
-            refresh_pictureBox.Location = new Point(left_arrow_pictureBox.Width * 2, this.Height);
+            //refresh_pictureBox.Location = new Point(left_arrow_pictureBox.Width * 2, this.Height);
 
 
 
