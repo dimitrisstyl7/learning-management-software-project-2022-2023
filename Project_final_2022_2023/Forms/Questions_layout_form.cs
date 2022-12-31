@@ -54,7 +54,7 @@ namespace Project_final_2022_2023.Forms
             
             panel3.Location = new Point(122, 75);
             panel3.Size = new Size(1600, 800);
-            question2Text_richTextBox.Text = ImportData.finalQuestions[2].QText;
+            question3_richTextBox.Text = ImportData.finalQuestions[2].QText;
             var y = ImportData.finalQuestions[2].QAnswers[0];
             q3_answer1.Text = y[0];
             q3_answer2.Text = y[1];
