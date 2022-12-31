@@ -86,6 +86,7 @@
             this.left_arrow_pictureBox.TabIndex = 15;
             this.left_arrow_pictureBox.TabStop = false;
             this.left_arrow_pictureBox.Click += new System.EventHandler(this.left_arrow_pictureBox_Click);
+            this.left_arrow_pictureBox.MouseHover += new System.EventHandler(this.Left_arrow_pictureBox_MouseHover);
             // 
             // refresh_pictureBox
             // 
@@ -99,6 +100,7 @@
             this.refresh_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.refresh_pictureBox.TabIndex = 18;
             this.refresh_pictureBox.TabStop = false;
+            this.refresh_pictureBox.MouseHover += new System.EventHandler(this.Refresh_pictureBox_MouseHover);
             // 
             // right_arrow_pictureBox
             // 
@@ -113,6 +115,7 @@
             this.right_arrow_pictureBox.TabIndex = 16;
             this.right_arrow_pictureBox.TabStop = false;
             this.right_arrow_pictureBox.Click += new System.EventHandler(this.right_arrow_pictureBox_Click);
+            this.right_arrow_pictureBox.MouseHover += new System.EventHandler(this.Right_arrow_pictureBox_MouseHover);
             // 
             // tip_pictureBox
             // 
@@ -126,6 +129,7 @@
             this.tip_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tip_pictureBox.TabIndex = 17;
             this.tip_pictureBox.TabStop = false;
+            this.tip_pictureBox.MouseHover += new System.EventHandler(this.Tip_pictureBox_MouseHover);
             // 
             // label1
             // 

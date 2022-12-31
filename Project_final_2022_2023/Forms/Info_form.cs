@@ -32,17 +32,14 @@ namespace Project_final_2022_2023
 
         private void Start_pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+            var _ = ImportData.finalQuestions;
             new Questions_layout_form(this).ShowDialog();
         }
 
         private void Start_pictureBox_MouseHover(object sender, EventArgs e)
         {
             start_pictureBox.Cursor = Cursors.Hand;
-        }
-
-        private void Info_form_Shown(object sender, EventArgs e)
-        {
-            var _ = ImportData.finalQuestions;
         }
     }
 }

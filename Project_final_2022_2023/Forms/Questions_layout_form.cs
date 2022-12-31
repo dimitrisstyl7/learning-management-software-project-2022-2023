@@ -145,5 +145,25 @@ namespace Project_final_2022_2023.Forms
                 */
             }
         }
+
+        private void Left_arrow_pictureBox_MouseHover(object sender, EventArgs e)
+        {
+            left_arrow_pictureBox.Cursor = Cursors.Hand;
+        }
+
+        private void Right_arrow_pictureBox_MouseHover(object sender, EventArgs e)
+        {
+            right_arrow_pictureBox.Cursor = Cursors.Hand;
+        }
+
+        private void Refresh_pictureBox_MouseHover(object sender, EventArgs e)
+        {
+            refresh_pictureBox.Cursor = Cursors.Hand;
+        }
+
+        private void Tip_pictureBox_MouseHover(object sender, EventArgs e)
+        {
+            tip_pictureBox.Cursor = Cursors.Hand;
+        }
     }
 }
