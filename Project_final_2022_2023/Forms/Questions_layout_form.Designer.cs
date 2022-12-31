@@ -39,6 +39,9 @@
             this.totalTimer = new System.Windows.Forms.Timer(this.components);
             this.QuestionTimer = new System.Windows.Forms.Timer(this.components);
             this.background_panel = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -52,24 +55,24 @@
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.radioButton_wrongOption = new System.Windows.Forms.RadioButton();
+            this.radioButton_correctOption = new System.Windows.Forms.RadioButton();
+            this.question1Text_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.questionType_richTextBox = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.total_time_label = new System.Windows.Forms.Label();
             this.question_time_label = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.richTextBox6 = new System.Windows.Forms.RichTextBox();
-            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.left_arrow_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.refresh_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.right_arrow_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tip_pictureBox)).BeginInit();
             this.background_panel.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // left_arrow_pictureBox
@@ -171,6 +174,34 @@
             this.background_panel.Name = "background_panel";
             this.background_panel.Size = new System.Drawing.Size(1800, 1000);
             this.background_panel.TabIndex = 21;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.Lavender;
+            this.panel6.Controls.Add(this.richTextBox6);
+            this.panel6.Controls.Add(this.label8);
+            this.panel6.Location = new System.Drawing.Point(1776, 521);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(1600, 800);
+            this.panel6.TabIndex = 27;
+            // 
+            // richTextBox6
+            // 
+            this.richTextBox6.Location = new System.Drawing.Point(111, 81);
+            this.richTextBox6.Name = "richTextBox6";
+            this.richTextBox6.Size = new System.Drawing.Size(874, 109);
+            this.richTextBox6.TabIndex = 1;
+            this.richTextBox6.Text = "";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(101, 23);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(148, 32);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Ερώτηση ...";
             // 
             // panel5
             // 
@@ -287,20 +318,66 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Controls.Add(this.richTextBox1);
+            this.panel1.Controls.Add(this.radioButton_wrongOption);
+            this.panel1.Controls.Add(this.radioButton_correctOption);
+            this.panel1.Controls.Add(this.question1Text_richTextBox);
+            this.panel1.Controls.Add(this.questionType_richTextBox);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(1675, 733);
+            this.panel1.Location = new System.Drawing.Point(32, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1600, 800);
             this.panel1.TabIndex = 22;
             // 
-            // richTextBox1
+            // radioButton_wrongOption
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(111, 81);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(874, 109);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.radioButton_wrongOption.AutoSize = true;
+            this.radioButton_wrongOption.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radioButton_wrongOption.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton_wrongOption.Location = new System.Drawing.Point(866, 459);
+            this.radioButton_wrongOption.Name = "radioButton_wrongOption";
+            this.radioButton_wrongOption.Size = new System.Drawing.Size(107, 37);
+            this.radioButton_wrongOption.TabIndex = 4;
+            this.radioButton_wrongOption.TabStop = true;
+            this.radioButton_wrongOption.Text = "Λάθος";
+            this.radioButton_wrongOption.UseVisualStyleBackColor = true;
+            // 
+            // radioButton_correctOption
+            // 
+            this.radioButton_correctOption.AutoSize = true;
+            this.radioButton_correctOption.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton_correctOption.Location = new System.Drawing.Point(551, 460);
+            this.radioButton_correctOption.Name = "radioButton_correctOption";
+            this.radioButton_correctOption.Size = new System.Drawing.Size(103, 36);
+            this.radioButton_correctOption.TabIndex = 3;
+            this.radioButton_correctOption.TabStop = true;
+            this.radioButton_correctOption.Text = "Σωστό";
+            this.radioButton_correctOption.UseVisualStyleBackColor = true;
+            // 
+            // question1Text_richTextBox
+            // 
+            this.question1Text_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question1Text_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.question1Text_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question1Text_richTextBox.HideSelection = false;
+            this.question1Text_richTextBox.Location = new System.Drawing.Point(353, 225);
+            this.question1Text_richTextBox.Name = "question1Text_richTextBox";
+            this.question1Text_richTextBox.Size = new System.Drawing.Size(874, 84);
+            this.question1Text_richTextBox.TabIndex = 2;
+            this.question1Text_richTextBox.TabStop = false;
+            this.question1Text_richTextBox.Text = "[Εκφώνηση Ερώτησης Εδώ]";
+            // 
+            // questionType_richTextBox
+            // 
+            this.questionType_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.questionType_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.questionType_richTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.questionType_richTextBox.HideSelection = false;
+            this.questionType_richTextBox.Location = new System.Drawing.Point(353, 156);
+            this.questionType_richTextBox.Name = "questionType_richTextBox";
+            this.questionType_richTextBox.Size = new System.Drawing.Size(874, 51);
+            this.questionType_richTextBox.TabIndex = 1;
+            this.questionType_richTextBox.TabStop = false;
+            this.questionType_richTextBox.Text = "Συμπλήρωσε το σωστό/λάθος:";
             // 
             // label3
             // 
@@ -308,9 +385,9 @@
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.Location = new System.Drawing.Point(101, 23);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(148, 32);
+            this.label3.Size = new System.Drawing.Size(234, 32);
             this.label3.TabIndex = 0;
-            this.label3.Text = "Ερώτηση ...";
+            this.label3.Text = "Ερώτηση 1 (από 6)";
             // 
             // total_time_label
             // 
@@ -337,34 +414,6 @@
             this.question_time_label.TabIndex = 21;
             this.question_time_label.Text = "00:00";
             // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.Lavender;
-            this.panel6.Controls.Add(this.richTextBox6);
-            this.panel6.Controls.Add(this.label8);
-            this.panel6.Location = new System.Drawing.Point(1776, 521);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(1600, 800);
-            this.panel6.TabIndex = 27;
-            // 
-            // richTextBox6
-            // 
-            this.richTextBox6.Location = new System.Drawing.Point(111, 81);
-            this.richTextBox6.Name = "richTextBox6";
-            this.richTextBox6.Size = new System.Drawing.Size(874, 109);
-            this.richTextBox6.TabIndex = 1;
-            this.richTextBox6.Text = "";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(101, 23);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(148, 32);
-            this.label8.TabIndex = 0;
-            this.label8.Text = "Ερώτηση ...";
-            // 
             // Questions_layout_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -372,7 +421,7 @@
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2163, 1217);
+            this.ClientSize = new System.Drawing.Size(2163, 1061);
             this.Controls.Add(this.background_panel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -390,6 +439,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tip_pictureBox)).EndInit();
             this.background_panel.ResumeLayout(false);
             this.background_panel.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -400,8 +451,6 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -419,7 +468,7 @@
         private Label question_time_label;
         private Label total_time_label;
         private Panel panel1;
-        private RichTextBox richTextBox1;
+        private RichTextBox questionType_richTextBox;
         private Label label3;
         private Panel panel5;
         private RichTextBox richTextBox5;
@@ -436,5 +485,8 @@
         private Panel panel6;
         private RichTextBox richTextBox6;
         private Label label8;
+        private RichTextBox question1Text_richTextBox;
+        private RadioButton radioButton_wrongOption;
+        private RadioButton radioButton_correctOption;
     }
 }

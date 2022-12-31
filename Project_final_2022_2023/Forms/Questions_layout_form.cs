@@ -12,7 +12,6 @@ namespace Project_final_2022_2023.Forms
         }
 
 
-
         private void Questions_layout_form_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
@@ -20,31 +19,43 @@ namespace Project_final_2022_2023.Forms
             int height = this.Height / 2 - background_panel.Height / 2;
             background_panel.Location = new Point(width, height);
 
+
+            panel1.Visible = true;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+
+
+            List<Question> questionLlist = ImportData.finalQuestions;
+
             //to work on your question set the visibility to true
 
             panel1.Location = new Point(122,75);
             panel1.Size= new Size(1600,800);
-            panel1.Visible= true;
+            question1Text_richTextBox.Text = questionLlist[0].QText;
+            
 
             panel2.Location = new Point(122, 75);
             panel2.Size = new Size(1600, 800);
-            panel2.Visible= false;
+            
             
             panel3.Location = new Point(122, 75);
             panel3.Size = new Size(1600, 800);
-            panel3.Visible = false;
+            
 
             panel4.Location = new Point(122, 75);
             panel4.Size = new Size(1600, 800);
-            panel4.Visible = false;
+            
 
             panel5.Location = new Point(122, 75);
             panel5.Size = new Size(1600, 800);
-            panel5.Visible = false;
+            
 
             panel6.Location = new Point(122, 75);
             panel6.Size = new Size(1600, 800);
-            panel6.Visible = false;
+            
         }
     }
 }
