@@ -6,7 +6,7 @@ namespace Project_final_2022_2023.Forms
 {
     public partial class Questions_layout_form : Form
     {
-       // public static List<Question> questionList = new();
+        private int qNumber;
 
 
         public Questions_layout_form(Info_form form)
@@ -23,6 +23,7 @@ namespace Project_final_2022_2023.Forms
             int height = this.Height / 2 - background_panel.Height / 2;
             background_panel.Location = new Point(width, height);
 
+            qNumber = 1;
 
             panel1.Visible = true;
             panel2.Visible = false;
@@ -31,7 +32,7 @@ namespace Project_final_2022_2023.Forms
             panel5.Visible = false;
             panel6.Visible = false;
 
-
+            left_arrow_pictureBox.Visible = false;
 
             //to work on your question set the visibility to true
 
@@ -57,6 +58,43 @@ namespace Project_final_2022_2023.Forms
             panel6.Location = new Point(122, 75);
             panel6.Size = new Size(1600, 800);
             
+        }
+
+        private void left_arrow_pictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void right_arrow_pictureBox_Click(object sender, EventArgs e)
+        {
+            switch(qNumber)
+            {
+                case 1:
+                    panel1.Visible = false;
+                    panel2.Visible = true;
+                    left_arrow_pictureBox.Visible = true;
+                    break;
+                case 2:
+                    panel2.Visible = false;
+                    panel3.Visible = true;
+                    break;
+                case 3:
+                    panel3.Visible = false;
+                    panel4.Visible = true;
+                    break;
+                case 4:
+                    panel4.Visible = false;
+                    panel5.Visible = true;
+                    break;
+                case 5:
+                    panel5.Visible = false;
+                    panel6.Visible = true;
+                    break;
+                case 6:
+                    //make showdialog to final form
+                    break;
+
+            }
         }
     }
 }

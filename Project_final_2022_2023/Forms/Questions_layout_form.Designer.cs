@@ -87,6 +87,7 @@
             this.left_arrow_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.left_arrow_pictureBox.TabIndex = 15;
             this.left_arrow_pictureBox.TabStop = false;
+            this.left_arrow_pictureBox.Click += new System.EventHandler(this.left_arrow_pictureBox_Click);
             // 
             // refresh_pictureBox
             // 
@@ -113,6 +114,7 @@
             this.right_arrow_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.right_arrow_pictureBox.TabIndex = 16;
             this.right_arrow_pictureBox.TabStop = false;
+            this.right_arrow_pictureBox.Click += new System.EventHandler(this.right_arrow_pictureBox_Click);
             // 
             // tip_pictureBox
             // 
@@ -155,6 +157,7 @@
             // background_panel
             // 
             this.background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_panel.Controls.Add(this.right_arrow_pictureBox);
             this.background_panel.Controls.Add(this.panel6);
             this.background_panel.Controls.Add(this.panel5);
             this.background_panel.Controls.Add(this.panel4);
@@ -167,7 +170,6 @@
             this.background_panel.Controls.Add(this.left_arrow_pictureBox);
             this.background_panel.Controls.Add(this.label1);
             this.background_panel.Controls.Add(this.question_time_label);
-            this.background_panel.Controls.Add(this.right_arrow_pictureBox);
             this.background_panel.Controls.Add(this.label2);
             this.background_panel.Location = new System.Drawing.Point(98, 59);
             this.background_panel.Margin = new System.Windows.Forms.Padding(2);
