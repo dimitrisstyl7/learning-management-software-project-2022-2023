@@ -34,10 +34,10 @@
             this.refresh_pictureBox = new System.Windows.Forms.PictureBox();
             this.right_arrow_pictureBox = new System.Windows.Forms.PictureBox();
             this.tip_pictureBox = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.totalTime_label = new System.Windows.Forms.Label();
+            this.questionTime_label = new System.Windows.Forms.Label();
             this.totalTimer = new System.Windows.Forms.Timer(this.components);
-            this.QuestionTimer = new System.Windows.Forms.Timer(this.components);
+            this.questionTimer = new System.Windows.Forms.Timer(this.components);
             this.background_panel = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.q3_answer4 = new System.Windows.Forms.RadioButton();
@@ -61,8 +61,8 @@
             this.question1Text_richTextBox = new System.Windows.Forms.RichTextBox();
             this.questionType_richTextBox = new System.Windows.Forms.RichTextBox();
             this.question1_label = new System.Windows.Forms.Label();
-            this.total_time_label = new System.Windows.Forms.Label();
-            this.question_time_label = new System.Windows.Forms.Label();
+            this.totalTimeTimer_label = new System.Windows.Forms.Label();
+            this.questionTimeTimer_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.left_arrow_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.refresh_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.right_arrow_pictureBox)).BeginInit();
@@ -131,30 +131,34 @@
             this.tip_pictureBox.TabStop = false;
             this.tip_pictureBox.MouseHover += new System.EventHandler(this.Tip_pictureBox_MouseHover);
             // 
-            // label1
+            // totalTime_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.DarkGoldenrod;
-            this.label1.Location = new System.Drawing.Point(772, 37);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(141, 21);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Συνολικός χρόνος:";
+            this.totalTime_label.AutoSize = true;
+            this.totalTime_label.BackColor = System.Drawing.Color.Transparent;
+            this.totalTime_label.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.totalTime_label.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.totalTime_label.Location = new System.Drawing.Point(772, 37);
+            this.totalTime_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.totalTime_label.Name = "totalTime_label";
+            this.totalTime_label.Size = new System.Drawing.Size(141, 21);
+            this.totalTime_label.TabIndex = 19;
+            this.totalTime_label.Text = "Συνολικός χρόνος:";
             // 
-            // label2
+            // questionTime_label
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(693, 16);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(220, 21);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Διαθέσιμος χρόνος ερώτησης:";
+            this.questionTime_label.AutoSize = true;
+            this.questionTime_label.BackColor = System.Drawing.Color.Transparent;
+            this.questionTime_label.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.questionTime_label.Location = new System.Drawing.Point(693, 16);
+            this.questionTime_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.questionTime_label.Name = "questionTime_label";
+            this.questionTime_label.Size = new System.Drawing.Size(220, 21);
+            this.questionTime_label.TabIndex = 20;
+            this.questionTime_label.Text = "Διαθέσιμος χρόνος ερώτησης:";
+            // 
+            // totalTimer
+            // 
+            this.totalTimer.Tick += new System.EventHandler(this.totalTimer_Tick);
             // 
             // background_panel
             // 
@@ -163,13 +167,13 @@
             this.background_panel.Controls.Add(this.panel2);
             this.background_panel.Controls.Add(this.right_arrow_pictureBox);
             this.background_panel.Controls.Add(this.panel1);
-            this.background_panel.Controls.Add(this.total_time_label);
+            this.background_panel.Controls.Add(this.totalTimeTimer_label);
             this.background_panel.Controls.Add(this.tip_pictureBox);
             this.background_panel.Controls.Add(this.refresh_pictureBox);
             this.background_panel.Controls.Add(this.left_arrow_pictureBox);
-            this.background_panel.Controls.Add(this.label1);
-            this.background_panel.Controls.Add(this.question_time_label);
-            this.background_panel.Controls.Add(this.label2);
+            this.background_panel.Controls.Add(this.totalTime_label);
+            this.background_panel.Controls.Add(this.questionTimeTimer_Label);
+            this.background_panel.Controls.Add(this.questionTime_label);
             this.background_panel.Location = new System.Drawing.Point(98, 59);
             this.background_panel.Margin = new System.Windows.Forms.Padding(2);
             this.background_panel.Name = "background_panel";
@@ -454,30 +458,30 @@
             this.question1_label.TabIndex = 0;
             this.question1_label.Text = "Ερώτηση 1 (από 6)";
             // 
-            // total_time_label
+            // totalTimeTimer_label
             // 
-            this.total_time_label.AutoSize = true;
-            this.total_time_label.BackColor = System.Drawing.Color.Transparent;
-            this.total_time_label.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.total_time_label.ForeColor = System.Drawing.Color.Linen;
-            this.total_time_label.Location = new System.Drawing.Point(923, 37);
-            this.total_time_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.total_time_label.Name = "total_time_label";
-            this.total_time_label.Size = new System.Drawing.Size(53, 21);
-            this.total_time_label.TabIndex = 21;
-            this.total_time_label.Text = "00:00";
+            this.totalTimeTimer_label.AutoSize = true;
+            this.totalTimeTimer_label.BackColor = System.Drawing.Color.Transparent;
+            this.totalTimeTimer_label.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.totalTimeTimer_label.ForeColor = System.Drawing.Color.Linen;
+            this.totalTimeTimer_label.Location = new System.Drawing.Point(923, 37);
+            this.totalTimeTimer_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.totalTimeTimer_label.Name = "totalTimeTimer_label";
+            this.totalTimeTimer_label.Size = new System.Drawing.Size(72, 21);
+            this.totalTimeTimer_label.TabIndex = 21;
+            this.totalTimeTimer_label.Text = "[Χρόνος]";
             // 
-            // question_time_label
+            // questionTimeTimer_Label
             // 
-            this.question_time_label.AutoSize = true;
-            this.question_time_label.BackColor = System.Drawing.Color.Transparent;
-            this.question_time_label.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.question_time_label.Location = new System.Drawing.Point(923, 16);
-            this.question_time_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.question_time_label.Name = "question_time_label";
-            this.question_time_label.Size = new System.Drawing.Size(53, 21);
-            this.question_time_label.TabIndex = 21;
-            this.question_time_label.Text = "00:00";
+            this.questionTimeTimer_Label.AutoSize = true;
+            this.questionTimeTimer_Label.BackColor = System.Drawing.Color.Transparent;
+            this.questionTimeTimer_Label.Font = new System.Drawing.Font("Comic Sans MS", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.questionTimeTimer_Label.Location = new System.Drawing.Point(923, 16);
+            this.questionTimeTimer_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.questionTimeTimer_Label.Name = "questionTimeTimer_Label";
+            this.questionTimeTimer_Label.Size = new System.Drawing.Size(72, 21);
+            this.questionTimeTimer_Label.TabIndex = 21;
+            this.questionTimeTimer_Label.Text = "[Χρόνος]";
             // 
             // Questions_layout_form
             // 
@@ -519,13 +523,13 @@
         private PictureBox refresh_pictureBox;
         private PictureBox right_arrow_pictureBox;
         private PictureBox tip_pictureBox;
-        private Label label1;
-        private Label label2;
+        private Label totalTime_label;
+        private Label questionTime_label;
         private System.Windows.Forms.Timer totalTimer;
-        private System.Windows.Forms.Timer QuestionTimer;
+        private System.Windows.Forms.Timer questionTimer;
         private Panel background_panel;
-        private Label question_time_label;
-        private Label total_time_label;
+        private Label questionTimeTimer_Label;
+        private Label totalTimeTimer_label;
         private Panel panel1;
         private RichTextBox questionType_richTextBox;
         private Label question1_label;
