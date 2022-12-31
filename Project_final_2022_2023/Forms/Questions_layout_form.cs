@@ -24,7 +24,7 @@ namespace Project_final_2022_2023.Forms
 
             panel1.Location = new Point(122,75);
             panel1.Size= new Size(1600,800);
-            panel1.Visible= false;
+            panel1.Visible= true;
 
             panel2.Location = new Point(122, 75);
             panel2.Size = new Size(1600, 800);

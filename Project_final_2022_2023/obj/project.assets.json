@@ -9,7 +9,7 @@
   },
   "packageFolders": {
     "C:\\Users\\theok\\.nuget\\packages\\": {},
-    "F:\\University\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -21,7 +21,7 @@
       "outputPath": "C:\\Users\\theok\\OneDrive\\5o Εξάμηνο\\Λογισμικό Διαχείρισης Μάθησης\\Απαλλακτική Εργασία 2022\\project_final\\Project_final_2022_2023\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "F:\\University\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\theok\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -69,7 +69,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
