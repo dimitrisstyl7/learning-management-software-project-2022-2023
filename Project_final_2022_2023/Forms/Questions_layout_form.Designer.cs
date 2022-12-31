@@ -39,6 +39,14 @@
             this.totalTimer = new System.Windows.Forms.Timer(this.components);
             this.QuestionTimer = new System.Windows.Forms.Timer(this.components);
             this.background_panel = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.q3_answer4 = new System.Windows.Forms.RadioButton();
+            this.q3_answer3 = new System.Windows.Forms.RadioButton();
+            this.q3_answer1 = new System.Windows.Forms.RadioButton();
+            this.q3_answer2 = new System.Windows.Forms.RadioButton();
+            this.question3_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.q2_answer4 = new System.Windows.Forms.RadioButton();
             this.q2_answer3 = new System.Windows.Forms.RadioButton();
@@ -60,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.right_arrow_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tip_pictureBox)).BeginInit();
             this.background_panel.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -146,6 +155,7 @@
             // background_panel
             // 
             this.background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_panel.Controls.Add(this.panel3);
             this.background_panel.Controls.Add(this.panel2);
             this.background_panel.Controls.Add(this.right_arrow_pictureBox);
             this.background_panel.Controls.Add(this.panel1);
@@ -162,6 +172,108 @@
             this.background_panel.Size = new System.Drawing.Size(1800, 1000);
             this.background_panel.TabIndex = 21;
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Lavender;
+            this.panel3.Controls.Add(this.q3_answer4);
+            this.panel3.Controls.Add(this.q3_answer3);
+            this.panel3.Controls.Add(this.q3_answer1);
+            this.panel3.Controls.Add(this.q3_answer2);
+            this.panel3.Controls.Add(this.question3_richTextBox);
+            this.panel3.Controls.Add(this.richTextBox3);
+            this.panel3.Controls.Add(this.label4);
+            this.panel3.Location = new System.Drawing.Point(42, 37);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1600, 800);
+            this.panel3.TabIndex = 24;
+            // 
+            // q3_answer4
+            // 
+            this.q3_answer4.AutoSize = true;
+            this.q3_answer4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.q3_answer4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q3_answer4.Location = new System.Drawing.Point(848, 520);
+            this.q3_answer4.Name = "q3_answer4";
+            this.q3_answer4.Size = new System.Drawing.Size(184, 37);
+            this.q3_answer4.TabIndex = 6;
+            this.q3_answer4.TabStop = true;
+            this.q3_answer4.Text = "[Απάντηση 4]";
+            this.q3_answer4.UseVisualStyleBackColor = true;
+            // 
+            // q3_answer3
+            // 
+            this.q3_answer3.AutoSize = true;
+            this.q3_answer3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.q3_answer3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q3_answer3.Location = new System.Drawing.Point(511, 520);
+            this.q3_answer3.Name = "q3_answer3";
+            this.q3_answer3.Size = new System.Drawing.Size(184, 37);
+            this.q3_answer3.TabIndex = 5;
+            this.q3_answer3.TabStop = true;
+            this.q3_answer3.Text = "[Απάντηση 3]";
+            this.q3_answer3.UseVisualStyleBackColor = true;
+            // 
+            // q3_answer1
+            // 
+            this.q3_answer1.AutoSize = true;
+            this.q3_answer1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.q3_answer1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q3_answer1.Location = new System.Drawing.Point(511, 418);
+            this.q3_answer1.Name = "q3_answer1";
+            this.q3_answer1.Size = new System.Drawing.Size(184, 37);
+            this.q3_answer1.TabIndex = 4;
+            this.q3_answer1.TabStop = true;
+            this.q3_answer1.Text = "[Απάντηση 1]";
+            this.q3_answer1.UseVisualStyleBackColor = true;
+            // 
+            // q3_answer2
+            // 
+            this.q3_answer2.AutoSize = true;
+            this.q3_answer2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q3_answer2.Location = new System.Drawing.Point(848, 419);
+            this.q3_answer2.Name = "q3_answer2";
+            this.q3_answer2.Size = new System.Drawing.Size(178, 36);
+            this.q3_answer2.TabIndex = 3;
+            this.q3_answer2.TabStop = true;
+            this.q3_answer2.Text = "[Απάντηση 2]";
+            this.q3_answer2.UseVisualStyleBackColor = true;
+            // 
+            // question3_richTextBox
+            // 
+            this.question3_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question3_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.question3_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question3_richTextBox.HideSelection = false;
+            this.question3_richTextBox.Location = new System.Drawing.Point(353, 225);
+            this.question3_richTextBox.Name = "question3_richTextBox";
+            this.question3_richTextBox.Size = new System.Drawing.Size(874, 84);
+            this.question3_richTextBox.TabIndex = 2;
+            this.question3_richTextBox.TabStop = false;
+            this.question3_richTextBox.Text = "[Εκφώνηση Ερώτησης Εδώ]";
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.BackColor = System.Drawing.Color.Lavender;
+            this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox3.HideSelection = false;
+            this.richTextBox3.Location = new System.Drawing.Point(353, 156);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(874, 51);
+            this.richTextBox3.TabIndex = 1;
+            this.richTextBox3.TabStop = false;
+            this.richTextBox3.Text = "Επέλεξε τις σωστές απάντησεις στην παρακάτω ερώτηση:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.Location = new System.Drawing.Point(101, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(234, 32);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Ερώτηση 3 (από 6)";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Lavender;
@@ -172,7 +284,7 @@
             this.panel2.Controls.Add(this.question2Text_richTextBox);
             this.panel2.Controls.Add(this.richTextBox2);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(100, 100);
+            this.panel2.Location = new System.Drawing.Point(29, 43);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1600, 800);
             this.panel2.TabIndex = 23;
@@ -388,6 +500,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tip_pictureBox)).EndInit();
             this.background_panel.ResumeLayout(false);
             this.background_panel.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -422,5 +536,13 @@
         private Label label3;
         private RadioButton q2_answer4;
         private RadioButton q2_answer3;
+        private Panel panel3;
+        private RadioButton q3_answer4;
+        private RadioButton q3_answer3;
+        private RadioButton q3_answer1;
+        private RadioButton q3_answer2;
+        private RichTextBox question3_richTextBox;
+        private RichTextBox richTextBox3;
+        private Label label4;
     }
 }
