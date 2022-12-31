@@ -62,7 +62,29 @@ namespace Project_final_2022_2023.Forms
 
         private void left_arrow_pictureBox_Click(object sender, EventArgs e)
         {
-
+            switch (qNumber)
+            {
+                case 2:
+                    panel2.Visible = false;
+                    panel1.Visible = true;
+                    break;
+                case 3:
+                    panel3.Visible = false;
+                    panel2.Visible = true;
+                    break;
+                case 4:
+                    panel4.Visible = false;
+                    panel3.Visible = true;
+                    break;
+                case 5:
+                    panel5.Visible = false;
+                    panel4.Visible = true;
+                    break;
+                case 6:
+                    panel6.Visible = false;
+                    panel5.Visible = true;
+                    break;
+            }
         }
 
         private void right_arrow_pictureBox_Click(object sender, EventArgs e)
@@ -93,7 +115,6 @@ namespace Project_final_2022_2023.Forms
                 case 6:
                     //make showdialog to final form
                     break;
-
             }
         }
     }

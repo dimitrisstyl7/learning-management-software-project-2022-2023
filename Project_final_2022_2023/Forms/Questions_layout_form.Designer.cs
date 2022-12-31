@@ -59,7 +59,7 @@
             this.radioButton_correctOption = new System.Windows.Forms.RadioButton();
             this.question1Text_richTextBox = new System.Windows.Forms.RichTextBox();
             this.questionType_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.question1_label = new System.Windows.Forms.Label();
             this.total_time_label = new System.Windows.Forms.Label();
             this.question_time_label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.left_arrow_pictureBox)).BeginInit();
@@ -324,7 +324,7 @@
             this.panel1.Controls.Add(this.radioButton_correctOption);
             this.panel1.Controls.Add(this.question1Text_richTextBox);
             this.panel1.Controls.Add(this.questionType_richTextBox);
-            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.question1_label);
             this.panel1.Location = new System.Drawing.Point(32, 61);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1600, 800);
@@ -381,15 +381,15 @@
             this.questionType_richTextBox.TabStop = false;
             this.questionType_richTextBox.Text = "Συμπλήρωσε το σωστό/λάθος:";
             // 
-            // label3
+            // question1_label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(101, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 32);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Ερώτηση 1 (από 6)";
+            this.question1_label.AutoSize = true;
+            this.question1_label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.question1_label.Location = new System.Drawing.Point(101, 23);
+            this.question1_label.Name = "question1_label";
+            this.question1_label.Size = new System.Drawing.Size(234, 32);
+            this.question1_label.TabIndex = 0;
+            this.question1_label.Text = "Ερώτηση 1 (από 6)";
             // 
             // total_time_label
             // 
@@ -471,7 +471,7 @@
         private Label total_time_label;
         private Panel panel1;
         private RichTextBox questionType_richTextBox;
-        private Label label3;
+        private Label question1_label;
         private Panel panel5;
         private RichTextBox richTextBox5;
         private Label label7;
