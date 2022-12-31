@@ -38,11 +38,9 @@ namespace Project_final_2022_2023.Forms
             panel1.Location = new Point(122,75);
             panel1.Size= new Size(1600,800);
             question1Text_richTextBox.Text = ImportData.finalQuestions[0].QText;
-            
 
             panel2.Location = new Point(122, 75);
             panel2.Size = new Size(1600, 800);
-            
             
             panel3.Location = new Point(122, 75);
             panel3.Size = new Size(1600, 800);
