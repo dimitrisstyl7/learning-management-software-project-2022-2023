@@ -1,10 +1,14 @@
 ﻿using Project_final_2022_2023.Classes;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace Project_final_2022_2023.Forms
 {
     public partial class Questions_layout_form : Form
     {
+       // public static List<Question> questionList = new();
+
+
         public Questions_layout_form(Info_form form)
         {
             InitializeComponent();
@@ -28,13 +32,12 @@ namespace Project_final_2022_2023.Forms
             panel6.Visible = false;
 
 
-            List<Question> questionLlist = ImportData.finalQuestions;
 
             //to work on your question set the visibility to true
 
             panel1.Location = new Point(122,75);
             panel1.Size= new Size(1600,800);
-            question1Text_richTextBox.Text = questionLlist[0].QText;
+            question1Text_richTextBox.Text = ImportData.finalQuestions[0].QText;
             
 
             panel2.Location = new Point(122, 75);
