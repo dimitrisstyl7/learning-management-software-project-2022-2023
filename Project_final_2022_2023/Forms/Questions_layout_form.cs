@@ -8,8 +8,8 @@ namespace Project_final_2022_2023.Forms
     {
         private int qNumber; //it keeps the question that is running right now
         private int totalTime = 0;
-        int m, s; //minutes and seconds
-
+        int tm, ts; //totalTimer -> minutes and seconds
+        int qm, qs; //questionTimer -> minutes and seconds
 
         public Questions_layout_form(Info_form form)
         {
@@ -46,7 +46,7 @@ namespace Project_final_2022_2023.Forms
                 totalTime += i.QTime;
             }
             totalTime = totalTime / 60;
-            m = totalTime;
+            tm = totalTime;
 
             //start total Timer 
             totalTimer.Interval = 1000; //1s timer
@@ -188,22 +188,45 @@ namespace Project_final_2022_2023.Forms
             tip_pictureBox.Cursor = Cursors.Hand;
         }
 
-        private void totalTimer_Tick(object sender, EventArgs e)
+        private void questionTimer_Tick(object sender, EventArgs e)
         {
-            if (s != 0) 
+            //is NOT ready
+
+            if (qs != 0)
             {
-                s -= 1;
+                qs -= 1;
             }
-            else if (s == 00 & m != 00)
+            else if (qs == 00 & qm != 00)
             {
-                s = 59;
-                m -= 1;
+                qs = 59;
+                qm -= 1;
             }
             else
             {
                 totalTimer.Stop();
             }
-            totalTimeTimer_label.Text = string.Format("{0}:{1}", m.ToString().PadLeft(2,'0'), s.ToString().PadLeft(2, '0'));
+            totalTimeTimer_label.Text = string.Format("{0}:{1}", qm.ToString().PadLeft(2, '0'), qs.ToString().PadLeft(2, '0'));
+        }
+
+        private void totalTimer_Tick(object sender, EventArgs e)
+        {
+            if (ts != 0) 
+            {
+                ts -= 1;
+                totalTimeTimer_label.Text = string.Format("{0}:{1}", tm.ToString().PadLeft(2, '0'), ts.ToString().PadLeft(2, '0'));
+            }
+            else if (ts == 00 & tm != 00)
+            {
+                ts = 59;
+                tm -= 1;
+                totalTimeTimer_label.Text = string.Format("{0}:{1}", tm.ToString().PadLeft(2, '0'), ts.ToString().PadLeft(2, '0'));
+            }
+            else
+            {
+                totalTimer.Stop();
+                totalTimeTimer_label.Text = "Τέλος Χρόνου";
+            }
+            
         }
     }
 }

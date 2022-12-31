@@ -160,6 +160,10 @@
             // 
             this.totalTimer.Tick += new System.EventHandler(this.totalTimer_Tick);
             // 
+            // questionTimer
+            // 
+            this.questionTimer.Tick += new System.EventHandler(this.questionTimer_Tick);
+            // 
             // background_panel
             // 
             this.background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;

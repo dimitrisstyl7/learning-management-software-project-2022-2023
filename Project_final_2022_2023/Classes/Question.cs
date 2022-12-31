@@ -9,8 +9,7 @@
         public string[] QCorrectAns { get; set; } // correct answers
         public int QTime { get; set; } // question time (in seconds)
         public int QTimeRemaining { get; set; } // question remaining time (in seconds)
-        public static int QTotalTime { get; set; } // questions total time (in seconds)
-        public const int QMark = 1;
+        public const int QMark = 1; //the value of the question
         public static int QTotalMarks;
 
         public void OpenQuestion()
