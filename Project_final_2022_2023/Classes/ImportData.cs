@@ -128,44 +128,30 @@ namespace Project_final_2022_2023.Classes
 
         private static void SelectQuestions()
         {
-            int duration = 0;
             Question question;
 
             question = questionsType1[RndIndex(questionsType1.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
 
             question = questionsType2[RndIndex(questionsType2.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
 
             question = questionsType3[RndIndex(questionsType3.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
 
             question = questionsType4[RndIndex(questionsType4.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
 
             question = questionsType5[RndIndex(questionsType5.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
 
             question = questionsType6[RndIndex(questionsType6.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
-
-            SetTotalTime(duration);
         }
 
         private static int RndIndex(int length)
         {
             return new Random().Next(length);
-        }
-
-        private static void SetTotalTime(int duration)
-        {
-            Question.QTotalTime = duration;
         }
     }
 }
