@@ -95,6 +95,7 @@ namespace Project_final_2022_2023.Classes
                         break;
                     case 5:
                         question.QTime = Int32.Parse(value);
+                        question.QTimeRemaining = Int32.Parse(value);
                         break;
                 }
             }

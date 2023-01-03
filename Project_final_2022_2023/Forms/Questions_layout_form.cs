@@ -89,8 +89,8 @@ namespace Project_final_2022_2023.Forms
             {
                 totalTime += i.QTime;
             }
-            int timese = totalTime / 60; //δεν παίρνω τα δεκαδικά
-            tm = timese;
+            tm = totalTime / 60; //δεν παίρνω τα δεκαδικά
+            ts = totalTime % 60;
 
             //start total Timer 
             totalTimer.Interval = 1000; //1s timer
@@ -100,15 +100,11 @@ namespace Project_final_2022_2023.Forms
 
         private void createQuestionTimer()
         {
-            int i = ImportData.finalQuestions[qNumber].QTime;
-            int y = ImportData.finalQuestions[qNumber].QTimeRemaining;
-            if ( i > y)
+            int y = ImportData.finalQuestions[qNumber - 1].QTimeRemaining;
+            if ( y !=0)
             {
-                qm = i / 60;  //δεν παίρνω τα δεκαδικά
-            }
-            else
-            {
-                qm = y / 60; //δεν παίρνω τα δεκαδικά
+                qm = y / 60;  //δεν παίρνω τα δεκαδικά
+                qs = y % 60;
             }
 
             //start question Timer
@@ -123,12 +119,14 @@ namespace Project_final_2022_2023.Forms
             {
                 case 2:
                     panel2.Visible = false;
+                    ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel1.Visible = true;
                     qNumber = 1;
                     createQuestionTimer();
                     break;
                 case 3:
                     panel3.Visible = false;
+                    ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel2.Visible = true;
                     qNumber = 2;
                     createQuestionTimer();
@@ -136,18 +134,21 @@ namespace Project_final_2022_2023.Forms
                     /*
                     case 4:
                         panel4.Visible = false;
+                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                         panel3.Visible = true;
                         qNumber = 3;
                         createQuestionTimer();
                         break;
                     case 5:
                         panel5.Visible = false;
+                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                         panel4.Visible = true;
                         qNumber = 4;
                         createQuestionTimer();
                         break;
                     case 6:
                         panel6.Visible = false;
+                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                         panel5.Visible = true;
                         qNumber = 5;
                         createQuestionTimer();
@@ -162,6 +163,7 @@ namespace Project_final_2022_2023.Forms
             {
                 case 1:
                     panel1.Visible = false;
+                    ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel2.Visible = true;
                     qNumber = 2;
                     left_arrow_pictureBox.Visible = true;
@@ -169,24 +171,28 @@ namespace Project_final_2022_2023.Forms
                     break;
                 case 2:
                     panel2.Visible = false;
+                    ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel3.Visible = true;
                     qNumber = 3;
                     createQuestionTimer();
                     break;
                     /*case 3:
                         panel3.Visible = false;
+                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                         panel4.Visible = true;
                         qNumber = 4;
                         createQuestionTimer();
                         break;
                     case 4:
                         panel4.Visible = false;
+                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                         panel5.Visible = true;
                         qNumber = 5;
                         createQuestionTimer();
                         break;
                     case 5:
                         panel5.Visible = false;
+                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                         panel6.Visible = true;
                         qNumber = 6;
                         createQuestionTimer();
