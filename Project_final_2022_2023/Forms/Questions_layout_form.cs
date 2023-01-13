@@ -297,17 +297,20 @@ namespace Project_final_2022_2023.Forms
         private void DropButtton1_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
+            DisableButtons();
         }
 
 
         private void DropButtton2_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
+            DisableButtons();
         }
 
         private void DropButtton3_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
+            DisableButtons();
         }
 
         private void TotalTimer_Tick(object sender, EventArgs e)
