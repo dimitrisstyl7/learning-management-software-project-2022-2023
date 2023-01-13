@@ -40,6 +40,9 @@
             this.questionTimer = new System.Windows.Forms.Timer(this.components);
             this.background_panel = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dropButton3 = new System.Windows.Forms.Button();
+            this.dropButton2 = new System.Windows.Forms.Button();
+            this.dropButton1 = new System.Windows.Forms.Button();
             this.q5_label6 = new System.Windows.Forms.Label();
             this.q5_label5 = new System.Windows.Forms.Label();
             this.q5_label4 = new System.Windows.Forms.Label();
@@ -218,7 +221,11 @@
             // 
             // panel5
             // 
+            this.panel5.AllowDrop = true;
             this.panel5.BackColor = System.Drawing.Color.Lavender;
+            this.panel5.Controls.Add(this.dropButton3);
+            this.panel5.Controls.Add(this.dropButton2);
+            this.panel5.Controls.Add(this.dropButton1);
             this.panel5.Controls.Add(this.q5_label6);
             this.panel5.Controls.Add(this.q5_label5);
             this.panel5.Controls.Add(this.q5_label4);
@@ -236,35 +243,80 @@
             this.panel5.Size = new System.Drawing.Size(1600, 800);
             this.panel5.TabIndex = 26;
             // 
+            // dropButton3
+            // 
+            this.dropButton3.AllowDrop = true;
+            this.dropButton3.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.dropButton3.Enabled = false;
+            this.dropButton3.Location = new System.Drawing.Point(595, 544);
+            this.dropButton3.Name = "dropButton3";
+            this.dropButton3.Size = new System.Drawing.Size(168, 59);
+            this.dropButton3.TabIndex = 26;
+            this.dropButton3.Text = "DROP HERE";
+            this.dropButton3.UseVisualStyleBackColor = true;
+            this.dropButton3.DragDrop += new System.Windows.Forms.DragEventHandler(this.DropButtton3_DragDrop);
+            this.dropButton3.DragEnter += new System.Windows.Forms.DragEventHandler(this.DropButtton3_DragEnter);
+            // 
+            // dropButton2
+            // 
+            this.dropButton2.AllowDrop = true;
+            this.dropButton2.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.dropButton2.Enabled = false;
+            this.dropButton2.Location = new System.Drawing.Point(595, 451);
+            this.dropButton2.Name = "dropButton2";
+            this.dropButton2.Size = new System.Drawing.Size(168, 59);
+            this.dropButton2.TabIndex = 25;
+            this.dropButton2.Text = "DROP HERE";
+            this.dropButton2.UseVisualStyleBackColor = true;
+            this.dropButton2.DragDrop += new System.Windows.Forms.DragEventHandler(this.DropButtton2_DragDrop);
+            this.dropButton2.DragEnter += new System.Windows.Forms.DragEventHandler(this.DropButtton2_DragEnter);
+            // 
+            // dropButton1
+            // 
+            this.dropButton1.AllowDrop = true;
+            this.dropButton1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.dropButton1.Enabled = false;
+            this.dropButton1.Location = new System.Drawing.Point(595, 358);
+            this.dropButton1.Name = "dropButton1";
+            this.dropButton1.Size = new System.Drawing.Size(168, 59);
+            this.dropButton1.TabIndex = 24;
+            this.dropButton1.Text = "DROP HERE";
+            this.dropButton1.UseVisualStyleBackColor = true;
+            this.dropButton1.DragDrop += new System.Windows.Forms.DragEventHandler(this.DropButtton1_DragDrop);
+            this.dropButton1.DragEnter += new System.Windows.Forms.DragEventHandler(this.DropButtton1_DragEnter);
+            // 
             // q5_label6
             // 
             this.q5_label6.AutoSize = true;
             this.q5_label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q5_label6.Location = new System.Drawing.Point(803, 488);
+            this.q5_label6.Location = new System.Drawing.Point(1051, 545);
             this.q5_label6.Name = "q5_label6";
             this.q5_label6.Size = new System.Drawing.Size(113, 32);
             this.q5_label6.TabIndex = 16;
             this.q5_label6.Text = "[Στηλή Β]";
+            this.q5_label6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Q5_label6_MouseDown);
             // 
             // q5_label5
             // 
             this.q5_label5.AutoSize = true;
             this.q5_label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q5_label5.Location = new System.Drawing.Point(803, 454);
+            this.q5_label5.Location = new System.Drawing.Point(1051, 453);
             this.q5_label5.Name = "q5_label5";
             this.q5_label5.Size = new System.Drawing.Size(113, 32);
             this.q5_label5.TabIndex = 15;
             this.q5_label5.Text = "[Στήλη Β]";
+            this.q5_label5.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Q5_label5_MouseDown);
             // 
             // q5_label4
             // 
             this.q5_label4.AutoSize = true;
             this.q5_label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q5_label4.Location = new System.Drawing.Point(803, 417);
+            this.q5_label4.Location = new System.Drawing.Point(1051, 374);
             this.q5_label4.Name = "q5_label4";
             this.q5_label4.Size = new System.Drawing.Size(113, 32);
             this.q5_label4.TabIndex = 14;
             this.q5_label4.Text = "[Στήλη Β]";
+            this.q5_label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Q5_label4_MouseDown);
             // 
             // q5_pentagon_pictureBox
             // 
@@ -306,7 +358,7 @@
             // 
             this.q5_label3.AutoSize = true;
             this.q5_label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q5_label3.Location = new System.Drawing.Point(559, 483);
+            this.q5_label3.Location = new System.Drawing.Point(439, 557);
             this.q5_label3.Name = "q5_label3";
             this.q5_label3.Size = new System.Drawing.Size(114, 32);
             this.q5_label3.TabIndex = 5;
@@ -317,7 +369,7 @@
             // 
             this.q5_label2.AutoSize = true;
             this.q5_label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q5_label2.Location = new System.Drawing.Point(559, 449);
+            this.q5_label2.Location = new System.Drawing.Point(439, 464);
             this.q5_label2.Name = "q5_label2";
             this.q5_label2.Size = new System.Drawing.Size(114, 32);
             this.q5_label2.TabIndex = 4;
@@ -328,7 +380,7 @@
             // 
             this.q5_label1.AutoSize = true;
             this.q5_label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q5_label1.Location = new System.Drawing.Point(559, 412);
+            this.q5_label1.Location = new System.Drawing.Point(439, 381);
             this.q5_label1.Name = "q5_label1";
             this.q5_label1.Size = new System.Drawing.Size(114, 32);
             this.q5_label1.TabIndex = 3;
@@ -895,5 +947,8 @@
         private Label q5_label6;
         private Label q5_label5;
         private Label q5_label4;
+        private Button dropButton3;
+        private Button dropButton2;
+        private Button dropButton1;
     }
 }

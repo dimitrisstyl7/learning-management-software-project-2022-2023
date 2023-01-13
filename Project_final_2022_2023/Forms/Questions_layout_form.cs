@@ -1,5 +1,5 @@
 ﻿using Project_final_2022_2023.Classes;
-using System.Drawing.Text;
+using System.Drawing;
 using System.Net.Http.Headers;
 using System.Text;
 
@@ -257,6 +257,59 @@ namespace Project_final_2022_2023.Forms
             tip_pictureBox.Cursor = Cursors.Hand;
         }
 
+        private void Q5_label4_MouseDown(object sender, MouseEventArgs e)
+        {
+            EnableButtons();
+            q5_label4.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+
+        }
+
+        private void Q5_label5_MouseDown(object sender, MouseEventArgs e)
+        {
+            EnableButtons();
+            DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q5_label6_MouseDown(object sender, MouseEventArgs e)
+        {
+            EnableButtons();
+            q5_label6.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void DropButtton1_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Text))
+                e.Effect = DragDropEffects.Copy;
+        }
+
+        private void DropButtton2_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Text))
+                e.Effect = DragDropEffects.Copy;
+        }
+
+        private void DropButtton3_DragEnter(object sender, DragEventArgs e)
+        {
+            if (e.Data.GetDataPresent(DataFormats.Text))
+                e.Effect = DragDropEffects.Copy;
+        }
+
+        private void DropButtton1_DragDrop(object sender, DragEventArgs e)
+        {
+            ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
+        }
+
+
+        private void DropButtton2_DragDrop(object sender, DragEventArgs e)
+        {
+            ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
+        }
+
+        private void DropButtton3_DragDrop(object sender, DragEventArgs e)
+        {
+            ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
+        }
+
         private void TotalTimer_Tick(object sender, EventArgs e)
         {
             if (ts != 0)
@@ -298,6 +351,20 @@ namespace Project_final_2022_2023.Forms
                 questionTimeTimer_Label.Text = "Τέλος Χρόνου";
                 currentPanel.Enabled = false;
             }
+        }
+
+        private void EnableButtons()
+        {
+            dropButton1.Enabled = true;
+            dropButton2.Enabled = true;
+            dropButton3.Enabled = true;
+        }
+
+        private void DisableButtons()
+        {
+            dropButton1.Enabled = false;
+            dropButton2.Enabled = false;
+            dropButton3.Enabled = false;
         }
     }
 }
