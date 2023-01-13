@@ -75,17 +75,17 @@ namespace Project_final_2022_2023.Classes
                     case 3:
                         List<string[]> list = new();
 
-                        // Example : 10+5=|6-3=|9x3=!9÷3|25-10|15+12
+                        //Example : 10+5=|6-3=|9x3=!9÷3|25-10|15+12
                         string[] listElement = value.Split("!");
-                        // listElement[0] = 10+5=|6-3=|9x3=
-                        // listElement[1] = 9÷3|25-10|15+12
+                        //listElement[0] = 10+5=|6-3=|9x3=
+                        //listElement[1] = 9÷3|25-10|15+12
 
-                        string[] colA = listElement[0].Split("|"); // colA = { 10+5=,6-3=,9x3= }
+                        string[] colA = listElement[0].Split("|"); //colA = { 10+5=,6-3=,9x3= }
                         list.Add(colA);
 
-                        if (listElement.Length == 2) // Type 5,6.
+                        if (listElement.Length == 2) //Type 5,6.
                         {
-                            string[] colB = listElement[1].Split("|"); // colB = { 9÷3,25-10,15+12 }
+                            string[] colB = listElement[1].Split("|"); //colB = { 9÷3,25-10,15+12 }
                             list.Add(colB);
                         }
                         question.QAnswers = list;

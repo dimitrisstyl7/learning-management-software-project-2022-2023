@@ -1,4 +1,5 @@
 ﻿using Project_final_2022_2023.Classes;
+using System.Drawing.Text;
 using System.Net.Http.Headers;
 using System.Text;
 
@@ -8,13 +9,15 @@ namespace Project_final_2022_2023.Forms
     {
         private int qNumber; //it keeps the question that is running right now
         private int totalTime = 0;
-        int tm, ts; //totalTimer -> minutes and seconds
-        int qm, qs; //questionTimer -> minutes and seconds
-
+        private int tm, ts; //totalTimer -> tm = minutes and ts = seconds
+        private int qm, qs; //questionTimer -> qm = minutes and qs = seconds
+        private Panel currentPanel;
+        
         public Questions_layout_form(Info_form form)
         {
             InitializeComponent();
             form.Dispose();
+            currentPanel = panel1;
         }
 
         private void Questions_layout_form_Load(object sender, EventArgs e)
@@ -32,16 +35,15 @@ namespace Project_final_2022_2023.Forms
             panel1.Visible = true;
             panel2.Visible = false;
             panel3.Visible = false;
-            //panel4.Visible = false;
-            //panel5.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
             //panel6.Visible = false;
 
             //disable the left arrow
             left_arrow_pictureBox.Visible = false;
 
-            createTotalTimer();
-
-            createQuestionTimer();
+            CreateTotalTimer();
+            CreateQuestionTimer();
 
             //create question 1 panel
             panel1.Location = new Point(122,75);
@@ -68,52 +70,79 @@ namespace Project_final_2022_2023.Forms
             q3_answer3.Text = y[2];
             q3_answer4.Text = y[3];
 
-            /*
+            //create question 4 panel
             panel4.Location = new Point(122, 75);
             panel4.Size = new Size(1600, 800);
-            
+            question4_richTextBox.Text = ImportData.finalQuestions[3].QText;
+            var z = ImportData.finalQuestions[3].QAnswers[0];
+            q4_label1.Text = z[0];
+            q4_label2.Text = z[1];
+            q4_label3.Text = z[2];
+            q4_label4.Text = z[3];
+
+            //create question 5 panel
             panel5.Location = new Point(122, 75);
             panel5.Size = new Size(1600, 800);
-            
+            question5_richTextBox.Text = ImportData.finalQuestions[4].QText;
+            var colA = ImportData.finalQuestions[4].QAnswers[0];
+            var colB = ImportData.finalQuestions[4].QAnswers[1];
+            if (colA[0].EndsWith("path"))
+            {
+                q5_pentagon_pictureBox.Visible = true;
+                q5_triangle_pictureBox.Visible = true;
+                q5_square_pictureBox.Visible = true;
+            }
+            else
+            {
+                q5_label1.Text = colA[0];
+                q5_label2.Text = colA[1];
+                q5_label3.Text = colA[2];
+                q5_label1.Visible = true;
+                q5_label2.Visible = true;
+                q5_label3.Visible = true;
+            }
+            q5_label4.Text = colB[0];
+            q5_label5.Text = colB[1];
+            q5_label6.Text = colB[2];
+
+            /*
             panel6.Location = new Point(122, 75);
             panel6.Size = new Size(1600, 800);
             */
-
-
         }
 
-        private void createTotalTimer()
+        private void CreateTotalTimer()
         {
             //count total minutes for all 6 final questions
-            foreach (Question i in ImportData.finalQuestions)
+            foreach (Question q in ImportData.finalQuestions)
             {
-                totalTime += i.QTime;
+                totalTime += q.QTime;
             }
-            tm = totalTime / 60; //δεν παίρνω τα δεκαδικά
-            ts = totalTime % 60;
+            tm = totalTime / 60; //minutes
+            ts = totalTime % 60; //seconds
 
             //start total Timer 
-            totalTimer.Interval = 1000; //1s timer
+            totalTimer.Interval = 1000; //1s timer -> 1000ms = 1s
             totalTimer.Enabled = true;
             totalTimer.Start();
         }
 
-        private void createQuestionTimer()
+        private void CreateQuestionTimer()
         {
-            int y = ImportData.finalQuestions[qNumber - 1].QTimeRemaining;
-            if ( y !=0)
+            int qTimeRemaining = ImportData.finalQuestions[qNumber - 1].QTimeRemaining;
+            if ( qTimeRemaining != 0)
             {
-                qm = y / 60;  //δεν παίρνω τα δεκαδικά
-                qs = y % 60;
+                qm = qTimeRemaining / 60;  //minutes
+                qs = qTimeRemaining % 60;  //seconds
             }
 
             //start question Timer
-            questionTimer.Interval = 1000; //1s timer
+            questionTimer.Interval = 1000; //1s timer -> 1000ms = 1s
             questionTimer.Enabled = true;
             questionTimer.Start();
         }
 
-        private void left_arrow_pictureBox_Click(object sender, EventArgs e)
+        private void Left_arrow_pictureBox_Click(object sender, EventArgs e)
         {
             switch (qNumber)
             {
@@ -121,32 +150,34 @@ namespace Project_final_2022_2023.Forms
                     panel2.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel1.Visible = true;
+                    left_arrow_pictureBox.Visible = false;
                     qNumber = 1;
-                    createQuestionTimer();
+                    CreateQuestionTimer();
+                    currentPanel = panel1;
                     break;
                 case 3:
                     panel3.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel2.Visible = true;
                     qNumber = 2;
-                    createQuestionTimer();
+                    CreateQuestionTimer();
+                    currentPanel = panel2;
                     break;
-                    /*
-                    case 4:
-                        panel4.Visible = false;
-                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
-                        panel3.Visible = true;
-                        qNumber = 3;
-                        createQuestionTimer();
-                        break;
-                    case 5:
-                        panel5.Visible = false;
-                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
-                        panel4.Visible = true;
-                        qNumber = 4;
-                        createQuestionTimer();
-                        break;
-                    case 6:
+                case 4:
+                    panel4.Visible = false;
+                    ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
+                    panel3.Visible = true;
+                    qNumber = 3;
+                    CreateQuestionTimer();
+                    break;
+                case 5:
+                    panel5.Visible = false;
+                    ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
+                    panel4.Visible = true;
+                    qNumber = 4;
+                    CreateQuestionTimer();
+                    break;
+                    /*case 6:
                         panel6.Visible = false;
                         ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                         panel5.Visible = true;
@@ -157,9 +188,9 @@ namespace Project_final_2022_2023.Forms
             }
         }
 
-        private void right_arrow_pictureBox_Click(object sender, EventArgs e)
+        private void Right_arrow_pictureBox_Click(object sender, EventArgs e)
         {
-            switch(qNumber)
+            switch (qNumber)
             {
                 case 1:
                     panel1.Visible = false;
@@ -167,30 +198,32 @@ namespace Project_final_2022_2023.Forms
                     panel2.Visible = true;
                     qNumber = 2;
                     left_arrow_pictureBox.Visible = true;
-                    createQuestionTimer();
+                    CreateQuestionTimer();
+                    currentPanel = panel2;
                     break;
                 case 2:
                     panel2.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel3.Visible = true;
                     qNumber = 3;
-                    createQuestionTimer();
+                    CreateQuestionTimer();
+                    currentPanel = panel3;
                     break;
-                    /*case 3:
-                        panel3.Visible = false;
-                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
-                        panel4.Visible = true;
-                        qNumber = 4;
-                        createQuestionTimer();
-                        break;
-                    case 4:
-                        panel4.Visible = false;
-                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
-                        panel5.Visible = true;
-                        qNumber = 5;
-                        createQuestionTimer();
-                        break;
-                    case 5:
+                case 3:
+                    panel3.Visible = false;
+                    ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
+                    panel4.Visible = true;
+                    qNumber = 4;
+                    CreateQuestionTimer();
+                    break;
+                case 4:
+                    panel4.Visible = false;
+                    ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
+                    panel5.Visible = true;
+                    qNumber = 5;
+                    CreateQuestionTimer();
+                    break;
+                    /*case 5:
                         panel5.Visible = false;
                         ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                         panel6.Visible = true;
@@ -224,14 +257,14 @@ namespace Project_final_2022_2023.Forms
             tip_pictureBox.Cursor = Cursors.Hand;
         }
 
-        private void totalTimer_Tick(object sender, EventArgs e)
+        private void TotalTimer_Tick(object sender, EventArgs e)
         {
-            if (ts != 0) 
+            if (ts != 0)
             {
                 ts -= 1;
-                totalTimeTimer_label.Text = string.Format("{0}:{1}", tm.ToString().PadLeft(2, '0'), ts.ToString().PadLeft(2, '0'));
+                totalTimeTimer_label.Text = string.Format("{0}:{1}", tm.ToString().PadLeft(2, '0'), ts.ToString().PadLeft(2, '0'));// if ts = 5, then {0} = 05.
             }
-            else if (ts == 00 & tm != 00)
+            else if (tm != 00) //ts == 00 & tm != 00
             {
                 ts = 59;
                 tm -= 1;
@@ -244,7 +277,7 @@ namespace Project_final_2022_2023.Forms
             }
         }
 
-        private void questionTimer_Tick(object sender, EventArgs e)
+        private void QuestionTimer_Tick(object sender, EventArgs e)
         {
             //is NOT ready
             
@@ -253,7 +286,7 @@ namespace Project_final_2022_2023.Forms
                 qs -= 1;
                 questionTimeTimer_Label.Text = string.Format("{0}:{1}", qm.ToString().PadLeft(2, '0'), qs.ToString().PadLeft(2, '0'));
             }
-            else if (qs == 00 & qm != 00)
+            else if (qm != 00) //qs == 00 & qm != 00
             {
                 qs = 59;
                 qm -= 1;
@@ -263,7 +296,8 @@ namespace Project_final_2022_2023.Forms
             {
                 questionTimer.Stop();
                 questionTimeTimer_Label.Text = "Τέλος Χρόνου";
-            }                    
+                currentPanel.Enabled = false;
+            }
         }
     }
 }
