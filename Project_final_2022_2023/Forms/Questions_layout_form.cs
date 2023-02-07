@@ -16,6 +16,7 @@ namespace Project_final_2022_2023.Forms
         public Questions_layout_form(Info_form form)
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
             form.Dispose();
             qNumber = 1; //start from question1
             totalTime = 0;
@@ -405,6 +406,48 @@ namespace Project_final_2022_2023.Forms
             }
         }
 
+        private void Q6_label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            EnableButtons(6);
+            q6_label1.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label2_MouseDown(object sender, MouseEventArgs e)
+        {
+            EnableButtons(6);
+            q6_label2.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label3_MouseDown(object sender, MouseEventArgs e)
+        {
+            EnableButtons(6);
+            q6_label3.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label4_MouseDown(object sender, MouseEventArgs e)
+        {
+            EnableButtons(6);
+            q6_label4.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label9_MouseDown(object sender, MouseEventArgs e)
+        {
+            EnableButtons(6);
+            q6_label9.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label10_MouseDown(object sender, MouseEventArgs e)
+        {
+            EnableButtons(6);
+            q6_label10.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label11_MouseDown(object sender, MouseEventArgs e)
+        {
+            EnableButtons(6);
+            q6_label11.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
         private void DisableButtons(int question)
         {
             if (question == 5)
@@ -428,13 +471,7 @@ namespace Project_final_2022_2023.Forms
         private void FillData()
         {
             radio_button_trash.Checked = true;
-            //make all panel, except question1, invisible
             panel1.Visible = true;
-            panel2.Visible = false;
-            panel3.Visible = false;
-            panel4.Visible = false;
-            panel5.Visible = false;
-            panel6.Visible = false;
 
             //disable the left arrow
             left_arrow_pictureBox.Visible = false;
@@ -539,6 +576,10 @@ namespace Project_final_2022_2023.Forms
                 q6_label7.Visible = true;
                 q6_label8.Visible = true;
 
+                q6_label1.MouseDown -= new MouseEventHandler(Q6_label1_MouseDown);
+                q6_label2.MouseDown -= new MouseEventHandler(Q6_label2_MouseDown);
+                q6_label3.MouseDown -= new MouseEventHandler(Q6_label3_MouseDown);
+                q6_label4.MouseDown -= new MouseEventHandler(Q6_label4_MouseDown);
             }
             catch
             {

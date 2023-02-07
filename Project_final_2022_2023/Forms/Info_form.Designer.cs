@@ -157,6 +157,7 @@
             this.info_panel.Name = "info_panel";
             this.info_panel.Size = new System.Drawing.Size(1200, 550);
             this.info_panel.TabIndex = 6;
+            this.info_panel.Visible = false;
             // 
             // label1
             // 

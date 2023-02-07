@@ -39,13 +39,6 @@
             this.totalTimer = new System.Windows.Forms.Timer(this.components);
             this.questionTimer = new System.Windows.Forms.Timer(this.components);
             this.background_panel = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.radio_button_trash = new System.Windows.Forms.RadioButton();
-            this.q1_false = new System.Windows.Forms.RadioButton();
-            this.q1_true = new System.Windows.Forms.RadioButton();
-            this.question1Text_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.questionType_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.question1_label = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.q6_button7 = new System.Windows.Forms.Button();
             this.q6_button6 = new System.Windows.Forms.Button();
@@ -116,6 +109,13 @@
             this.question2Text_richTextBox = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.radio_button_trash = new System.Windows.Forms.RadioButton();
+            this.q1_false = new System.Windows.Forms.RadioButton();
+            this.q1_true = new System.Windows.Forms.RadioButton();
+            this.question1Text_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.questionType_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.question1_label = new System.Windows.Forms.Label();
             this.totalTimeTimer_label = new System.Windows.Forms.Label();
             this.questionTimeTimer_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.left_arrow_pictureBox)).BeginInit();
@@ -123,7 +123,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.right_arrow_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tip_pictureBox)).BeginInit();
             this.background_panel.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.q5_pentagon_pictureBox)).BeginInit();
@@ -132,6 +131,7 @@
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // left_arrow_pictureBox
@@ -140,7 +140,7 @@
             this.left_arrow_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.left_arrow_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("left_arrow_pictureBox.Image")));
             this.left_arrow_pictureBox.Location = new System.Drawing.Point(16, 928);
-            this.left_arrow_pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.left_arrow_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.left_arrow_pictureBox.Name = "left_arrow_pictureBox";
             this.left_arrow_pictureBox.Size = new System.Drawing.Size(66, 52);
             this.left_arrow_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -155,7 +155,7 @@
             this.refresh_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.refresh_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("refresh_pictureBox.Image")));
             this.refresh_pictureBox.Location = new System.Drawing.Point(772, 928);
-            this.refresh_pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.refresh_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.refresh_pictureBox.Name = "refresh_pictureBox";
             this.refresh_pictureBox.Size = new System.Drawing.Size(66, 52);
             this.refresh_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -169,7 +169,7 @@
             this.right_arrow_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.right_arrow_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("right_arrow_pictureBox.Image")));
             this.right_arrow_pictureBox.Location = new System.Drawing.Point(1696, 928);
-            this.right_arrow_pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.right_arrow_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.right_arrow_pictureBox.Name = "right_arrow_pictureBox";
             this.right_arrow_pictureBox.Size = new System.Drawing.Size(66, 52);
             this.right_arrow_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -184,7 +184,7 @@
             this.tip_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.tip_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("tip_pictureBox.Image")));
             this.tip_pictureBox.Location = new System.Drawing.Point(898, 928);
-            this.tip_pictureBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tip_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.tip_pictureBox.Name = "tip_pictureBox";
             this.tip_pictureBox.Size = new System.Drawing.Size(66, 52);
             this.tip_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -243,99 +243,10 @@
             this.background_panel.Controls.Add(this.questionTimeTimer_Label);
             this.background_panel.Controls.Add(this.questionTime_label);
             this.background_panel.Location = new System.Drawing.Point(98, 59);
-            this.background_panel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.background_panel.Margin = new System.Windows.Forms.Padding(2);
             this.background_panel.Name = "background_panel";
             this.background_panel.Size = new System.Drawing.Size(1800, 1000);
             this.background_panel.TabIndex = 21;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Controls.Add(this.radio_button_trash);
-            this.panel1.Controls.Add(this.q1_false);
-            this.panel1.Controls.Add(this.q1_true);
-            this.panel1.Controls.Add(this.question1Text_richTextBox);
-            this.panel1.Controls.Add(this.questionType_richTextBox);
-            this.panel1.Controls.Add(this.question1_label);
-            this.panel1.Location = new System.Drawing.Point(12, 119);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1600, 800);
-            this.panel1.TabIndex = 22;
-            // 
-            // radio_button_trash
-            // 
-            this.radio_button_trash.AutoSize = true;
-            this.radio_button_trash.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radio_button_trash.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radio_button_trash.Location = new System.Drawing.Point(704, 563);
-            this.radio_button_trash.Name = "radio_button_trash";
-            this.radio_button_trash.Size = new System.Drawing.Size(107, 37);
-            this.radio_button_trash.TabIndex = 5;
-            this.radio_button_trash.TabStop = true;
-            this.radio_button_trash.Text = "Λάθος";
-            this.radio_button_trash.UseVisualStyleBackColor = true;
-            this.radio_button_trash.Visible = false;
-            // 
-            // q1_false
-            // 
-            this.q1_false.AutoSize = true;
-            this.q1_false.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.q1_false.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q1_false.Location = new System.Drawing.Point(866, 459);
-            this.q1_false.Name = "q1_false";
-            this.q1_false.Size = new System.Drawing.Size(107, 37);
-            this.q1_false.TabIndex = 4;
-            this.q1_false.TabStop = true;
-            this.q1_false.Text = "Λάθος";
-            this.q1_false.UseVisualStyleBackColor = true;
-            // 
-            // q1_true
-            // 
-            this.q1_true.AutoSize = true;
-            this.q1_true.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q1_true.Location = new System.Drawing.Point(551, 460);
-            this.q1_true.Name = "q1_true";
-            this.q1_true.Size = new System.Drawing.Size(103, 36);
-            this.q1_true.TabIndex = 3;
-            this.q1_true.TabStop = true;
-            this.q1_true.Text = "Σωστό";
-            this.q1_true.UseVisualStyleBackColor = true;
-            // 
-            // question1Text_richTextBox
-            // 
-            this.question1Text_richTextBox.BackColor = System.Drawing.Color.Lavender;
-            this.question1Text_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.question1Text_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.question1Text_richTextBox.HideSelection = false;
-            this.question1Text_richTextBox.Location = new System.Drawing.Point(353, 225);
-            this.question1Text_richTextBox.Name = "question1Text_richTextBox";
-            this.question1Text_richTextBox.Size = new System.Drawing.Size(874, 84);
-            this.question1Text_richTextBox.TabIndex = 2;
-            this.question1Text_richTextBox.TabStop = false;
-            this.question1Text_richTextBox.Text = "[Εκφώνηση Ερώτησης Εδώ]";
-            // 
-            // questionType_richTextBox
-            // 
-            this.questionType_richTextBox.BackColor = System.Drawing.Color.Lavender;
-            this.questionType_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.questionType_richTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.questionType_richTextBox.HideSelection = false;
-            this.questionType_richTextBox.Location = new System.Drawing.Point(353, 156);
-            this.questionType_richTextBox.Name = "questionType_richTextBox";
-            this.questionType_richTextBox.Size = new System.Drawing.Size(874, 51);
-            this.questionType_richTextBox.TabIndex = 1;
-            this.questionType_richTextBox.TabStop = false;
-            this.questionType_richTextBox.Text = "Συμπλήρωσε το σωστό/λάθος:";
-            // 
-            // question1_label
-            // 
-            this.question1_label.AutoSize = true;
-            this.question1_label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.question1_label.Location = new System.Drawing.Point(101, 23);
-            this.question1_label.Name = "question1_label";
-            this.question1_label.Size = new System.Drawing.Size(234, 32);
-            this.question1_label.TabIndex = 0;
-            this.question1_label.Text = "Ερώτηση 1 (από 6)";
             // 
             // panel6
             // 
@@ -370,6 +281,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(1600, 800);
             this.panel6.TabIndex = 27;
+            this.panel6.Visible = false;
             // 
             // q6_button7
             // 
@@ -476,6 +388,7 @@
             this.q6_label11.Text = "[A]";
             this.q6_label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.q6_label11.Visible = false;
+            this.q6_label11.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Q6_label11_MouseDown);
             // 
             // q6_label10
             // 
@@ -489,6 +402,7 @@
             this.q6_label10.Text = "[A]";
             this.q6_label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.q6_label10.Visible = false;
+            this.q6_label10.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Q6_label10_MouseDown);
             // 
             // q6_label9
             // 
@@ -502,6 +416,7 @@
             this.q6_label9.Text = "[A]";
             this.q6_label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.q6_label9.Visible = false;
+            this.q6_label9.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Q6_label9_MouseDown);
             // 
             // q6_label8
             // 
@@ -525,6 +440,7 @@
             this.q6_label4.TabIndex = 28;
             this.q6_label4.Text = "[A]";
             this.q6_label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.q6_label4.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Q6_label4_MouseDown);
             // 
             // q6_button4
             // 
@@ -626,6 +542,7 @@
             this.q6_label3.TabIndex = 5;
             this.q6_label3.Text = "[A]";
             this.q6_label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.q6_label3.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Q6_label3_MouseDown);
             // 
             // q6_label2
             // 
@@ -638,6 +555,7 @@
             this.q6_label2.TabIndex = 4;
             this.q6_label2.Text = "[A]";
             this.q6_label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.q6_label2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Q6_label2_MouseDown);
             // 
             // q6_label1
             // 
@@ -650,6 +568,7 @@
             this.q6_label1.TabIndex = 3;
             this.q6_label1.Text = "[A]";
             this.q6_label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.q6_label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Q6_label1_MouseDown);
             // 
             // question6_richTextBox
             // 
@@ -710,6 +629,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1600, 800);
             this.panel5.TabIndex = 26;
+            this.panel5.Visible = false;
             // 
             // q5_button3
             // 
@@ -909,6 +829,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1600, 800);
             this.panel4.TabIndex = 25;
+            this.panel4.Visible = false;
             // 
             // q4_textBox4
             // 
@@ -1032,6 +953,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1600, 800);
             this.panel3.TabIndex = 24;
+            this.panel3.Visible = false;
             // 
             // q3_answer4
             // 
@@ -1134,6 +1056,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1600, 800);
             this.panel2.TabIndex = 23;
+            this.panel2.Visible = false;
             // 
             // q2_answer4
             // 
@@ -1222,6 +1145,96 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Ερώτηση 2 (από 6)";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.radio_button_trash);
+            this.panel1.Controls.Add(this.q1_false);
+            this.panel1.Controls.Add(this.q1_true);
+            this.panel1.Controls.Add(this.question1Text_richTextBox);
+            this.panel1.Controls.Add(this.questionType_richTextBox);
+            this.panel1.Controls.Add(this.question1_label);
+            this.panel1.Location = new System.Drawing.Point(12, 119);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1600, 800);
+            this.panel1.TabIndex = 22;
+            this.panel1.Visible = false;
+            // 
+            // radio_button_trash
+            // 
+            this.radio_button_trash.AutoSize = true;
+            this.radio_button_trash.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radio_button_trash.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radio_button_trash.Location = new System.Drawing.Point(704, 563);
+            this.radio_button_trash.Name = "radio_button_trash";
+            this.radio_button_trash.Size = new System.Drawing.Size(107, 37);
+            this.radio_button_trash.TabIndex = 5;
+            this.radio_button_trash.TabStop = true;
+            this.radio_button_trash.Text = "Λάθος";
+            this.radio_button_trash.UseVisualStyleBackColor = true;
+            this.radio_button_trash.Visible = false;
+            // 
+            // q1_false
+            // 
+            this.q1_false.AutoSize = true;
+            this.q1_false.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.q1_false.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q1_false.Location = new System.Drawing.Point(866, 459);
+            this.q1_false.Name = "q1_false";
+            this.q1_false.Size = new System.Drawing.Size(107, 37);
+            this.q1_false.TabIndex = 4;
+            this.q1_false.TabStop = true;
+            this.q1_false.Text = "Λάθος";
+            this.q1_false.UseVisualStyleBackColor = true;
+            // 
+            // q1_true
+            // 
+            this.q1_true.AutoSize = true;
+            this.q1_true.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q1_true.Location = new System.Drawing.Point(551, 460);
+            this.q1_true.Name = "q1_true";
+            this.q1_true.Size = new System.Drawing.Size(103, 36);
+            this.q1_true.TabIndex = 3;
+            this.q1_true.TabStop = true;
+            this.q1_true.Text = "Σωστό";
+            this.q1_true.UseVisualStyleBackColor = true;
+            // 
+            // question1Text_richTextBox
+            // 
+            this.question1Text_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question1Text_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.question1Text_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question1Text_richTextBox.HideSelection = false;
+            this.question1Text_richTextBox.Location = new System.Drawing.Point(353, 225);
+            this.question1Text_richTextBox.Name = "question1Text_richTextBox";
+            this.question1Text_richTextBox.Size = new System.Drawing.Size(874, 84);
+            this.question1Text_richTextBox.TabIndex = 2;
+            this.question1Text_richTextBox.TabStop = false;
+            this.question1Text_richTextBox.Text = "[Εκφώνηση Ερώτησης Εδώ]";
+            // 
+            // questionType_richTextBox
+            // 
+            this.questionType_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.questionType_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.questionType_richTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.questionType_richTextBox.HideSelection = false;
+            this.questionType_richTextBox.Location = new System.Drawing.Point(353, 156);
+            this.questionType_richTextBox.Name = "questionType_richTextBox";
+            this.questionType_richTextBox.Size = new System.Drawing.Size(874, 51);
+            this.questionType_richTextBox.TabIndex = 1;
+            this.questionType_richTextBox.TabStop = false;
+            this.questionType_richTextBox.Text = "Συμπλήρωσε το σωστό/λάθος:";
+            // 
+            // question1_label
+            // 
+            this.question1_label.AutoSize = true;
+            this.question1_label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.question1_label.Location = new System.Drawing.Point(101, 23);
+            this.question1_label.Name = "question1_label";
+            this.question1_label.Size = new System.Drawing.Size(234, 32);
+            this.question1_label.TabIndex = 0;
+            this.question1_label.Text = "Ερώτηση 1 (από 6)";
+            // 
             // totalTimeTimer_label
             // 
             this.totalTimeTimer_label.AutoSize = true;
@@ -1251,12 +1264,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSteelBlue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(2163, 928);
+            this.ClientSize = new System.Drawing.Size(2163, 1061);
             this.Controls.Add(this.background_panel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Questions_layout_form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -1269,8 +1282,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.tip_pictureBox)).EndInit();
             this.background_panel.ResumeLayout(false);
             this.background_panel.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1284,6 +1295,8 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }

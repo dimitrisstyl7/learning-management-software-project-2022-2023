@@ -9,14 +9,15 @@ namespace Project_final_2022_2023
         public Info_form()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
 
         private void Info_form_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.None;
-
             //set the position of the panel
             info_panel.Location = new Point(this.Width / 2 - info_panel.Width/2, this.Height / 2 - info_panel.Height/2);
+            info_panel.Visible = true;
         }
 
         private void Cancel_pictureBox_MouseClick(object sender, MouseEventArgs e)
