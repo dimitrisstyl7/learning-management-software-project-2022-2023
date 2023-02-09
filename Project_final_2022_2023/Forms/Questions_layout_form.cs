@@ -11,7 +11,6 @@ namespace Project_final_2022_2023.Forms
         private int totalTime;
         private int tm, ts; //totalTimer -> tm = minutes and ts = seconds
         private int qm, qs; //questionTimer -> qm = minutes and qs = seconds
-        private Panel currentPanel;
         
         public Questions_layout_form(Info_form form)
         {
@@ -20,7 +19,6 @@ namespace Project_final_2022_2023.Forms
             form.Dispose();
             qNumber = 1; //start from question1
             totalTime = 0;
-            currentPanel = panel1;
         }
 
         private void Questions_layout_form_Load(object sender, EventArgs e)
@@ -75,7 +73,6 @@ namespace Project_final_2022_2023.Forms
                     left_arrow_pictureBox.Visible = false;
                     qNumber = 1;
                     CreateQuestionTimer();
-                    currentPanel = panel1;
                     break;
                 case 3:
                     panel3.Visible = false;
@@ -83,7 +80,6 @@ namespace Project_final_2022_2023.Forms
                     panel2.Visible = true;
                     qNumber = 2;
                     CreateQuestionTimer();
-                    currentPanel = panel2;
                     break;
                 case 4:
                     panel4.Visible = false;
@@ -120,7 +116,6 @@ namespace Project_final_2022_2023.Forms
                     qNumber = 2;
                     left_arrow_pictureBox.Visible = true;
                     CreateQuestionTimer();
-                    currentPanel = panel2;
                     break;
                 case 2:
                     panel2.Visible = false;
@@ -128,7 +123,6 @@ namespace Project_final_2022_2023.Forms
                     panel3.Visible = true;
                     qNumber = 3;
                     CreateQuestionTimer();
-                    currentPanel = panel3;
                     break;
                 case 3:
                     panel3.Visible = false;
@@ -154,9 +148,12 @@ namespace Project_final_2022_2023.Forms
                 case 6:
                     panel6.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
-                    panel1.Visible = true;
-                    qNumber = 1;
-                    CreateQuestionTimer();
+                    HidePanelButtons();
+                    FillStatusColumn();
+                    q_panel.Visible = true;
+                    questionTimer.Enabled = false;
+                    questionTime_label.Visible = false;
+                    questionTimeTimer_Label.Visible = false;
                     break;
             }
         }
@@ -183,20 +180,20 @@ namespace Project_final_2022_2023.Forms
 
         private void Q5_label4_MouseDown(object sender, MouseEventArgs e)
         {
-            EnableButtons(5);
+            QEnableButtons(5);
             q5_label4.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
 
         }
 
         private void Q5_label5_MouseDown(object sender, MouseEventArgs e)
         {
-            EnableButtons(5);
+            QEnableButtons(5);
             DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
         }
 
         private void Q5_label6_MouseDown(object sender, MouseEventArgs e)
         {
-            EnableButtons(5);
+            QEnableButtons(5);
             q5_label6.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
         }
 
@@ -221,19 +218,19 @@ namespace Project_final_2022_2023.Forms
         private void DropButtton1_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
-            DisableButtons(5);
+            QDisableButtons(5);
         }
 
         private void DropButtton2_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
-            DisableButtons(5);
+            QDisableButtons(5);
         }
 
         private void DropButtton3_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
-            DisableButtons(5);
+            QDisableButtons(5);
         }
 
         private void TotalTimer_Tick(object sender, EventArgs e)
@@ -275,31 +272,30 @@ namespace Project_final_2022_2023.Forms
             {
                 questionTimer.Stop();
                 questionTimeTimer_Label.Text = "Τέλος Χρόνου";
-                currentPanel.Enabled = false;
             }
         }
 
         private void Q6_label14_MouseDown(object sender, MouseEventArgs e)
         {
-            EnableButtons(6);
+            QEnableButtons(6);
             q6_label14.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
         }
 
         private void Q6_label12_MouseDown(object sender, MouseEventArgs e)
         {
-            EnableButtons(6);
+            QEnableButtons(6);
             q6_label12.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
         }
 
         private void Q6_label13_MouseDown(object sender, MouseEventArgs e)
         {
-            EnableButtons(6);
+            QEnableButtons(6);
             q6_label13.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
         }
 
         private void Q6_label15_MouseDown(object sender, MouseEventArgs e)
         {
-            EnableButtons(6);
+            QEnableButtons(6);
             q6_label15.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
         }
 
@@ -348,46 +344,130 @@ namespace Project_final_2022_2023.Forms
         private void Q6_button1_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
-            DisableButtons(6);
+            QDisableButtons(6);
         }
 
         private void Q6_button2_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
-            DisableButtons(6);
+            QDisableButtons(6);
         }
 
         private void Q6_button3_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
-            DisableButtons(6);
+            QDisableButtons(6);
         }
 
         private void Q6_button4_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
-            DisableButtons(6);
+            QDisableButtons(6);
         }
 
         private void Q6_button5_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
-            DisableButtons(6);
+            QDisableButtons(6);
         }
 
         private void Q6_button6_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
-            DisableButtons(6);
+            QDisableButtons(6);
         }
 
         private void Q6_button7_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
-            DisableButtons(6);
+            QDisableButtons(6);
         }
 
-        private void EnableButtons(int question)
+        private void Q6_label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            QEnableButtons(6);
+            q6_label1.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label2_MouseDown(object sender, MouseEventArgs e)
+        {
+            QEnableButtons(6);
+            q6_label2.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label3_MouseDown(object sender, MouseEventArgs e)
+        {
+            QEnableButtons(6);
+            q6_label3.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label4_MouseDown(object sender, MouseEventArgs e)
+        {
+            QEnableButtons(6);
+            q6_label4.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label9_MouseDown(object sender, MouseEventArgs e)
+        {
+            QEnableButtons(6);
+            q6_label9.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label10_MouseDown(object sender, MouseEventArgs e)
+        {
+            QEnableButtons(6);
+            q6_label10.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Q6_label11_MouseDown(object sender, MouseEventArgs e)
+        {
+            QEnableButtons(6);
+            q6_label11.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
+        }
+
+        private void Refresh_pictureBox_Click(object sender, EventArgs e)
+        {
+            switch (qNumber)
+            {
+                case 1:
+                    radio_button_trash.Checked = true;
+                    break;
+                case 2:
+                    q2_answer1.Checked = false;
+                    q2_answer2.Checked = false;
+                    q2_answer3.Checked = false;
+                    q2_answer4.Checked = false;
+                    break;
+                case 3:
+                    q3_answer1.Checked = false;
+                    q3_answer2.Checked = false;
+                    q3_answer3.Checked = false;
+                    q3_answer4.Checked = false;
+                    break;
+                case 4:
+                    q4_textBox1.Text = String.Empty;
+                    q4_textBox2.Text = String.Empty;
+                    q4_textBox3.Text = String.Empty;
+                    q4_textBox4.Text = String.Empty;
+                    break;
+                case 5:
+                    q5_button1.Text = String.Empty;
+                    q5_button2.Text = String.Empty;
+                    q5_button3.Text = String.Empty;
+                    break;
+                case 6:
+                    q6_button1.Text = String.Empty;
+                    q6_button2.Text = String.Empty;
+                    q6_button3.Text = String.Empty;
+                    q6_button4.Text = String.Empty;
+                    q6_button5.Text = String.Empty;
+                    q6_button6.Text = String.Empty;
+                    q6_button7.Text = String.Empty;
+                    break;
+            }
+        }
+
+        private void QEnableButtons(int question)
         {
             if (question == 5)
             {
@@ -395,7 +475,8 @@ namespace Project_final_2022_2023.Forms
                 q5_button2.Enabled = true;
                 q5_button3.Enabled = true;
             }
-            else {
+            else
+            {
                 q6_button1.Enabled = true;
                 q6_button2.Enabled = true;
                 q6_button3.Enabled = true;
@@ -406,49 +487,7 @@ namespace Project_final_2022_2023.Forms
             }
         }
 
-        private void Q6_label1_MouseDown(object sender, MouseEventArgs e)
-        {
-            EnableButtons(6);
-            q6_label1.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
-        }
-
-        private void Q6_label2_MouseDown(object sender, MouseEventArgs e)
-        {
-            EnableButtons(6);
-            q6_label2.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
-        }
-
-        private void Q6_label3_MouseDown(object sender, MouseEventArgs e)
-        {
-            EnableButtons(6);
-            q6_label3.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
-        }
-
-        private void Q6_label4_MouseDown(object sender, MouseEventArgs e)
-        {
-            EnableButtons(6);
-            q6_label4.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
-        }
-
-        private void Q6_label9_MouseDown(object sender, MouseEventArgs e)
-        {
-            EnableButtons(6);
-            q6_label9.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
-        }
-
-        private void Q6_label10_MouseDown(object sender, MouseEventArgs e)
-        {
-            EnableButtons(6);
-            q6_label10.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
-        }
-
-        private void Q6_label11_MouseDown(object sender, MouseEventArgs e)
-        {
-            EnableButtons(6);
-            q6_label11.DoDragDrop(((Label)sender).Text, DragDropEffects.Copy);
-        }
-
-        private void DisableButtons(int question)
+        private void QDisableButtons(int question)
         {
             if (question == 5)
             {
@@ -479,14 +518,19 @@ namespace Project_final_2022_2023.Forms
             CreateTotalTimer();
             CreateQuestionTimer();
 
-            //create question 1 panel
+            //align q_panel to center, change size
+            q_panel.Location = new Point(122, 75);
+            q_panel.Size = new Size(1600, 800);
+
+            //align panel 1 to center, change size
             panel1.Location = new Point(122, 75);
             panel1.Size = new Size(1600, 800);
             question1Text_richTextBox.Text = ImportData.finalQuestions[0].QText;
 
-            //create question 2 panel
+            //align panel2 to center, change size
             panel2.Location = new Point(122, 75);
             panel2.Size = new Size(1600, 800);
+            //import data
             question2Text_richTextBox.Text = ImportData.finalQuestions[1].QText;
             var x = ImportData.finalQuestions[1].QAnswers[0];
             q2_answer1.Text = x[0];
@@ -494,9 +538,10 @@ namespace Project_final_2022_2023.Forms
             q2_answer3.Text = x[2];
             q2_answer4.Text = x[3];
 
-            //create question 3 panel
+            //align panel3 to center, change size
             panel3.Location = new Point(122, 75);
             panel3.Size = new Size(1600, 800);
+            //import data
             question3_richTextBox.Text = ImportData.finalQuestions[2].QText;
             var y = ImportData.finalQuestions[2].QAnswers[0];
             q3_answer1.Text = y[0];
@@ -504,9 +549,10 @@ namespace Project_final_2022_2023.Forms
             q3_answer3.Text = y[2];
             q3_answer4.Text = y[3];
 
-            //create question 4 panel
+            //align panel4 to center, change size
             panel4.Location = new Point(122, 75);
             panel4.Size = new Size(1600, 800);
+            //import data
             question4_richTextBox.Text = ImportData.finalQuestions[3].QText;
             var z = ImportData.finalQuestions[3].QAnswers[0];
             q4_label1.Text = z[0];
@@ -514,9 +560,10 @@ namespace Project_final_2022_2023.Forms
             q4_label3.Text = z[2];
             q4_label4.Text = z[3];
 
-            //create question 5 panel
+            //align panel5 to center, change size
             panel5.Location = new Point(122, 75);
             panel5.Size = new Size(1600, 800);
+            //import data
             question5_richTextBox.Text = ImportData.finalQuestions[4].QText;
             var colA = ImportData.finalQuestions[4].QAnswers[0];
             var colB = ImportData.finalQuestions[4].QAnswers[1];
@@ -540,9 +587,10 @@ namespace Project_final_2022_2023.Forms
             q5_label5.Text = colB[1];
             q5_label6.Text = colB[2];
 
-            //create question 6 panel
+            //align panel6 to center, change size
             panel6.Location = new Point(122, 75);
             panel6.Size = new Size(1600, 800);
+            //import data
             question6_richTextBox.Text = ImportData.finalQuestions[5].QText;
             colA = ImportData.finalQuestions[5].QAnswers[0];
 
@@ -592,6 +640,125 @@ namespace Project_final_2022_2023.Forms
                 q6_button5.Visible = true;
                 q6_button6.Visible = true;
                 q6_button7.Visible = true;
+            }
+        }
+
+        private void HidePanelButtons()
+        {
+            left_arrow_pictureBox.Visible = false;
+            right_arrow_pictureBox.Visible = false;
+            tip_pictureBox.Visible = false;
+            refresh_pictureBox.Visible = false;
+        }
+
+        private void UnhidePanelButtons()
+        {
+            left_arrow_pictureBox.Visible = true;
+            right_arrow_pictureBox.Visible = true;
+            tip_pictureBox.Visible = true;
+            refresh_pictureBox.Visible = true;
+        }
+
+        private void FillStatusColumn()
+        {
+            if (q1_true.Checked || q1_false.Checked)
+            {
+                status1_label.Text = "Απαντήθηκε";
+                status1_label.ForeColor = Color.Green;
+            }
+            else if (ImportData.finalQuestions[0].QTimeRemaining == 0)
+            {
+                status1_label.Text = "Τέλος χρόνου";
+                status1_label.ForeColor = Color.Gray;
+            }
+            else
+            {
+                status1_label.Text = "Δεν απαντήθηκε";
+                status1_label.ForeColor = Color.Red;
+            }
+
+            if (q2_answer1.Checked || q2_answer2.Checked || q2_answer3.Checked || q2_answer4.Checked)
+            {
+                status2_label.Text = "Απαντήθηκε";
+                status2_label.ForeColor = Color.Green;
+            }
+            else if (ImportData.finalQuestions[1].QTimeRemaining == 0)
+            {
+                status2_label.Text = "Τέλος χρόνου";
+                status2_label.ForeColor = Color.Gray;
+            }
+            else
+            {
+                status2_label.Text = "Δεν απαντήθηκε";
+                status2_label.ForeColor = Color.Red;
+            }
+
+            if (q3_answer1.Checked || q3_answer2.Checked || q3_answer3.Checked || q3_answer4.Checked)
+            {
+                status3_label.Text = "Απαντήθηκε";
+                status3_label.ForeColor = Color.Green;
+            }
+            else if (ImportData.finalQuestions[2].QTimeRemaining == 0)
+            {
+                status3_label.Text = "Τέλος χρόνου";
+                status3_label.ForeColor = Color.Gray;
+            }
+            else
+            {
+                status3_label.Text = "Δεν απαντήθηκε";
+                status3_label.ForeColor = Color.Red;
+            }
+
+            if (!String.IsNullOrEmpty(q4_textBox1.Text) || !String.IsNullOrEmpty(q4_textBox2.Text) ||
+                !String.IsNullOrEmpty(q4_textBox3.Text) || !String.IsNullOrEmpty(q4_textBox4.Text))
+            {
+                status4_label.Text = "Απαντήθηκε";
+                status4_label.ForeColor = Color.Green;
+            }
+            else if (ImportData.finalQuestions[3].QTimeRemaining == 0)
+            {
+                status4_label.Text = "Τέλος χρόνου";
+                status4_label.ForeColor = Color.Gray;
+            }
+            else
+            {
+                status4_label.Text = "Δεν απαντήθηκε";
+                status4_label.ForeColor = Color.Red;
+            }
+            
+            if (!String.IsNullOrEmpty(q5_button1.Text) || !String.IsNullOrEmpty(q5_button2.Text) || !String.IsNullOrEmpty(q5_button3.Text))
+            {
+                status5_label.Text = "Απαντήθηκε";
+                status5_label.ForeColor = Color.Green;
+            }
+            else if (ImportData.finalQuestions[4].QTimeRemaining == 0)
+            {
+                status5_label.Text = "Τέλος χρόνου";
+                status5_label.ForeColor = Color.Gray;
+            }
+            else
+            {
+                status5_label.Text = "Δεν απαντήθηκε";
+                status5_label.ForeColor = Color.Red;
+            }
+
+            if (!String.IsNullOrEmpty(q6_button1.Text) || !String.IsNullOrEmpty(q6_button2.Text) ||
+                !String.IsNullOrEmpty(q6_button3.Text) || !String.IsNullOrEmpty(q6_button4.Text) ||
+                !String.IsNullOrEmpty(q6_button5.Text) || !String.IsNullOrEmpty(q6_button6.Text) ||
+                !String.IsNullOrEmpty(q6_button7.Text))
+            {
+                status6_label.Text = "Απαντήθηκε";
+                status6_label.ForeColor = Color.Green;
+            }
+            else if (ImportData.finalQuestions[5].QTimeRemaining == 0)
+            {
+                status6_label.Text = "Τέλος χρόνου";
+                status6_label.ForeColor = Color.Gray;
+            }
+            else
+            {
+                status6_label.Text = "Δεν απαντήθηκε";
+                status6_label.ForeColor = Color.Red;
             }
         }
     }
