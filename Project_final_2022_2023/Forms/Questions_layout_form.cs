@@ -8,17 +8,16 @@ namespace Project_final_2022_2023.Forms
     public partial class Questions_layout_form : Form
     {
         private int qNumber; //it keeps the question that is running right now
-        private int totalTime;
         private int tm, ts; //totalTimer -> tm = minutes and ts = seconds
         private int qm, qs; //questionTimer -> qm = minutes and qs = seconds
-        
+        private Panel currentPanel;
         public Questions_layout_form(Info_form form)
         {
             InitializeComponent();
             this.DoubleBuffered = true;
             form.Dispose();
             qNumber = 1; //start from question1
-            totalTime = 0;
+            currentPanel = panel1;
         }
 
         private void Questions_layout_form_Load(object sender, EventArgs e)
@@ -33,6 +32,7 @@ namespace Project_final_2022_2023.Forms
 
         private void CreateTotalTimer()
         {
+            int totalTime = 0;
             //count total minutes for all 6 final questions
             foreach (Question q in ImportData.finalQuestions)
             {
@@ -50,16 +50,15 @@ namespace Project_final_2022_2023.Forms
         private void CreateQuestionTimer()
         {
             int qTimeRemaining = ImportData.finalQuestions[qNumber - 1].QTimeRemaining;
-            if ( qTimeRemaining != 0)
+            if (qTimeRemaining != 0)
             {
                 qm = qTimeRemaining / 60;  //minutes
                 qs = qTimeRemaining % 60;  //seconds
+                //start question Timer
+                questionTimer.Interval = 1000; //1s timer -> 1000ms = 1s
+                questionTimer.Enabled = true;
+                questionTimer.Start();// move it somewhere else
             }
-
-            //start question Timer
-            questionTimer.Interval = 1000; //1s timer -> 1000ms = 1s
-            questionTimer.Enabled = true;
-            questionTimer.Start();
         }
 
         private void Left_arrow_pictureBox_Click(object sender, EventArgs e)
@@ -70,6 +69,7 @@ namespace Project_final_2022_2023.Forms
                     panel2.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel1.Visible = true;
+                    currentPanel = panel1;
                     left_arrow_pictureBox.Visible = false;
                     qNumber = 1;
                     CreateQuestionTimer();
@@ -78,6 +78,7 @@ namespace Project_final_2022_2023.Forms
                     panel3.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel2.Visible = true;
+                    currentPanel = panel2;
                     qNumber = 2;
                     CreateQuestionTimer();
                     break;
@@ -85,6 +86,7 @@ namespace Project_final_2022_2023.Forms
                     panel4.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel3.Visible = true;
+                    currentPanel = panel3;
                     qNumber = 3;
                     CreateQuestionTimer();
                     break;
@@ -92,6 +94,7 @@ namespace Project_final_2022_2023.Forms
                     panel5.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel4.Visible = true;
+                    currentPanel = panel4;
                     qNumber = 4;
                     CreateQuestionTimer();
                     break;
@@ -99,6 +102,7 @@ namespace Project_final_2022_2023.Forms
                     panel6.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel5.Visible = true;
+                    currentPanel = panel5;
                     qNumber = 5;
                     CreateQuestionTimer();
                     break;
@@ -113,6 +117,7 @@ namespace Project_final_2022_2023.Forms
                     panel1.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel2.Visible = true;
+                    currentPanel = panel2;
                     qNumber = 2;
                     left_arrow_pictureBox.Visible = true;
                     CreateQuestionTimer();
@@ -121,6 +126,7 @@ namespace Project_final_2022_2023.Forms
                     panel2.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel3.Visible = true;
+                    currentPanel = panel3;
                     qNumber = 3;
                     CreateQuestionTimer();
                     break;
@@ -128,6 +134,7 @@ namespace Project_final_2022_2023.Forms
                     panel3.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel4.Visible = true;
+                    currentPanel = panel4;
                     qNumber = 4;
                     CreateQuestionTimer();
                     break;
@@ -135,6 +142,7 @@ namespace Project_final_2022_2023.Forms
                     panel4.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel5.Visible = true;
+                    currentPanel = panel5;
                     qNumber = 5;
                     CreateQuestionTimer();
                     break;
@@ -142,6 +150,7 @@ namespace Project_final_2022_2023.Forms
                     panel5.Visible = false;
                     ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
                     panel6.Visible = true;
+                    currentPanel = panel6;
                     qNumber = 6;
                     CreateQuestionTimer();
                     break;
@@ -240,7 +249,7 @@ namespace Project_final_2022_2023.Forms
                 ts -= 1;
                 totalTimeTimer_label.Text = string.Format("{0}:{1}", tm.ToString().PadLeft(2, '0'), ts.ToString().PadLeft(2, '0'));// if ts = 5, then {0} = 05.
             }
-            else if (tm != 00) //ts == 00 & tm != 00
+            else if (tm != 0) //ts == 0 & tm != 0
             {
                 ts = 59;
                 tm -= 1;
@@ -262,7 +271,7 @@ namespace Project_final_2022_2023.Forms
                 qs -= 1;
                 questionTimeTimer_Label.Text = string.Format("{0}:{1}", qm.ToString().PadLeft(2, '0'), qs.ToString().PadLeft(2, '0'));
             }
-            else if (qm != 00) //qs == 00 & qm != 00
+            else if (qm != 0) //qs == 0 & qm != 0
             {
                 qs = 59;
                 qm -= 1;

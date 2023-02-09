@@ -256,10 +256,10 @@
             // background_panel
             // 
             this.background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_panel.Controls.Add(this.q_panel);
             this.background_panel.Controls.Add(this.panel3);
             this.background_panel.Controls.Add(this.panel5);
             this.background_panel.Controls.Add(this.panel4);
-            this.background_panel.Controls.Add(this.q_panel);
             this.background_panel.Controls.Add(this.panel6);
             this.background_panel.Controls.Add(this.panel2);
             this.background_panel.Controls.Add(this.panel1);
