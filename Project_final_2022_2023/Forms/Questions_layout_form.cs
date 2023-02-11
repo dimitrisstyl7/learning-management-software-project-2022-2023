@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Net.Http.Headers;
 using System.Text;
+using System.Windows.Forms;
 
 namespace Project_final_2022_2023.Forms
 {
@@ -11,6 +12,7 @@ namespace Project_final_2022_2023.Forms
         private int tm, ts; //totalTimer -> tm = minutes and ts = seconds
         private int qm, qs; //questionTimer -> qm = minutes and qs = seconds
         private Panel currentPanel;
+
         public Questions_layout_form(Info_form form)
         {
             InitializeComponent();
@@ -27,7 +29,9 @@ namespace Project_final_2022_2023.Forms
             int width = this.Width / 2 - background_panel.Width / 2;
             int height = this.Height / 2 - background_panel.Height / 2;
             background_panel.Location = new Point(width, height);
-            FillData(); // Fill panels data
+            FillData(); //Fill panels data
+            CreateTotalTimer();
+            CreateQuestionTimer();
         }
 
         private void CreateTotalTimer()
@@ -40,10 +44,6 @@ namespace Project_final_2022_2023.Forms
             }
             tm = totalTime / 60; //minutes
             ts = totalTime % 60; //seconds
-
-            //start total Timer 
-            totalTimer.Interval = 1000; //1s timer -> 1000ms = 1s
-            totalTimer.Enabled = true;
             totalTimer.Start();
         }
 
@@ -54,10 +54,14 @@ namespace Project_final_2022_2023.Forms
             {
                 qm = qTimeRemaining / 60;  //minutes
                 qs = qTimeRemaining % 60;  //seconds
-                //start question Timer
-                questionTimer.Interval = 1000; //1s timer -> 1000ms = 1s
                 questionTimer.Enabled = true;
-                questionTimer.Start();// move it somewhere else
+            }
+            else
+            {
+                questionTimer.Enabled = false;
+                questionTimeTimer_Label.Text = "-";
+                qm = 0;
+                qs = 0;
             }
         }
 
@@ -167,26 +171,6 @@ namespace Project_final_2022_2023.Forms
             }
         }
 
-        private void Left_arrow_pictureBox_MouseHover(object sender, EventArgs e)
-        {
-            left_arrow_pictureBox.Cursor = Cursors.Hand;
-        }
-
-        private void Right_arrow_pictureBox_MouseHover(object sender, EventArgs e)
-        {
-            right_arrow_pictureBox.Cursor = Cursors.Hand;
-        }
-
-        private void Refresh_pictureBox_MouseHover(object sender, EventArgs e)
-        {
-            refresh_pictureBox.Cursor = Cursors.Hand;
-        }
-
-        private void Tip_pictureBox_MouseHover(object sender, EventArgs e)
-        {
-            tip_pictureBox.Cursor = Cursors.Hand;
-        }
-
         private void Q5_label4_MouseDown(object sender, MouseEventArgs e)
         {
             QEnableButtons(5);
@@ -240,48 +224,6 @@ namespace Project_final_2022_2023.Forms
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
             QDisableButtons(5);
-        }
-
-        private void TotalTimer_Tick(object sender, EventArgs e)
-        {
-            if (ts != 0)
-            {
-                ts -= 1;
-                totalTimeTimer_label.Text = string.Format("{0}:{1}", tm.ToString().PadLeft(2, '0'), ts.ToString().PadLeft(2, '0'));// if ts = 5, then {0} = 05.
-            }
-            else if (tm != 0) //ts == 0 & tm != 0
-            {
-                ts = 59;
-                tm -= 1;
-                totalTimeTimer_label.Text = string.Format("{0}:{1}", tm.ToString().PadLeft(2, '0'), ts.ToString().PadLeft(2, '0'));
-            }
-            else
-            {
-                totalTimer.Stop();
-                totalTimeTimer_label.Text = "Τέλος Χρόνου";
-            }
-        }
-
-        private void QuestionTimer_Tick(object sender, EventArgs e)
-        {
-            //is NOT ready
-            
-            if (qs != 0)
-            {
-                qs -= 1;
-                questionTimeTimer_Label.Text = string.Format("{0}:{1}", qm.ToString().PadLeft(2, '0'), qs.ToString().PadLeft(2, '0'));
-            }
-            else if (qm != 0) //qs == 0 & qm != 0
-            {
-                qs = 59;
-                qm -= 1;
-                questionTimeTimer_Label.Text = string.Format("{0}:{1}", qm.ToString().PadLeft(2, '0'), qs.ToString().PadLeft(2, '0'));
-            }
-            else
-            {
-                questionTimer.Stop();
-                questionTimeTimer_Label.Text = "Τέλος Χρόνου";
-            }
         }
 
         private void Q6_label14_MouseDown(object sender, MouseEventArgs e)
@@ -476,6 +418,97 @@ namespace Project_final_2022_2023.Forms
             }
         }
 
+        private void Q1_appear_label_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+            q_panel.Visible = false;
+            qNumber = 1;
+            UnhidePanelButtons();
+        }
+
+        private void Q2_appear_label_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+            q_panel.Visible = false;
+            qNumber = 2;
+            UnhidePanelButtons();
+        }
+
+        private void Q3_appear_label_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = true;
+            q_panel.Visible = false;
+            qNumber = 3;
+            UnhidePanelButtons();
+        }
+
+        private void Q4_appear_label_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+            q_panel.Visible = false;
+            qNumber = 4;
+            UnhidePanelButtons();
+        }
+
+        private void Q5_appear_label_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = true;
+            q_panel.Visible = false;
+            qNumber = 5;
+            UnhidePanelButtons();
+        }
+
+        private void Q6_appear_label_Click(object sender, EventArgs e)
+        {
+            panel6.Visible = true;
+            q_panel.Visible = false;
+            qNumber = 6;
+            UnhidePanelButtons();
+        }
+
+        private void TotalTimer_Tick(object sender, EventArgs e)
+        {
+            if (ts != 0)
+            {
+                ts -= 1;
+                totalTimeTimer_label.Text = string.Format("{0}:{1}", tm.ToString().PadLeft(2, '0'), ts.ToString().PadLeft(2, '0'));// if ts = 5, then {0} = 05.
+            }
+            else if (tm != 0) //ts == 0 & tm != 0
+            {
+                ts = 59;
+                tm -= 1;
+                totalTimeTimer_label.Text = string.Format("{0}:{1}", tm.ToString().PadLeft(2, '0'), ts.ToString().PadLeft(2, '0'));
+            }
+            else
+            {
+                totalTimer.Stop();
+                questionTimer.Stop();
+                totalTimeTimer_label.Text = "Τέλος Χρόνου";
+                //ADD CODE HERE
+            }
+        }
+
+        private void QuestionTimer_Tick(object sender, EventArgs e)
+        {
+            if (qs != 0)
+            {
+                qs -= 1;
+                questionTimeTimer_Label.Text = string.Format("{0}:{1}", qm.ToString().PadLeft(2, '0'), qs.ToString().PadLeft(2, '0'));
+            }
+            else if (qm != 0) //qs == 0 & qm != 0
+            {
+                qs = 59;
+                qm -= 1;
+                questionTimeTimer_Label.Text = string.Format("{0}:{1}", qm.ToString().PadLeft(2, '0'), qs.ToString().PadLeft(2, '0'));
+            }
+            else
+            {
+                questionTimer.Enabled = false;
+                questionTimeTimer_Label.Text = "Τέλος Χρόνου";
+                currentPanel.Enabled = false; //Disable the current panel.
+            }
+        }
+
         private void QEnableButtons(int question)
         {
             if (question == 5)
@@ -523,9 +556,6 @@ namespace Project_final_2022_2023.Forms
 
             //disable the left arrow
             left_arrow_pictureBox.Visible = false;
-
-            CreateTotalTimer();
-            CreateQuestionTimer();
 
             //align q_panel to center, change size
             q_panel.Location = new Point(122, 75);
@@ -649,6 +679,13 @@ namespace Project_final_2022_2023.Forms
                 q6_button5.Visible = true;
                 q6_button6.Visible = true;
                 q6_button7.Visible = true;
+                q6_label1.Cursor = Cursors.SizeAll;
+                q6_label2.Cursor = Cursors.SizeAll;
+                q6_label3.Cursor = Cursors.SizeAll;
+                q6_label4.Cursor = Cursors.SizeAll;
+                q6_label9.Cursor = Cursors.SizeAll;
+                q6_label10.Cursor = Cursors.SizeAll;
+                q6_label11.Cursor = Cursors.SizeAll;
             }
         }
 
