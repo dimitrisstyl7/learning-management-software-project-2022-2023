@@ -1,8 +1,12 @@
-﻿using Project_final_2022_2023.Classes;
+﻿using Microsoft.Office.Interop.Excel;
+using Project_final_2022_2023.Classes;
 using System.Drawing;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Windows.Forms;
+using Button = System.Windows.Forms.Button;
+using Label = System.Windows.Forms.Label;
+using Point = System.Drawing.Point;
 
 namespace Project_final_2022_2023.Forms
 {
@@ -565,47 +569,66 @@ namespace Project_final_2022_2023.Forms
             panel1.Location = new Point(122, 75);
             panel1.Size = new Size(1600, 800);
             question1Text_richTextBox.Text = ImportData.finalQuestions[0].QText;
+            q1_QTip_RichTextBox.Text = ImportData.finalQuestions[0].QTip;
 
             //align panel2 to center, change size
             panel2.Location = new Point(122, 75);
             panel2.Size = new Size(1600, 800);
+
             //import data
             question2Text_richTextBox.Text = ImportData.finalQuestions[1].QText;
-            var x = ImportData.finalQuestions[1].QAnswers[0];
-            q2_answer1.Text = x[0];
-            q2_answer2.Text = x[1];
-            q2_answer3.Text = x[2];
-            q2_answer4.Text = x[3];
+            var data1 = ImportData.finalQuestions[1].QAnswers[0];
+            q2_answer1.Text = data1[0];
+            q2_answer2.Text = data1[1];
+            q2_answer3.Text = data1[2];
+            q2_answer4.Text = data1[3];
 
             //align panel3 to center, change size
             panel3.Location = new Point(122, 75);
             panel3.Size = new Size(1600, 800);
+
             //import data
             question3_richTextBox.Text = ImportData.finalQuestions[2].QText;
-            var y = ImportData.finalQuestions[2].QAnswers[0];
-            q3_answer1.Text = y[0];
-            q3_answer2.Text = y[1];
-            q3_answer3.Text = y[2];
-            q3_answer4.Text = y[3];
+            var data2 = ImportData.finalQuestions[2].QAnswers[0];
+            q3_answer1.Text = data2[0];
+            q3_answer2.Text = data2[1];
+            q3_answer3.Text = data2[2];
+            q3_answer4.Text = data2[3];
 
             //align panel4 to center, change size
             panel4.Location = new Point(122, 75);
             panel4.Size = new Size(1600, 800);
+
             //import data
             question4_richTextBox.Text = ImportData.finalQuestions[3].QText;
-            var z = ImportData.finalQuestions[3].QAnswers[0];
-            q4_label1.Text = z[0];
-            q4_label2.Text = z[1];
-            q4_label3.Text = z[2];
-            q4_label4.Text = z[3];
+            var data3 = ImportData.finalQuestions[3].QAnswers[0];
+            q4_label1.Text = data3[0];
+            q4_label2.Text = data3[1];
+            q4_label3.Text = data3[2];
+            q4_label4.Text = data3[3];
+            string q4_QTip = ImportData.finalQuestions[3].QTip;
+
+            if (q4_QTip.EndsWith("path"))
+            {
+                q4_QTip_RichTextBox.Visible = false;
+                q4_QTip_RichTextBox.Text = String.Empty;
+                if (q4_QTip.StartsWith("example1"))
+                    q4_QTip_PictureBox.Image = Image.FromFile(@"pictures\example1.png");
+                else // q4_QTip.StartsWith("example2")
+                    q4_QTip_PictureBox.Image = Image.FromFile(@"pictures\example2.png");
+            }
+            else
+                q4_QTip_RichTextBox.Text = q4_QTip;
 
             //align panel5 to center, change size
             panel5.Location = new Point(122, 75);
             panel5.Size = new Size(1600, 800);
+
             //import data
             question5_richTextBox.Text = ImportData.finalQuestions[4].QText;
             var colA = ImportData.finalQuestions[4].QAnswers[0];
             var colB = ImportData.finalQuestions[4].QAnswers[1];
+            q5_QTip_RichTextBox.Text = ImportData.finalQuestions[4].QTip;
 
             if (colA[0].EndsWith("path"))
             {
@@ -629,9 +652,11 @@ namespace Project_final_2022_2023.Forms
             //align panel6 to center, change size
             panel6.Location = new Point(122, 75);
             panel6.Size = new Size(1600, 800);
+
             //import data
             question6_richTextBox.Text = ImportData.finalQuestions[5].QText;
             colA = ImportData.finalQuestions[5].QAnswers[0];
+            q6_QTip_RichTextBox.Text = ImportData.finalQuestions[5].QTip;
 
             q6_label1.Text = colA[0].Split('#')[0];
             q6_label2.Text = colA[1].Split('#')[0];
@@ -695,6 +720,75 @@ namespace Project_final_2022_2023.Forms
             right_arrow_pictureBox.Visible = false;
             tip_pictureBox.Visible = false;
             refresh_pictureBox.Visible = false;
+        }
+
+        private void Tip_pictureBox_Click(object sender, EventArgs e)
+        {
+            switch (qNumber)
+            {
+                case 1:
+                    q1_QTip_RichTextBox.Visible = true;
+                    break;
+                case 2:
+                    HideAvailableChoiceQ2(ImportData.finalQuestions[1].QTip);
+                    break;
+                case 3:
+                    HideAvailableChoiceQ3(ImportData.finalQuestions[2].QTip);
+                    break;
+                case 4:
+                    if (String.IsNullOrEmpty(q4_QTip_RichTextBox.Text))
+                        q4_QTip_PictureBox.Visible = true;
+                    else
+                        q4_QTip_RichTextBox.Visible = true;
+                    break;
+                case 5:
+                    if (q5_QTip_RichTextBox.Text.Equals("Μέτρησε τις γωνιές."))
+                        q5_QTip_RichTextBox.Visible = true;
+                    else if (q5_QTip_RichTextBox.Text.Equals("Θεώρημα"))
+                        q5_button1.Text = q5_QTip_RichTextBox.Text;
+                    else // q5_QTip_RichTextBox.Text.Equals("15 + 12")
+                        q5_button3.Text = q5_QTip_RichTextBox.Text;
+                    break;
+                case 6:
+                    if (q6_QTip_RichTextBox.Text.Equals("x"))
+                        q6_button1.Text = q6_QTip_RichTextBox.Text;
+                    else
+                        q6_QTip_RichTextBox.Visible = true;
+                    break;
+
+            }
+        }
+
+        private void HideAvailableChoiceQ2(string hideAnswer)
+        {
+            switch (hideAnswer)
+            {
+                case "2":
+                    q2_answer2.Visible = false;
+                    break;
+                case "3":
+                    q2_answer3.Visible = false;
+                    break;
+                case "4":
+                    q2_answer4.Visible = false;
+                    break;
+            }
+        }
+
+        private void HideAvailableChoiceQ3(string hideAnswer) // The same as the HideAvailableChoiceQ2
+        {
+            switch (hideAnswer)
+            {
+                case "2":
+                    q3_answer2.Visible = false;
+                    break;
+                case "3":
+                    q3_answer3.Visible = false;
+                    break;
+                case "4":
+                    q3_answer4.Visible = false;
+                    break;
+            }
         }
 
         private void UnhidePanelButtons()

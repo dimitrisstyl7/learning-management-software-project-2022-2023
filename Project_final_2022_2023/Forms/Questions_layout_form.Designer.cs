@@ -39,30 +39,22 @@
             this.totalTimer = new System.Windows.Forms.Timer(this.components);
             this.questionTimer = new System.Windows.Forms.Timer(this.components);
             this.background_panel = new System.Windows.Forms.Panel();
-            this.q_panel = new System.Windows.Forms.Panel();
-            this.q6_appear_label = new System.Windows.Forms.Label();
-            this.q5_appear_label = new System.Windows.Forms.Label();
-            this.q4_appear_label = new System.Windows.Forms.Label();
-            this.q3_appear_label = new System.Windows.Forms.Label();
-            this.q2_appear_label = new System.Windows.Forms.Label();
-            this.q1_appear_label = new System.Windows.Forms.Label();
-            this.status2_label = new System.Windows.Forms.Label();
-            this.status3_label = new System.Windows.Forms.Label();
-            this.status4_label = new System.Windows.Forms.Label();
-            this.status5_label = new System.Windows.Forms.Label();
-            this.status6_label = new System.Windows.Forms.Label();
-            this.status1_label = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.q4_QTip_PictureBox = new System.Windows.Forms.PictureBox();
+            this.q4_QTip_RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.q4_textBox4 = new System.Windows.Forms.TextBox();
+            this.q4_textBox3 = new System.Windows.Forms.TextBox();
+            this.q4_textBox2 = new System.Windows.Forms.TextBox();
+            this.q4_textBox1 = new System.Windows.Forms.TextBox();
+            this.q4_label4 = new System.Windows.Forms.Label();
+            this.q4_label3 = new System.Windows.Forms.Label();
+            this.q4_label2 = new System.Windows.Forms.Label();
+            this.q4_label1 = new System.Windows.Forms.Label();
+            this.question4_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.q6_QTip_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.q6_button7 = new System.Windows.Forms.Button();
             this.q6_button6 = new System.Windows.Forms.Button();
             this.q6_button5 = new System.Windows.Forms.Button();
@@ -89,6 +81,7 @@
             this.richTextBox6 = new System.Windows.Forms.RichTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.q5_QTip_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.q5_button3 = new System.Windows.Forms.Button();
             this.q5_button2 = new System.Windows.Forms.Button();
             this.q5_button1 = new System.Windows.Forms.Button();
@@ -104,18 +97,22 @@
             this.question5_richTextBox = new System.Windows.Forms.RichTextBox();
             this.richTextBox5 = new System.Windows.Forms.RichTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.q4_textBox4 = new System.Windows.Forms.TextBox();
-            this.q4_textBox3 = new System.Windows.Forms.TextBox();
-            this.q4_textBox2 = new System.Windows.Forms.TextBox();
-            this.q4_textBox1 = new System.Windows.Forms.TextBox();
-            this.q4_label4 = new System.Windows.Forms.Label();
-            this.q4_label3 = new System.Windows.Forms.Label();
-            this.q4_label2 = new System.Windows.Forms.Label();
-            this.q4_label1 = new System.Windows.Forms.Label();
-            this.question4_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.richTextBox4 = new System.Windows.Forms.RichTextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.q1_QTip_RichTextBox = new System.Windows.Forms.RichTextBox();
+            this.radio_button_trash = new System.Windows.Forms.RadioButton();
+            this.q1_false = new System.Windows.Forms.RadioButton();
+            this.q1_true = new System.Windows.Forms.RadioButton();
+            this.question1Text_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.questionType_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.question1_label = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.q2_answer4 = new System.Windows.Forms.RadioButton();
+            this.q2_answer3 = new System.Windows.Forms.RadioButton();
+            this.q2_answer1 = new System.Windows.Forms.RadioButton();
+            this.q2_answer2 = new System.Windows.Forms.RadioButton();
+            this.question2Text_richTextBox = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.q3_answer4 = new System.Windows.Forms.RadioButton();
@@ -128,21 +125,29 @@
             this.question3_richTextBox = new System.Windows.Forms.RichTextBox();
             this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.q2_answer4 = new System.Windows.Forms.RadioButton();
-            this.q2_answer3 = new System.Windows.Forms.RadioButton();
-            this.q2_answer1 = new System.Windows.Forms.RadioButton();
-            this.q2_answer2 = new System.Windows.Forms.RadioButton();
-            this.question2Text_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.radio_button_trash = new System.Windows.Forms.RadioButton();
-            this.q1_false = new System.Windows.Forms.RadioButton();
-            this.q1_true = new System.Windows.Forms.RadioButton();
-            this.question1Text_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.questionType_richTextBox = new System.Windows.Forms.RichTextBox();
-            this.question1_label = new System.Windows.Forms.Label();
+            this.q_panel = new System.Windows.Forms.Panel();
+            this.q6_appear_label = new System.Windows.Forms.Label();
+            this.q5_appear_label = new System.Windows.Forms.Label();
+            this.q4_appear_label = new System.Windows.Forms.Label();
+            this.q3_appear_label = new System.Windows.Forms.Label();
+            this.q2_appear_label = new System.Windows.Forms.Label();
+            this.q1_appear_label = new System.Windows.Forms.Label();
+            this.status2_label = new System.Windows.Forms.Label();
+            this.status3_label = new System.Windows.Forms.Label();
+            this.status4_label = new System.Windows.Forms.Label();
+            this.status5_label = new System.Windows.Forms.Label();
+            this.status6_label = new System.Windows.Forms.Label();
+            this.status1_label = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.totalTimeTimer_label = new System.Windows.Forms.Label();
             this.questionTimeTimer_Label = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.left_arrow_pictureBox)).BeginInit();
@@ -150,21 +155,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.right_arrow_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tip_pictureBox)).BeginInit();
             this.background_panel.SuspendLayout();
-            this.q_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.q4_QTip_PictureBox)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.q5_pentagon_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.q5_square_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.q5_triangle_pictureBox)).BeginInit();
-            this.panel4.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.q_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // left_arrow_pictureBox
@@ -225,6 +231,7 @@
             this.tip_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.tip_pictureBox.TabIndex = 17;
             this.tip_pictureBox.TabStop = false;
+            this.tip_pictureBox.Click += new System.EventHandler(this.Tip_pictureBox_Click);
             // 
             // totalTime_label
             // 
@@ -264,13 +271,13 @@
             // background_panel
             // 
             this.background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.background_panel.Controls.Add(this.panel5);
-            this.background_panel.Controls.Add(this.panel4);
-            this.background_panel.Controls.Add(this.panel3);
-            this.background_panel.Controls.Add(this.panel2);
-            this.background_panel.Controls.Add(this.panel1);
-            this.background_panel.Controls.Add(this.q_panel);
             this.background_panel.Controls.Add(this.panel6);
+            this.background_panel.Controls.Add(this.panel4);
+            this.background_panel.Controls.Add(this.panel5);
+            this.background_panel.Controls.Add(this.panel1);
+            this.background_panel.Controls.Add(this.panel2);
+            this.background_panel.Controls.Add(this.panel3);
+            this.background_panel.Controls.Add(this.q_panel);
             this.background_panel.Controls.Add(this.right_arrow_pictureBox);
             this.background_panel.Controls.Add(this.totalTimeTimer_label);
             this.background_panel.Controls.Add(this.tip_pictureBox);
@@ -285,278 +292,165 @@
             this.background_panel.Size = new System.Drawing.Size(1800, 1000);
             this.background_panel.TabIndex = 21;
             // 
-            // q_panel
+            // panel4
             // 
-            this.q_panel.AllowDrop = true;
-            this.q_panel.BackColor = System.Drawing.Color.Lavender;
-            this.q_panel.Controls.Add(this.q6_appear_label);
-            this.q_panel.Controls.Add(this.q5_appear_label);
-            this.q_panel.Controls.Add(this.q4_appear_label);
-            this.q_panel.Controls.Add(this.q3_appear_label);
-            this.q_panel.Controls.Add(this.q2_appear_label);
-            this.q_panel.Controls.Add(this.q1_appear_label);
-            this.q_panel.Controls.Add(this.status2_label);
-            this.q_panel.Controls.Add(this.status3_label);
-            this.q_panel.Controls.Add(this.status4_label);
-            this.q_panel.Controls.Add(this.status5_label);
-            this.q_panel.Controls.Add(this.status6_label);
-            this.q_panel.Controls.Add(this.status1_label);
-            this.q_panel.Controls.Add(this.label14);
-            this.q_panel.Controls.Add(this.label13);
-            this.q_panel.Controls.Add(this.label12);
-            this.q_panel.Controls.Add(this.label10);
-            this.q_panel.Controls.Add(this.label9);
-            this.q_panel.Controls.Add(this.label7);
-            this.q_panel.Controls.Add(this.label6);
-            this.q_panel.Controls.Add(this.label5);
-            this.q_panel.Controls.Add(this.label2);
-            this.q_panel.Controls.Add(this.pictureBox1);
-            this.q_panel.Location = new System.Drawing.Point(113, 74);
-            this.q_panel.Name = "q_panel";
-            this.q_panel.Size = new System.Drawing.Size(1600, 800);
-            this.q_panel.TabIndex = 40;
-            this.q_panel.Visible = false;
+            this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.Controls.Add(this.q4_QTip_PictureBox);
+            this.panel4.Controls.Add(this.q4_QTip_RichTextBox);
+            this.panel4.Controls.Add(this.q4_textBox4);
+            this.panel4.Controls.Add(this.q4_textBox3);
+            this.panel4.Controls.Add(this.q4_textBox2);
+            this.panel4.Controls.Add(this.q4_textBox1);
+            this.panel4.Controls.Add(this.q4_label4);
+            this.panel4.Controls.Add(this.q4_label3);
+            this.panel4.Controls.Add(this.q4_label2);
+            this.panel4.Controls.Add(this.q4_label1);
+            this.panel4.Controls.Add(this.question4_richTextBox);
+            this.panel4.Controls.Add(this.richTextBox4);
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Location = new System.Drawing.Point(54, 103);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1600, 800);
+            this.panel4.TabIndex = 25;
+            this.panel4.Visible = false;
             // 
-            // q6_appear_label
+            // q4_QTip_PictureBox
             // 
-            this.q6_appear_label.AutoSize = true;
-            this.q6_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q6_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q6_appear_label.Location = new System.Drawing.Point(999, 620);
-            this.q6_appear_label.Name = "q6_appear_label";
-            this.q6_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q6_appear_label.TabIndex = 39;
-            this.q6_appear_label.Text = "Πατήστε εδώ";
-            this.q6_appear_label.Click += new System.EventHandler(this.Q6_appear_label_Click);
+            this.q4_QTip_PictureBox.Location = new System.Drawing.Point(1086, 358);
+            this.q4_QTip_PictureBox.Name = "q4_QTip_PictureBox";
+            this.q4_QTip_PictureBox.Size = new System.Drawing.Size(234, 231);
+            this.q4_QTip_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.q4_QTip_PictureBox.TabIndex = 12;
+            this.q4_QTip_PictureBox.TabStop = false;
+            this.q4_QTip_PictureBox.Visible = false;
             // 
-            // q5_appear_label
+            // q4_QTip_RichTextBox
             // 
-            this.q5_appear_label.AutoSize = true;
-            this.q5_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q5_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q5_appear_label.Location = new System.Drawing.Point(999, 518);
-            this.q5_appear_label.Name = "q5_appear_label";
-            this.q5_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q5_appear_label.TabIndex = 38;
-            this.q5_appear_label.Text = "Πατήστε εδώ";
-            this.q5_appear_label.Click += new System.EventHandler(this.Q5_appear_label_Click);
+            this.q4_QTip_RichTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.q4_QTip_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.q4_QTip_RichTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_QTip_RichTextBox.HideSelection = false;
+            this.q4_QTip_RichTextBox.Location = new System.Drawing.Point(353, 658);
+            this.q4_QTip_RichTextBox.Name = "q4_QTip_RichTextBox";
+            this.q4_QTip_RichTextBox.Size = new System.Drawing.Size(874, 84);
+            this.q4_QTip_RichTextBox.TabIndex = 11;
+            this.q4_QTip_RichTextBox.TabStop = false;
+            this.q4_QTip_RichTextBox.Text = "[Tip Εδώ]";
+            this.q4_QTip_RichTextBox.Visible = false;
             // 
-            // q4_appear_label
+            // q4_textBox4
             // 
-            this.q4_appear_label.AutoSize = true;
-            this.q4_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q4_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q4_appear_label.Location = new System.Drawing.Point(999, 414);
-            this.q4_appear_label.Name = "q4_appear_label";
-            this.q4_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q4_appear_label.TabIndex = 37;
-            this.q4_appear_label.Text = "Πατήστε εδώ";
-            this.q4_appear_label.Click += new System.EventHandler(this.Q4_appear_label_Click);
+            this.q4_textBox4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_textBox4.Location = new System.Drawing.Point(848, 520);
+            this.q4_textBox4.Name = "q4_textBox4";
+            this.q4_textBox4.Size = new System.Drawing.Size(100, 33);
+            this.q4_textBox4.TabIndex = 10;
             // 
-            // q3_appear_label
+            // q4_textBox3
             // 
-            this.q3_appear_label.AutoSize = true;
-            this.q3_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q3_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q3_appear_label.Location = new System.Drawing.Point(999, 312);
-            this.q3_appear_label.Name = "q3_appear_label";
-            this.q3_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q3_appear_label.TabIndex = 36;
-            this.q3_appear_label.Text = "Πατήστε εδώ";
-            this.q3_appear_label.Click += new System.EventHandler(this.Q3_appear_label_Click);
+            this.q4_textBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_textBox3.Location = new System.Drawing.Point(848, 478);
+            this.q4_textBox3.Name = "q4_textBox3";
+            this.q4_textBox3.Size = new System.Drawing.Size(100, 33);
+            this.q4_textBox3.TabIndex = 9;
             // 
-            // q2_appear_label
+            // q4_textBox2
             // 
-            this.q2_appear_label.AutoSize = true;
-            this.q2_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q2_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q2_appear_label.Location = new System.Drawing.Point(999, 210);
-            this.q2_appear_label.Name = "q2_appear_label";
-            this.q2_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q2_appear_label.TabIndex = 35;
-            this.q2_appear_label.Text = "Πατήστε εδώ";
-            this.q2_appear_label.Click += new System.EventHandler(this.Q2_appear_label_Click);
+            this.q4_textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_textBox2.Location = new System.Drawing.Point(848, 444);
+            this.q4_textBox2.Name = "q4_textBox2";
+            this.q4_textBox2.Size = new System.Drawing.Size(100, 33);
+            this.q4_textBox2.TabIndex = 8;
             // 
-            // q1_appear_label
+            // q4_textBox1
             // 
-            this.q1_appear_label.AutoSize = true;
-            this.q1_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q1_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q1_appear_label.Location = new System.Drawing.Point(999, 108);
-            this.q1_appear_label.Name = "q1_appear_label";
-            this.q1_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q1_appear_label.TabIndex = 34;
-            this.q1_appear_label.Text = "Πατήστε εδώ";
-            this.q1_appear_label.Click += new System.EventHandler(this.Q1_appear_label_Click);
+            this.q4_textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_textBox1.Location = new System.Drawing.Point(848, 407);
+            this.q4_textBox1.Name = "q4_textBox1";
+            this.q4_textBox1.Size = new System.Drawing.Size(100, 33);
+            this.q4_textBox1.TabIndex = 7;
             // 
-            // status2_label
+            // q4_label4
             // 
-            this.status2_label.AutoSize = true;
-            this.status2_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status2_label.Location = new System.Drawing.Point(321, 210);
-            this.status2_label.Name = "status2_label";
-            this.status2_label.Size = new System.Drawing.Size(30, 32);
-            this.status2_label.TabIndex = 33;
-            this.status2_label.Text = "[]";
+            this.q4_label4.AutoSize = true;
+            this.q4_label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_label4.Location = new System.Drawing.Point(688, 510);
+            this.q4_label4.Name = "q4_label4";
+            this.q4_label4.Size = new System.Drawing.Size(148, 32);
+            this.q4_label4.TabIndex = 6;
+            this.q4_label4.Text = "[Πρόταση 4]";
             // 
-            // status3_label
+            // q4_label3
             // 
-            this.status3_label.AutoSize = true;
-            this.status3_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status3_label.Location = new System.Drawing.Point(321, 312);
-            this.status3_label.Name = "status3_label";
-            this.status3_label.Size = new System.Drawing.Size(30, 32);
-            this.status3_label.TabIndex = 32;
-            this.status3_label.Text = "[]";
+            this.q4_label3.AutoSize = true;
+            this.q4_label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_label3.Location = new System.Drawing.Point(688, 471);
+            this.q4_label3.Name = "q4_label3";
+            this.q4_label3.Size = new System.Drawing.Size(148, 32);
+            this.q4_label3.TabIndex = 5;
+            this.q4_label3.Text = "[Πρόταση 3]";
             // 
-            // status4_label
+            // q4_label2
             // 
-            this.status4_label.AutoSize = true;
-            this.status4_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status4_label.Location = new System.Drawing.Point(321, 420);
-            this.status4_label.Name = "status4_label";
-            this.status4_label.Size = new System.Drawing.Size(30, 32);
-            this.status4_label.TabIndex = 31;
-            this.status4_label.Text = "[]";
+            this.q4_label2.AutoSize = true;
+            this.q4_label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_label2.Location = new System.Drawing.Point(688, 437);
+            this.q4_label2.Name = "q4_label2";
+            this.q4_label2.Size = new System.Drawing.Size(148, 32);
+            this.q4_label2.TabIndex = 4;
+            this.q4_label2.Text = "[Πρόταση 2]";
             // 
-            // status5_label
+            // q4_label1
             // 
-            this.status5_label.AutoSize = true;
-            this.status5_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status5_label.Location = new System.Drawing.Point(321, 518);
-            this.status5_label.Name = "status5_label";
-            this.status5_label.Size = new System.Drawing.Size(30, 32);
-            this.status5_label.TabIndex = 30;
-            this.status5_label.Text = "[]";
+            this.q4_label1.AutoSize = true;
+            this.q4_label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_label1.Location = new System.Drawing.Point(688, 400);
+            this.q4_label1.Name = "q4_label1";
+            this.q4_label1.Size = new System.Drawing.Size(148, 32);
+            this.q4_label1.TabIndex = 3;
+            this.q4_label1.Text = "[Πρόταση 1]";
             // 
-            // status6_label
+            // question4_richTextBox
             // 
-            this.status6_label.AutoSize = true;
-            this.status6_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status6_label.Location = new System.Drawing.Point(321, 616);
-            this.status6_label.Name = "status6_label";
-            this.status6_label.Size = new System.Drawing.Size(30, 32);
-            this.status6_label.TabIndex = 29;
-            this.status6_label.Text = "[]";
+            this.question4_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question4_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.question4_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question4_richTextBox.HideSelection = false;
+            this.question4_richTextBox.Location = new System.Drawing.Point(353, 225);
+            this.question4_richTextBox.Name = "question4_richTextBox";
+            this.question4_richTextBox.Size = new System.Drawing.Size(874, 84);
+            this.question4_richTextBox.TabIndex = 2;
+            this.question4_richTextBox.TabStop = false;
+            this.question4_richTextBox.Text = "[Εκφώνηση Ερώτησης Εδώ]";
             // 
-            // status1_label
+            // richTextBox4
             // 
-            this.status1_label.AutoSize = true;
-            this.status1_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status1_label.Location = new System.Drawing.Point(321, 108);
-            this.status1_label.Name = "status1_label";
-            this.status1_label.Size = new System.Drawing.Size(30, 32);
-            this.status1_label.TabIndex = 28;
-            this.status1_label.Text = "[]";
+            this.richTextBox4.BackColor = System.Drawing.Color.Lavender;
+            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox4.HideSelection = false;
+            this.richTextBox4.Location = new System.Drawing.Point(353, 156);
+            this.richTextBox4.Name = "richTextBox4";
+            this.richTextBox4.Size = new System.Drawing.Size(874, 51);
+            this.richTextBox4.TabIndex = 1;
+            this.richTextBox4.TabStop = false;
+            this.richTextBox4.Text = "Συμπλήρωσε τα κενά:";
             // 
-            // label14
+            // label1
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(221, 30);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(313, 37);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Κατάσταση ερωτήσεων";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(924, 30);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(271, 37);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Εμφάνιση ερώτησης";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(568, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(289, 37);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Διαθέσιμες ερωτήσεις";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(649, 210);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 32);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Ερώτηση 2";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(649, 312);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 32);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Ερώτηση 3";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(649, 420);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 32);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Ερώτηση 4";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(649, 518);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 32);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Ερώτηση 5";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(649, 616);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 32);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Ερώτηση 6";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(649, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 32);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Ερώτηση 1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(688, 746);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(66, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 18;
-            this.pictureBox1.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(101, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(234, 32);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Ερώτηση 4 (από 6)";
             // 
             // panel6
             // 
             this.panel6.AllowDrop = true;
             this.panel6.BackColor = System.Drawing.Color.Lavender;
+            this.panel6.Controls.Add(this.q6_QTip_RichTextBox);
             this.panel6.Controls.Add(this.q6_button7);
             this.panel6.Controls.Add(this.q6_button6);
             this.panel6.Controls.Add(this.q6_button5);
@@ -587,6 +481,20 @@
             this.panel6.Size = new System.Drawing.Size(1600, 800);
             this.panel6.TabIndex = 27;
             this.panel6.Visible = false;
+            // 
+            // q6_QTip_RichTextBox
+            // 
+            this.q6_QTip_RichTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.q6_QTip_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.q6_QTip_RichTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_QTip_RichTextBox.HideSelection = false;
+            this.q6_QTip_RichTextBox.Location = new System.Drawing.Point(1050, 405);
+            this.q6_QTip_RichTextBox.Name = "q6_QTip_RichTextBox";
+            this.q6_QTip_RichTextBox.Size = new System.Drawing.Size(401, 201);
+            this.q6_QTip_RichTextBox.TabIndex = 40;
+            this.q6_QTip_RichTextBox.TabStop = false;
+            this.q6_QTip_RichTextBox.Text = "[Tip Εδώ]";
+            this.q6_QTip_RichTextBox.Visible = false;
             // 
             // q6_button7
             // 
@@ -926,6 +834,7 @@
             // 
             this.panel5.AllowDrop = true;
             this.panel5.BackColor = System.Drawing.Color.Lavender;
+            this.panel5.Controls.Add(this.q5_QTip_RichTextBox);
             this.panel5.Controls.Add(this.q5_button3);
             this.panel5.Controls.Add(this.q5_button2);
             this.panel5.Controls.Add(this.q5_button1);
@@ -946,6 +855,20 @@
             this.panel5.Size = new System.Drawing.Size(1600, 800);
             this.panel5.TabIndex = 26;
             this.panel5.Visible = false;
+            // 
+            // q5_QTip_RichTextBox
+            // 
+            this.q5_QTip_RichTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.q5_QTip_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.q5_QTip_RichTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_QTip_RichTextBox.HideSelection = false;
+            this.q5_QTip_RichTextBox.Location = new System.Drawing.Point(359, 679);
+            this.q5_QTip_RichTextBox.Name = "q5_QTip_RichTextBox";
+            this.q5_QTip_RichTextBox.Size = new System.Drawing.Size(874, 84);
+            this.q5_QTip_RichTextBox.TabIndex = 27;
+            this.q5_QTip_RichTextBox.TabStop = false;
+            this.q5_QTip_RichTextBox.Text = "[Tip Εδώ]";
+            this.q5_QTip_RichTextBox.Visible = false;
             // 
             // q5_button3
             // 
@@ -1133,133 +1056,221 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Ερώτηση 5 (από 6)";
             // 
-            // panel4
+            // panel1
             // 
-            this.panel4.BackColor = System.Drawing.Color.Lavender;
-            this.panel4.Controls.Add(this.q4_textBox4);
-            this.panel4.Controls.Add(this.q4_textBox3);
-            this.panel4.Controls.Add(this.q4_textBox2);
-            this.panel4.Controls.Add(this.q4_textBox1);
-            this.panel4.Controls.Add(this.q4_label4);
-            this.panel4.Controls.Add(this.q4_label3);
-            this.panel4.Controls.Add(this.q4_label2);
-            this.panel4.Controls.Add(this.q4_label1);
-            this.panel4.Controls.Add(this.question4_richTextBox);
-            this.panel4.Controls.Add(this.richTextBox4);
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(54, 103);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1600, 800);
-            this.panel4.TabIndex = 25;
-            this.panel4.Visible = false;
+            this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.Controls.Add(this.q1_QTip_RichTextBox);
+            this.panel1.Controls.Add(this.radio_button_trash);
+            this.panel1.Controls.Add(this.q1_false);
+            this.panel1.Controls.Add(this.q1_true);
+            this.panel1.Controls.Add(this.question1Text_richTextBox);
+            this.panel1.Controls.Add(this.questionType_richTextBox);
+            this.panel1.Controls.Add(this.question1_label);
+            this.panel1.Location = new System.Drawing.Point(3, 137);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1600, 800);
+            this.panel1.TabIndex = 22;
+            this.panel1.Visible = false;
             // 
-            // q4_textBox4
+            // q1_QTip_RichTextBox
             // 
-            this.q4_textBox4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q4_textBox4.Location = new System.Drawing.Point(848, 520);
-            this.q4_textBox4.Name = "q4_textBox4";
-            this.q4_textBox4.Size = new System.Drawing.Size(100, 33);
-            this.q4_textBox4.TabIndex = 10;
+            this.q1_QTip_RichTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.q1_QTip_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.q1_QTip_RichTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q1_QTip_RichTextBox.HideSelection = false;
+            this.q1_QTip_RichTextBox.Location = new System.Drawing.Point(353, 683);
+            this.q1_QTip_RichTextBox.Name = "q1_QTip_RichTextBox";
+            this.q1_QTip_RichTextBox.Size = new System.Drawing.Size(874, 84);
+            this.q1_QTip_RichTextBox.TabIndex = 6;
+            this.q1_QTip_RichTextBox.TabStop = false;
+            this.q1_QTip_RichTextBox.Text = "[Tip Εδώ]";
+            this.q1_QTip_RichTextBox.Visible = false;
             // 
-            // q4_textBox3
+            // radio_button_trash
             // 
-            this.q4_textBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q4_textBox3.Location = new System.Drawing.Point(848, 478);
-            this.q4_textBox3.Name = "q4_textBox3";
-            this.q4_textBox3.Size = new System.Drawing.Size(100, 33);
-            this.q4_textBox3.TabIndex = 9;
+            this.radio_button_trash.AutoSize = true;
+            this.radio_button_trash.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.radio_button_trash.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radio_button_trash.Location = new System.Drawing.Point(704, 563);
+            this.radio_button_trash.Name = "radio_button_trash";
+            this.radio_button_trash.Size = new System.Drawing.Size(107, 37);
+            this.radio_button_trash.TabIndex = 5;
+            this.radio_button_trash.TabStop = true;
+            this.radio_button_trash.Text = "Λάθος";
+            this.radio_button_trash.UseVisualStyleBackColor = true;
+            this.radio_button_trash.Visible = false;
             // 
-            // q4_textBox2
+            // q1_false
             // 
-            this.q4_textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q4_textBox2.Location = new System.Drawing.Point(848, 444);
-            this.q4_textBox2.Name = "q4_textBox2";
-            this.q4_textBox2.Size = new System.Drawing.Size(100, 33);
-            this.q4_textBox2.TabIndex = 8;
+            this.q1_false.AutoSize = true;
+            this.q1_false.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q1_false.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.q1_false.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q1_false.Location = new System.Drawing.Point(866, 459);
+            this.q1_false.Name = "q1_false";
+            this.q1_false.Size = new System.Drawing.Size(107, 37);
+            this.q1_false.TabIndex = 4;
+            this.q1_false.TabStop = true;
+            this.q1_false.Text = "Λάθος";
+            this.q1_false.UseVisualStyleBackColor = true;
             // 
-            // q4_textBox1
+            // q1_true
             // 
-            this.q4_textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q4_textBox1.Location = new System.Drawing.Point(848, 407);
-            this.q4_textBox1.Name = "q4_textBox1";
-            this.q4_textBox1.Size = new System.Drawing.Size(100, 33);
-            this.q4_textBox1.TabIndex = 7;
+            this.q1_true.AutoSize = true;
+            this.q1_true.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q1_true.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.q1_true.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q1_true.Location = new System.Drawing.Point(551, 460);
+            this.q1_true.Name = "q1_true";
+            this.q1_true.Size = new System.Drawing.Size(109, 37);
+            this.q1_true.TabIndex = 3;
+            this.q1_true.TabStop = true;
+            this.q1_true.Text = "Σωστό";
+            this.q1_true.UseVisualStyleBackColor = true;
             // 
-            // q4_label4
+            // question1Text_richTextBox
             // 
-            this.q4_label4.AutoSize = true;
-            this.q4_label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q4_label4.Location = new System.Drawing.Point(688, 510);
-            this.q4_label4.Name = "q4_label4";
-            this.q4_label4.Size = new System.Drawing.Size(148, 32);
-            this.q4_label4.TabIndex = 6;
-            this.q4_label4.Text = "[Πρόταση 4]";
+            this.question1Text_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question1Text_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.question1Text_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question1Text_richTextBox.HideSelection = false;
+            this.question1Text_richTextBox.Location = new System.Drawing.Point(353, 225);
+            this.question1Text_richTextBox.Name = "question1Text_richTextBox";
+            this.question1Text_richTextBox.Size = new System.Drawing.Size(874, 84);
+            this.question1Text_richTextBox.TabIndex = 2;
+            this.question1Text_richTextBox.TabStop = false;
+            this.question1Text_richTextBox.Text = "[Εκφώνηση Ερώτησης Εδώ]";
             // 
-            // q4_label3
+            // questionType_richTextBox
             // 
-            this.q4_label3.AutoSize = true;
-            this.q4_label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q4_label3.Location = new System.Drawing.Point(688, 471);
-            this.q4_label3.Name = "q4_label3";
-            this.q4_label3.Size = new System.Drawing.Size(148, 32);
-            this.q4_label3.TabIndex = 5;
-            this.q4_label3.Text = "[Πρόταση 3]";
+            this.questionType_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.questionType_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.questionType_richTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.questionType_richTextBox.HideSelection = false;
+            this.questionType_richTextBox.Location = new System.Drawing.Point(353, 156);
+            this.questionType_richTextBox.Name = "questionType_richTextBox";
+            this.questionType_richTextBox.Size = new System.Drawing.Size(874, 51);
+            this.questionType_richTextBox.TabIndex = 1;
+            this.questionType_richTextBox.TabStop = false;
+            this.questionType_richTextBox.Text = "Συμπλήρωσε το σωστό/λάθος:";
             // 
-            // q4_label2
+            // question1_label
             // 
-            this.q4_label2.AutoSize = true;
-            this.q4_label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q4_label2.Location = new System.Drawing.Point(688, 437);
-            this.q4_label2.Name = "q4_label2";
-            this.q4_label2.Size = new System.Drawing.Size(148, 32);
-            this.q4_label2.TabIndex = 4;
-            this.q4_label2.Text = "[Πρόταση 2]";
+            this.question1_label.AutoSize = true;
+            this.question1_label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.question1_label.Location = new System.Drawing.Point(101, 23);
+            this.question1_label.Name = "question1_label";
+            this.question1_label.Size = new System.Drawing.Size(234, 32);
+            this.question1_label.TabIndex = 0;
+            this.question1_label.Text = "Ερώτηση 1 (από 6)";
             // 
-            // q4_label1
+            // panel2
             // 
-            this.q4_label1.AutoSize = true;
-            this.q4_label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q4_label1.Location = new System.Drawing.Point(688, 400);
-            this.q4_label1.Name = "q4_label1";
-            this.q4_label1.Size = new System.Drawing.Size(148, 32);
-            this.q4_label1.TabIndex = 3;
-            this.q4_label1.Text = "[Πρόταση 1]";
+            this.panel2.BackColor = System.Drawing.Color.Lavender;
+            this.panel2.Controls.Add(this.q2_answer4);
+            this.panel2.Controls.Add(this.q2_answer3);
+            this.panel2.Controls.Add(this.q2_answer1);
+            this.panel2.Controls.Add(this.q2_answer2);
+            this.panel2.Controls.Add(this.question2Text_richTextBox);
+            this.panel2.Controls.Add(this.richTextBox2);
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(16, 126);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1600, 800);
+            this.panel2.TabIndex = 23;
+            this.panel2.Visible = false;
             // 
-            // question4_richTextBox
+            // q2_answer4
             // 
-            this.question4_richTextBox.BackColor = System.Drawing.Color.Lavender;
-            this.question4_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.question4_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.question4_richTextBox.HideSelection = false;
-            this.question4_richTextBox.Location = new System.Drawing.Point(353, 225);
-            this.question4_richTextBox.Name = "question4_richTextBox";
-            this.question4_richTextBox.Size = new System.Drawing.Size(874, 84);
-            this.question4_richTextBox.TabIndex = 2;
-            this.question4_richTextBox.TabStop = false;
-            this.question4_richTextBox.Text = "[Εκφώνηση Ερώτησης Εδώ]";
+            this.q2_answer4.AutoSize = true;
+            this.q2_answer4.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q2_answer4.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.q2_answer4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q2_answer4.Location = new System.Drawing.Point(848, 520);
+            this.q2_answer4.Name = "q2_answer4";
+            this.q2_answer4.Size = new System.Drawing.Size(184, 37);
+            this.q2_answer4.TabIndex = 6;
+            this.q2_answer4.TabStop = true;
+            this.q2_answer4.Text = "[Απάντηση 4]";
+            this.q2_answer4.UseVisualStyleBackColor = true;
             // 
-            // richTextBox4
+            // q2_answer3
             // 
-            this.richTextBox4.BackColor = System.Drawing.Color.Lavender;
-            this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox4.HideSelection = false;
-            this.richTextBox4.Location = new System.Drawing.Point(353, 156);
-            this.richTextBox4.Name = "richTextBox4";
-            this.richTextBox4.Size = new System.Drawing.Size(874, 51);
-            this.richTextBox4.TabIndex = 1;
-            this.richTextBox4.TabStop = false;
-            this.richTextBox4.Text = "Συμπλήρωσε τα κενά:";
+            this.q2_answer3.AutoSize = true;
+            this.q2_answer3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q2_answer3.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.q2_answer3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q2_answer3.Location = new System.Drawing.Point(511, 520);
+            this.q2_answer3.Name = "q2_answer3";
+            this.q2_answer3.Size = new System.Drawing.Size(184, 37);
+            this.q2_answer3.TabIndex = 5;
+            this.q2_answer3.TabStop = true;
+            this.q2_answer3.Text = "[Απάντηση 3]";
+            this.q2_answer3.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // q2_answer1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(101, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 32);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ερώτηση 4 (από 6)";
+            this.q2_answer1.AutoSize = true;
+            this.q2_answer1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q2_answer1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.q2_answer1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q2_answer1.Location = new System.Drawing.Point(511, 418);
+            this.q2_answer1.Name = "q2_answer1";
+            this.q2_answer1.Size = new System.Drawing.Size(184, 37);
+            this.q2_answer1.TabIndex = 4;
+            this.q2_answer1.TabStop = true;
+            this.q2_answer1.Text = "[Απάντηση 1]";
+            this.q2_answer1.UseVisualStyleBackColor = true;
+            // 
+            // q2_answer2
+            // 
+            this.q2_answer2.AutoSize = true;
+            this.q2_answer2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q2_answer2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.q2_answer2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q2_answer2.Location = new System.Drawing.Point(848, 419);
+            this.q2_answer2.Name = "q2_answer2";
+            this.q2_answer2.Size = new System.Drawing.Size(184, 37);
+            this.q2_answer2.TabIndex = 3;
+            this.q2_answer2.TabStop = true;
+            this.q2_answer2.Text = "[Απάντηση 2]";
+            this.q2_answer2.UseVisualStyleBackColor = true;
+            // 
+            // question2Text_richTextBox
+            // 
+            this.question2Text_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question2Text_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.question2Text_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question2Text_richTextBox.HideSelection = false;
+            this.question2Text_richTextBox.Location = new System.Drawing.Point(353, 225);
+            this.question2Text_richTextBox.Name = "question2Text_richTextBox";
+            this.question2Text_richTextBox.Size = new System.Drawing.Size(874, 84);
+            this.question2Text_richTextBox.TabIndex = 2;
+            this.question2Text_richTextBox.TabStop = false;
+            this.question2Text_richTextBox.Text = "[Εκφώνηση Ερώτησης Εδώ]";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.BackColor = System.Drawing.Color.Lavender;
+            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox2.HideSelection = false;
+            this.richTextBox2.Location = new System.Drawing.Point(353, 156);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(874, 51);
+            this.richTextBox2.TabIndex = 1;
+            this.richTextBox2.TabStop = false;
+            this.richTextBox2.Text = "Επέλεξε μία σωστή απάντηση στην παρακάτω ερώτηση:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(101, 23);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(234, 32);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Ερώτηση 2 (από 6)";
             // 
             // panel3
             // 
@@ -1401,206 +1412,273 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Ερώτηση 3 (από 6)";
             // 
-            // panel2
+            // q_panel
             // 
-            this.panel2.BackColor = System.Drawing.Color.Lavender;
-            this.panel2.Controls.Add(this.q2_answer4);
-            this.panel2.Controls.Add(this.q2_answer3);
-            this.panel2.Controls.Add(this.q2_answer1);
-            this.panel2.Controls.Add(this.q2_answer2);
-            this.panel2.Controls.Add(this.question2Text_richTextBox);
-            this.panel2.Controls.Add(this.richTextBox2);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Location = new System.Drawing.Point(16, 126);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1600, 800);
-            this.panel2.TabIndex = 23;
-            this.panel2.Visible = false;
+            this.q_panel.AllowDrop = true;
+            this.q_panel.BackColor = System.Drawing.Color.Lavender;
+            this.q_panel.Controls.Add(this.q6_appear_label);
+            this.q_panel.Controls.Add(this.q5_appear_label);
+            this.q_panel.Controls.Add(this.q4_appear_label);
+            this.q_panel.Controls.Add(this.q3_appear_label);
+            this.q_panel.Controls.Add(this.q2_appear_label);
+            this.q_panel.Controls.Add(this.q1_appear_label);
+            this.q_panel.Controls.Add(this.status2_label);
+            this.q_panel.Controls.Add(this.status3_label);
+            this.q_panel.Controls.Add(this.status4_label);
+            this.q_panel.Controls.Add(this.status5_label);
+            this.q_panel.Controls.Add(this.status6_label);
+            this.q_panel.Controls.Add(this.status1_label);
+            this.q_panel.Controls.Add(this.label14);
+            this.q_panel.Controls.Add(this.label13);
+            this.q_panel.Controls.Add(this.label12);
+            this.q_panel.Controls.Add(this.label10);
+            this.q_panel.Controls.Add(this.label9);
+            this.q_panel.Controls.Add(this.label7);
+            this.q_panel.Controls.Add(this.label6);
+            this.q_panel.Controls.Add(this.label5);
+            this.q_panel.Controls.Add(this.label2);
+            this.q_panel.Controls.Add(this.pictureBox1);
+            this.q_panel.Location = new System.Drawing.Point(113, 74);
+            this.q_panel.Name = "q_panel";
+            this.q_panel.Size = new System.Drawing.Size(1600, 800);
+            this.q_panel.TabIndex = 40;
+            this.q_panel.Visible = false;
             // 
-            // q2_answer4
+            // q6_appear_label
             // 
-            this.q2_answer4.AutoSize = true;
-            this.q2_answer4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q2_answer4.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.q2_answer4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q2_answer4.Location = new System.Drawing.Point(848, 520);
-            this.q2_answer4.Name = "q2_answer4";
-            this.q2_answer4.Size = new System.Drawing.Size(184, 37);
-            this.q2_answer4.TabIndex = 6;
-            this.q2_answer4.TabStop = true;
-            this.q2_answer4.Text = "[Απάντηση 4]";
-            this.q2_answer4.UseVisualStyleBackColor = true;
+            this.q6_appear_label.AutoSize = true;
+            this.q6_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q6_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q6_appear_label.Location = new System.Drawing.Point(999, 620);
+            this.q6_appear_label.Name = "q6_appear_label";
+            this.q6_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q6_appear_label.TabIndex = 39;
+            this.q6_appear_label.Text = "Πατήστε εδώ";
+            this.q6_appear_label.Click += new System.EventHandler(this.Q6_appear_label_Click);
             // 
-            // q2_answer3
+            // q5_appear_label
             // 
-            this.q2_answer3.AutoSize = true;
-            this.q2_answer3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q2_answer3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.q2_answer3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q2_answer3.Location = new System.Drawing.Point(511, 520);
-            this.q2_answer3.Name = "q2_answer3";
-            this.q2_answer3.Size = new System.Drawing.Size(184, 37);
-            this.q2_answer3.TabIndex = 5;
-            this.q2_answer3.TabStop = true;
-            this.q2_answer3.Text = "[Απάντηση 3]";
-            this.q2_answer3.UseVisualStyleBackColor = true;
+            this.q5_appear_label.AutoSize = true;
+            this.q5_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q5_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q5_appear_label.Location = new System.Drawing.Point(999, 518);
+            this.q5_appear_label.Name = "q5_appear_label";
+            this.q5_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q5_appear_label.TabIndex = 38;
+            this.q5_appear_label.Text = "Πατήστε εδώ";
+            this.q5_appear_label.Click += new System.EventHandler(this.Q5_appear_label_Click);
             // 
-            // q2_answer1
+            // q4_appear_label
             // 
-            this.q2_answer1.AutoSize = true;
-            this.q2_answer1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q2_answer1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.q2_answer1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q2_answer1.Location = new System.Drawing.Point(511, 418);
-            this.q2_answer1.Name = "q2_answer1";
-            this.q2_answer1.Size = new System.Drawing.Size(184, 37);
-            this.q2_answer1.TabIndex = 4;
-            this.q2_answer1.TabStop = true;
-            this.q2_answer1.Text = "[Απάντηση 1]";
-            this.q2_answer1.UseVisualStyleBackColor = true;
+            this.q4_appear_label.AutoSize = true;
+            this.q4_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q4_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q4_appear_label.Location = new System.Drawing.Point(999, 414);
+            this.q4_appear_label.Name = "q4_appear_label";
+            this.q4_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q4_appear_label.TabIndex = 37;
+            this.q4_appear_label.Text = "Πατήστε εδώ";
+            this.q4_appear_label.Click += new System.EventHandler(this.Q4_appear_label_Click);
             // 
-            // q2_answer2
+            // q3_appear_label
             // 
-            this.q2_answer2.AutoSize = true;
-            this.q2_answer2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q2_answer2.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.q2_answer2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q2_answer2.Location = new System.Drawing.Point(848, 419);
-            this.q2_answer2.Name = "q2_answer2";
-            this.q2_answer2.Size = new System.Drawing.Size(184, 37);
-            this.q2_answer2.TabIndex = 3;
-            this.q2_answer2.TabStop = true;
-            this.q2_answer2.Text = "[Απάντηση 2]";
-            this.q2_answer2.UseVisualStyleBackColor = true;
+            this.q3_appear_label.AutoSize = true;
+            this.q3_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q3_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q3_appear_label.Location = new System.Drawing.Point(999, 312);
+            this.q3_appear_label.Name = "q3_appear_label";
+            this.q3_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q3_appear_label.TabIndex = 36;
+            this.q3_appear_label.Text = "Πατήστε εδώ";
+            this.q3_appear_label.Click += new System.EventHandler(this.Q3_appear_label_Click);
             // 
-            // question2Text_richTextBox
+            // q2_appear_label
             // 
-            this.question2Text_richTextBox.BackColor = System.Drawing.Color.Lavender;
-            this.question2Text_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.question2Text_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.question2Text_richTextBox.HideSelection = false;
-            this.question2Text_richTextBox.Location = new System.Drawing.Point(353, 225);
-            this.question2Text_richTextBox.Name = "question2Text_richTextBox";
-            this.question2Text_richTextBox.Size = new System.Drawing.Size(874, 84);
-            this.question2Text_richTextBox.TabIndex = 2;
-            this.question2Text_richTextBox.TabStop = false;
-            this.question2Text_richTextBox.Text = "[Εκφώνηση Ερώτησης Εδώ]";
+            this.q2_appear_label.AutoSize = true;
+            this.q2_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q2_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q2_appear_label.Location = new System.Drawing.Point(999, 210);
+            this.q2_appear_label.Name = "q2_appear_label";
+            this.q2_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q2_appear_label.TabIndex = 35;
+            this.q2_appear_label.Text = "Πατήστε εδώ";
+            this.q2_appear_label.Click += new System.EventHandler(this.Q2_appear_label_Click);
             // 
-            // richTextBox2
+            // q1_appear_label
             // 
-            this.richTextBox2.BackColor = System.Drawing.Color.Lavender;
-            this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.richTextBox2.HideSelection = false;
-            this.richTextBox2.Location = new System.Drawing.Point(353, 156);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(874, 51);
-            this.richTextBox2.TabIndex = 1;
-            this.richTextBox2.TabStop = false;
-            this.richTextBox2.Text = "Επέλεξε μία σωστή απάντηση στην παρακάτω ερώτηση:";
+            this.q1_appear_label.AutoSize = true;
+            this.q1_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q1_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q1_appear_label.Location = new System.Drawing.Point(999, 108);
+            this.q1_appear_label.Name = "q1_appear_label";
+            this.q1_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q1_appear_label.TabIndex = 34;
+            this.q1_appear_label.Text = "Πατήστε εδώ";
+            this.q1_appear_label.Click += new System.EventHandler(this.Q1_appear_label_Click);
             // 
-            // label3
+            // status2_label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(101, 23);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(234, 32);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Ερώτηση 2 (από 6)";
+            this.status2_label.AutoSize = true;
+            this.status2_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status2_label.Location = new System.Drawing.Point(321, 210);
+            this.status2_label.Name = "status2_label";
+            this.status2_label.Size = new System.Drawing.Size(30, 32);
+            this.status2_label.TabIndex = 33;
+            this.status2_label.Text = "[]";
             // 
-            // panel1
+            // status3_label
             // 
-            this.panel1.BackColor = System.Drawing.Color.Lavender;
-            this.panel1.Controls.Add(this.radio_button_trash);
-            this.panel1.Controls.Add(this.q1_false);
-            this.panel1.Controls.Add(this.q1_true);
-            this.panel1.Controls.Add(this.question1Text_richTextBox);
-            this.panel1.Controls.Add(this.questionType_richTextBox);
-            this.panel1.Controls.Add(this.question1_label);
-            this.panel1.Location = new System.Drawing.Point(3, 137);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1600, 800);
-            this.panel1.TabIndex = 22;
-            this.panel1.Visible = false;
+            this.status3_label.AutoSize = true;
+            this.status3_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status3_label.Location = new System.Drawing.Point(321, 312);
+            this.status3_label.Name = "status3_label";
+            this.status3_label.Size = new System.Drawing.Size(30, 32);
+            this.status3_label.TabIndex = 32;
+            this.status3_label.Text = "[]";
             // 
-            // radio_button_trash
+            // status4_label
             // 
-            this.radio_button_trash.AutoSize = true;
-            this.radio_button_trash.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.radio_button_trash.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.radio_button_trash.Location = new System.Drawing.Point(704, 563);
-            this.radio_button_trash.Name = "radio_button_trash";
-            this.radio_button_trash.Size = new System.Drawing.Size(107, 37);
-            this.radio_button_trash.TabIndex = 5;
-            this.radio_button_trash.TabStop = true;
-            this.radio_button_trash.Text = "Λάθος";
-            this.radio_button_trash.UseVisualStyleBackColor = true;
-            this.radio_button_trash.Visible = false;
+            this.status4_label.AutoSize = true;
+            this.status4_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status4_label.Location = new System.Drawing.Point(321, 420);
+            this.status4_label.Name = "status4_label";
+            this.status4_label.Size = new System.Drawing.Size(30, 32);
+            this.status4_label.TabIndex = 31;
+            this.status4_label.Text = "[]";
             // 
-            // q1_false
+            // status5_label
             // 
-            this.q1_false.AutoSize = true;
-            this.q1_false.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q1_false.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.q1_false.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q1_false.Location = new System.Drawing.Point(866, 459);
-            this.q1_false.Name = "q1_false";
-            this.q1_false.Size = new System.Drawing.Size(107, 37);
-            this.q1_false.TabIndex = 4;
-            this.q1_false.TabStop = true;
-            this.q1_false.Text = "Λάθος";
-            this.q1_false.UseVisualStyleBackColor = true;
+            this.status5_label.AutoSize = true;
+            this.status5_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status5_label.Location = new System.Drawing.Point(321, 518);
+            this.status5_label.Name = "status5_label";
+            this.status5_label.Size = new System.Drawing.Size(30, 32);
+            this.status5_label.TabIndex = 30;
+            this.status5_label.Text = "[]";
             // 
-            // q1_true
+            // status6_label
             // 
-            this.q1_true.AutoSize = true;
-            this.q1_true.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q1_true.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.q1_true.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.q1_true.Location = new System.Drawing.Point(551, 460);
-            this.q1_true.Name = "q1_true";
-            this.q1_true.Size = new System.Drawing.Size(109, 37);
-            this.q1_true.TabIndex = 3;
-            this.q1_true.TabStop = true;
-            this.q1_true.Text = "Σωστό";
-            this.q1_true.UseVisualStyleBackColor = true;
+            this.status6_label.AutoSize = true;
+            this.status6_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status6_label.Location = new System.Drawing.Point(321, 616);
+            this.status6_label.Name = "status6_label";
+            this.status6_label.Size = new System.Drawing.Size(30, 32);
+            this.status6_label.TabIndex = 29;
+            this.status6_label.Text = "[]";
             // 
-            // question1Text_richTextBox
+            // status1_label
             // 
-            this.question1Text_richTextBox.BackColor = System.Drawing.Color.Lavender;
-            this.question1Text_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.question1Text_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.question1Text_richTextBox.HideSelection = false;
-            this.question1Text_richTextBox.Location = new System.Drawing.Point(353, 225);
-            this.question1Text_richTextBox.Name = "question1Text_richTextBox";
-            this.question1Text_richTextBox.Size = new System.Drawing.Size(874, 84);
-            this.question1Text_richTextBox.TabIndex = 2;
-            this.question1Text_richTextBox.TabStop = false;
-            this.question1Text_richTextBox.Text = "[Εκφώνηση Ερώτησης Εδώ]";
+            this.status1_label.AutoSize = true;
+            this.status1_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status1_label.Location = new System.Drawing.Point(321, 108);
+            this.status1_label.Name = "status1_label";
+            this.status1_label.Size = new System.Drawing.Size(30, 32);
+            this.status1_label.TabIndex = 28;
+            this.status1_label.Text = "[]";
             // 
-            // questionType_richTextBox
+            // label14
             // 
-            this.questionType_richTextBox.BackColor = System.Drawing.Color.Lavender;
-            this.questionType_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.questionType_richTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.questionType_richTextBox.HideSelection = false;
-            this.questionType_richTextBox.Location = new System.Drawing.Point(353, 156);
-            this.questionType_richTextBox.Name = "questionType_richTextBox";
-            this.questionType_richTextBox.Size = new System.Drawing.Size(874, 51);
-            this.questionType_richTextBox.TabIndex = 1;
-            this.questionType_richTextBox.TabStop = false;
-            this.questionType_richTextBox.Text = "Συμπλήρωσε το σωστό/λάθος:";
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.Location = new System.Drawing.Point(221, 30);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(313, 37);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Κατάσταση ερωτήσεων";
             // 
-            // question1_label
+            // label13
             // 
-            this.question1_label.AutoSize = true;
-            this.question1_label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.question1_label.Location = new System.Drawing.Point(101, 23);
-            this.question1_label.Name = "question1_label";
-            this.question1_label.Size = new System.Drawing.Size(234, 32);
-            this.question1_label.TabIndex = 0;
-            this.question1_label.Text = "Ερώτηση 1 (από 6)";
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(924, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(271, 37);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Εμφάνιση ερώτησης";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(568, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(289, 37);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Διαθέσιμες ερωτήσεις";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.Location = new System.Drawing.Point(649, 210);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(134, 32);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Ερώτηση 2";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.Location = new System.Drawing.Point(649, 312);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 32);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Ερώτηση 3";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(649, 420);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(135, 32);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Ερώτηση 4";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(649, 518);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 32);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Ερώτηση 5";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.Location = new System.Drawing.Point(649, 616);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 32);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Ερώτηση 6";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(649, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 32);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Ερώτηση 1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(688, 746);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(66, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 18;
+            this.pictureBox1.TabStop = false;
             // 
             // totalTimeTimer_label
             // 
@@ -1649,9 +1727,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tip_pictureBox)).EndInit();
             this.background_panel.ResumeLayout(false);
             this.background_panel.PerformLayout();
-            this.q_panel.ResumeLayout(false);
-            this.q_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.q4_QTip_PictureBox)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1659,8 +1737,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.q5_pentagon_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.q5_square_pictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.q5_triangle_pictureBox)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel10.ResumeLayout(false);
@@ -1671,10 +1751,9 @@
             this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.q_panel.ResumeLayout(false);
+            this.q_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1795,5 +1874,10 @@
         private Label q3_appear_label;
         private Label q2_appear_label;
         private Label q1_appear_label;
+        private RichTextBox q1_QTip_RichTextBox;
+        private RichTextBox q6_QTip_RichTextBox;
+        private RichTextBox q5_QTip_RichTextBox;
+        private RichTextBox q4_QTip_RichTextBox;
+        private PictureBox q4_QTip_PictureBox;
     }
 }
