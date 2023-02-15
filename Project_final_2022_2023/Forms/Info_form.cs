@@ -35,7 +35,7 @@ namespace Project_final_2022_2023
         {
             this.Cursor = Cursors.WaitCursor;
             var _ = ImportData.finalQuestions;
-            new Questions_layout_form(this).ShowDialog();
+            new Questions_form(this).ShowDialog();
         }
 
         private void Start_pictureBox_MouseHover(object sender, EventArgs e)
