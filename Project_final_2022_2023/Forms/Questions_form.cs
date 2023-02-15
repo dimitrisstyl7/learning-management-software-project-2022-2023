@@ -962,8 +962,13 @@ namespace Project_final_2022_2023.Forms
                         {
                             for (int j = i + 1; j < choice.Length; j++)
                             {
-                                matching_two = choice[i].Equals(x.QCorrectAns[0]) && choice[j].Equals(x.QCorrectAns[1]);
-                                if (choice[i].Equals(x.QCorrectAns[0]) || choice[j].Equals(x.QCorrectAns[1]))
+                                matching_two = choice[i] && x.QCorrectAns[0].Equals((i + 1).ToString())
+                                               && choice[j] && x.QCorrectAns[1].Equals((j + 1).ToString());
+
+                                if (
+                                    choice[i] && x.QCorrectAns[0].Equals((i + 1).ToString()) 
+                                    || choice[j] && x.QCorrectAns[1].Equals((j + 1).ToString())
+                                    )
                                     matching_one = true;
                             }
                             if (matching_two) break;
