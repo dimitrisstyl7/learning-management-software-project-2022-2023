@@ -39,6 +39,29 @@
             this.totalTimer = new System.Windows.Forms.Timer(this.components);
             this.questionTimer = new System.Windows.Forms.Timer(this.components);
             this.background_panel = new System.Windows.Forms.Panel();
+            this.q_panel = new System.Windows.Forms.Panel();
+            this.q6_appear_label = new System.Windows.Forms.Label();
+            this.q5_appear_label = new System.Windows.Forms.Label();
+            this.q4_appear_label = new System.Windows.Forms.Label();
+            this.q3_appear_label = new System.Windows.Forms.Label();
+            this.q2_appear_label = new System.Windows.Forms.Label();
+            this.q1_appear_label = new System.Windows.Forms.Label();
+            this.status2_label = new System.Windows.Forms.Label();
+            this.status3_label = new System.Windows.Forms.Label();
+            this.status4_label = new System.Windows.Forms.Label();
+            this.status5_label = new System.Windows.Forms.Label();
+            this.status6_label = new System.Windows.Forms.Label();
+            this.status1_label = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.results_pictureBox = new System.Windows.Forms.PictureBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.q6_QTip_RichTextBox = new System.Windows.Forms.RichTextBox();
             this.q6_button7 = new System.Windows.Forms.Button();
@@ -125,36 +148,17 @@
             this.question1Text_richTextBox = new System.Windows.Forms.RichTextBox();
             this.questionType_richTextBox = new System.Windows.Forms.RichTextBox();
             this.question1_label = new System.Windows.Forms.Label();
-            this.q_panel = new System.Windows.Forms.Panel();
-            this.q6_appear_label = new System.Windows.Forms.Label();
-            this.q5_appear_label = new System.Windows.Forms.Label();
-            this.q4_appear_label = new System.Windows.Forms.Label();
-            this.q3_appear_label = new System.Windows.Forms.Label();
-            this.q2_appear_label = new System.Windows.Forms.Label();
-            this.q1_appear_label = new System.Windows.Forms.Label();
-            this.status2_label = new System.Windows.Forms.Label();
-            this.status3_label = new System.Windows.Forms.Label();
-            this.status4_label = new System.Windows.Forms.Label();
-            this.status5_label = new System.Windows.Forms.Label();
-            this.status6_label = new System.Windows.Forms.Label();
-            this.status1_label = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.results_pictureBox = new System.Windows.Forms.PictureBox();
             this.totalTimeTimer_label = new System.Windows.Forms.Label();
             this.questionTimeTimer_Label = new System.Windows.Forms.Label();
+            this.backgroundQuestionDesign = new Project_final_2022_2023.CustomControls.BackgroundDesign();
+            this.backgroundFormDesign = new Project_final_2022_2023.CustomControls.BackgroundDesign();
             ((System.ComponentModel.ISupportInitialize)(this.left_arrow_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.refresh_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.right_arrow_pictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tip_pictureBox)).BeginInit();
             this.background_panel.SuspendLayout();
+            this.q_panel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.results_pictureBox)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.q5_pentagon_pictureBox)).BeginInit();
@@ -169,8 +173,6 @@
             this.panel7.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.q_panel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.results_pictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // left_arrow_pictureBox
@@ -179,7 +181,7 @@
             this.left_arrow_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.left_arrow_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.left_arrow_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("left_arrow_pictureBox.Image")));
-            this.left_arrow_pictureBox.Location = new System.Drawing.Point(16, 928);
+            this.left_arrow_pictureBox.Location = new System.Drawing.Point(16, 941);
             this.left_arrow_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.left_arrow_pictureBox.Name = "left_arrow_pictureBox";
             this.left_arrow_pictureBox.Size = new System.Drawing.Size(66, 52);
@@ -194,7 +196,7 @@
             this.refresh_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.refresh_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.refresh_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("refresh_pictureBox.Image")));
-            this.refresh_pictureBox.Location = new System.Drawing.Point(772, 928);
+            this.refresh_pictureBox.Location = new System.Drawing.Point(772, 941);
             this.refresh_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.refresh_pictureBox.Name = "refresh_pictureBox";
             this.refresh_pictureBox.Size = new System.Drawing.Size(66, 52);
@@ -209,7 +211,7 @@
             this.right_arrow_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.right_arrow_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.right_arrow_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("right_arrow_pictureBox.Image")));
-            this.right_arrow_pictureBox.Location = new System.Drawing.Point(1696, 928);
+            this.right_arrow_pictureBox.Location = new System.Drawing.Point(1696, 941);
             this.right_arrow_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.right_arrow_pictureBox.Name = "right_arrow_pictureBox";
             this.right_arrow_pictureBox.Size = new System.Drawing.Size(66, 52);
@@ -224,7 +226,7 @@
             this.tip_pictureBox.BackColor = System.Drawing.Color.Transparent;
             this.tip_pictureBox.Cursor = System.Windows.Forms.Cursors.Help;
             this.tip_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("tip_pictureBox.Image")));
-            this.tip_pictureBox.Location = new System.Drawing.Point(898, 928);
+            this.tip_pictureBox.Location = new System.Drawing.Point(898, 941);
             this.tip_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.tip_pictureBox.Name = "tip_pictureBox";
             this.tip_pictureBox.Size = new System.Drawing.Size(66, 52);
@@ -238,7 +240,7 @@
             this.totalTime_label.AutoSize = true;
             this.totalTime_label.BackColor = System.Drawing.Color.Transparent;
             this.totalTime_label.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
-            this.totalTime_label.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.totalTime_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(192)))), ((int)(((byte)(225)))));
             this.totalTime_label.Location = new System.Drawing.Point(777, 4);
             this.totalTime_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalTime_label.Name = "totalTime_label";
@@ -251,6 +253,7 @@
             this.questionTime_label.AutoSize = true;
             this.questionTime_label.BackColor = System.Drawing.Color.Transparent;
             this.questionTime_label.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.questionTime_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(229)))), ((int)(((byte)(233)))));
             this.questionTime_label.Location = new System.Drawing.Point(693, 37);
             this.questionTime_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.questionTime_label.Name = "questionTime_label";
@@ -270,14 +273,15 @@
             // 
             // background_panel
             // 
+            this.background_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(95)))), ((int)(((byte)(131)))));
             this.background_panel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.background_panel.Controls.Add(this.q_panel);
             this.background_panel.Controls.Add(this.panel3);
             this.background_panel.Controls.Add(this.panel6);
             this.background_panel.Controls.Add(this.panel5);
             this.background_panel.Controls.Add(this.panel4);
             this.background_panel.Controls.Add(this.panel2);
             this.background_panel.Controls.Add(this.panel1);
-            this.background_panel.Controls.Add(this.q_panel);
             this.background_panel.Controls.Add(this.right_arrow_pictureBox);
             this.background_panel.Controls.Add(this.totalTimeTimer_label);
             this.background_panel.Controls.Add(this.tip_pictureBox);
@@ -286,16 +290,307 @@
             this.background_panel.Controls.Add(this.totalTime_label);
             this.background_panel.Controls.Add(this.questionTimeTimer_Label);
             this.background_panel.Controls.Add(this.questionTime_label);
+            this.background_panel.Controls.Add(this.backgroundQuestionDesign);
             this.background_panel.Location = new System.Drawing.Point(98, 59);
             this.background_panel.Margin = new System.Windows.Forms.Padding(2);
             this.background_panel.Name = "background_panel";
             this.background_panel.Size = new System.Drawing.Size(1800, 1000);
             this.background_panel.TabIndex = 21;
             // 
+            // q_panel
+            // 
+            this.q_panel.AllowDrop = true;
+            this.q_panel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
+            this.q_panel.Controls.Add(this.q6_appear_label);
+            this.q_panel.Controls.Add(this.q5_appear_label);
+            this.q_panel.Controls.Add(this.q4_appear_label);
+            this.q_panel.Controls.Add(this.q3_appear_label);
+            this.q_panel.Controls.Add(this.q2_appear_label);
+            this.q_panel.Controls.Add(this.q1_appear_label);
+            this.q_panel.Controls.Add(this.status2_label);
+            this.q_panel.Controls.Add(this.status3_label);
+            this.q_panel.Controls.Add(this.status4_label);
+            this.q_panel.Controls.Add(this.status5_label);
+            this.q_panel.Controls.Add(this.status6_label);
+            this.q_panel.Controls.Add(this.status1_label);
+            this.q_panel.Controls.Add(this.label14);
+            this.q_panel.Controls.Add(this.label13);
+            this.q_panel.Controls.Add(this.label12);
+            this.q_panel.Controls.Add(this.label10);
+            this.q_panel.Controls.Add(this.label9);
+            this.q_panel.Controls.Add(this.label7);
+            this.q_panel.Controls.Add(this.label6);
+            this.q_panel.Controls.Add(this.label5);
+            this.q_panel.Controls.Add(this.label2);
+            this.q_panel.Controls.Add(this.results_pictureBox);
+            this.q_panel.Location = new System.Drawing.Point(119, 67);
+            this.q_panel.Name = "q_panel";
+            this.q_panel.Size = new System.Drawing.Size(1600, 800);
+            this.q_panel.TabIndex = 40;
+            this.q_panel.Visible = false;
+            // 
+            // q6_appear_label
+            // 
+            this.q6_appear_label.AutoSize = true;
+            this.q6_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q6_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q6_appear_label.ForeColor = System.Drawing.Color.White;
+            this.q6_appear_label.Location = new System.Drawing.Point(999, 620);
+            this.q6_appear_label.Name = "q6_appear_label";
+            this.q6_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q6_appear_label.TabIndex = 39;
+            this.q6_appear_label.Text = "Πατήστε εδώ";
+            this.q6_appear_label.Click += new System.EventHandler(this.Q6_appear_label_Click);
+            // 
+            // q5_appear_label
+            // 
+            this.q5_appear_label.AutoSize = true;
+            this.q5_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q5_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q5_appear_label.ForeColor = System.Drawing.Color.White;
+            this.q5_appear_label.Location = new System.Drawing.Point(999, 518);
+            this.q5_appear_label.Name = "q5_appear_label";
+            this.q5_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q5_appear_label.TabIndex = 38;
+            this.q5_appear_label.Text = "Πατήστε εδώ";
+            this.q5_appear_label.Click += new System.EventHandler(this.Q5_appear_label_Click);
+            // 
+            // q4_appear_label
+            // 
+            this.q4_appear_label.AutoSize = true;
+            this.q4_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q4_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q4_appear_label.ForeColor = System.Drawing.Color.White;
+            this.q4_appear_label.Location = new System.Drawing.Point(999, 414);
+            this.q4_appear_label.Name = "q4_appear_label";
+            this.q4_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q4_appear_label.TabIndex = 37;
+            this.q4_appear_label.Text = "Πατήστε εδώ";
+            this.q4_appear_label.Click += new System.EventHandler(this.Q4_appear_label_Click);
+            // 
+            // q3_appear_label
+            // 
+            this.q3_appear_label.AutoSize = true;
+            this.q3_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q3_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q3_appear_label.ForeColor = System.Drawing.Color.White;
+            this.q3_appear_label.Location = new System.Drawing.Point(999, 312);
+            this.q3_appear_label.Name = "q3_appear_label";
+            this.q3_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q3_appear_label.TabIndex = 36;
+            this.q3_appear_label.Text = "Πατήστε εδώ";
+            this.q3_appear_label.Click += new System.EventHandler(this.Q3_appear_label_Click);
+            // 
+            // q2_appear_label
+            // 
+            this.q2_appear_label.AutoSize = true;
+            this.q2_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q2_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q2_appear_label.ForeColor = System.Drawing.Color.White;
+            this.q2_appear_label.Location = new System.Drawing.Point(999, 210);
+            this.q2_appear_label.Name = "q2_appear_label";
+            this.q2_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q2_appear_label.TabIndex = 35;
+            this.q2_appear_label.Text = "Πατήστε εδώ";
+            this.q2_appear_label.Click += new System.EventHandler(this.Q2_appear_label_Click);
+            // 
+            // q1_appear_label
+            // 
+            this.q1_appear_label.AutoSize = true;
+            this.q1_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.q1_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.q1_appear_label.ForeColor = System.Drawing.Color.White;
+            this.q1_appear_label.Location = new System.Drawing.Point(999, 108);
+            this.q1_appear_label.Name = "q1_appear_label";
+            this.q1_appear_label.Size = new System.Drawing.Size(162, 32);
+            this.q1_appear_label.TabIndex = 34;
+            this.q1_appear_label.Text = "Πατήστε εδώ";
+            this.q1_appear_label.Click += new System.EventHandler(this.Q1_appear_label_Click);
+            // 
+            // status2_label
+            // 
+            this.status2_label.AutoSize = true;
+            this.status2_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status2_label.ForeColor = System.Drawing.Color.White;
+            this.status2_label.Location = new System.Drawing.Point(321, 210);
+            this.status2_label.Name = "status2_label";
+            this.status2_label.Size = new System.Drawing.Size(30, 32);
+            this.status2_label.TabIndex = 33;
+            this.status2_label.Text = "[]";
+            // 
+            // status3_label
+            // 
+            this.status3_label.AutoSize = true;
+            this.status3_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status3_label.ForeColor = System.Drawing.Color.White;
+            this.status3_label.Location = new System.Drawing.Point(321, 312);
+            this.status3_label.Name = "status3_label";
+            this.status3_label.Size = new System.Drawing.Size(30, 32);
+            this.status3_label.TabIndex = 32;
+            this.status3_label.Text = "[]";
+            // 
+            // status4_label
+            // 
+            this.status4_label.AutoSize = true;
+            this.status4_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status4_label.ForeColor = System.Drawing.Color.White;
+            this.status4_label.Location = new System.Drawing.Point(321, 420);
+            this.status4_label.Name = "status4_label";
+            this.status4_label.Size = new System.Drawing.Size(30, 32);
+            this.status4_label.TabIndex = 31;
+            this.status4_label.Text = "[]";
+            // 
+            // status5_label
+            // 
+            this.status5_label.AutoSize = true;
+            this.status5_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status5_label.ForeColor = System.Drawing.Color.White;
+            this.status5_label.Location = new System.Drawing.Point(321, 518);
+            this.status5_label.Name = "status5_label";
+            this.status5_label.Size = new System.Drawing.Size(30, 32);
+            this.status5_label.TabIndex = 30;
+            this.status5_label.Text = "[]";
+            // 
+            // status6_label
+            // 
+            this.status6_label.AutoSize = true;
+            this.status6_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status6_label.ForeColor = System.Drawing.Color.White;
+            this.status6_label.Location = new System.Drawing.Point(321, 616);
+            this.status6_label.Name = "status6_label";
+            this.status6_label.Size = new System.Drawing.Size(30, 32);
+            this.status6_label.TabIndex = 29;
+            this.status6_label.Text = "[]";
+            // 
+            // status1_label
+            // 
+            this.status1_label.AutoSize = true;
+            this.status1_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.status1_label.ForeColor = System.Drawing.Color.White;
+            this.status1_label.Location = new System.Drawing.Point(321, 108);
+            this.status1_label.Name = "status1_label";
+            this.status1_label.Size = new System.Drawing.Size(30, 32);
+            this.status1_label.TabIndex = 28;
+            this.status1_label.Text = "[]";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(221, 30);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(313, 37);
+            this.label14.TabIndex = 27;
+            this.label14.Text = "Κατάσταση ερωτήσεων";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(924, 30);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(271, 37);
+            this.label13.TabIndex = 26;
+            this.label13.Text = "Εμφάνιση ερώτησης";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(568, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(289, 37);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Διαθέσιμες ερωτήσεις";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label10.ForeColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(649, 210);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(134, 32);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Ερώτηση 2";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(649, 312);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(134, 32);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "Ερώτηση 3";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(649, 420);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(135, 32);
+            this.label7.TabIndex = 22;
+            this.label7.Text = "Ερώτηση 4";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(649, 518);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 32);
+            this.label6.TabIndex = 21;
+            this.label6.Text = "Ερώτηση 5";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(649, 616);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(134, 32);
+            this.label5.TabIndex = 20;
+            this.label5.Text = "Ερώτηση 6";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(649, 108);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 32);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Ερώτηση 1";
+            // 
+            // results_pictureBox
+            // 
+            this.results_pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.results_pictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.results_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.results_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("results_pictureBox.Image")));
+            this.results_pictureBox.Location = new System.Drawing.Point(688, 737);
+            this.results_pictureBox.Margin = new System.Windows.Forms.Padding(2);
+            this.results_pictureBox.Name = "results_pictureBox";
+            this.results_pictureBox.Size = new System.Drawing.Size(66, 52);
+            this.results_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.results_pictureBox.TabIndex = 18;
+            this.results_pictureBox.TabStop = false;
+            this.results_pictureBox.Click += new System.EventHandler(this.Results_pictureBox_Click);
+            // 
             // panel6
             // 
             this.panel6.AllowDrop = true;
-            this.panel6.BackColor = System.Drawing.Color.Lavender;
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.panel6.Controls.Add(this.q6_QTip_RichTextBox);
             this.panel6.Controls.Add(this.q6_button7);
             this.panel6.Controls.Add(this.q6_button6);
@@ -330,9 +625,10 @@
             // 
             // q6_QTip_RichTextBox
             // 
-            this.q6_QTip_RichTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.q6_QTip_RichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_QTip_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.q6_QTip_RichTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_QTip_RichTextBox.ForeColor = System.Drawing.Color.White;
             this.q6_QTip_RichTextBox.HideSelection = false;
             this.q6_QTip_RichTextBox.Location = new System.Drawing.Point(1050, 405);
             this.q6_QTip_RichTextBox.Name = "q6_QTip_RichTextBox";
@@ -345,10 +641,12 @@
             // q6_button7
             // 
             this.q6_button7.AllowDrop = true;
+            this.q6_button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_button7.Cursor = System.Windows.Forms.Cursors.Cross;
             this.q6_button7.Enabled = false;
             this.q6_button7.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q6_button7.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_button7.ForeColor = System.Drawing.Color.White;
             this.q6_button7.Location = new System.Drawing.Point(491, 668);
             this.q6_button7.Name = "q6_button7";
             this.q6_button7.Size = new System.Drawing.Size(55, 55);
@@ -361,10 +659,12 @@
             // q6_button6
             // 
             this.q6_button6.AllowDrop = true;
+            this.q6_button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_button6.Cursor = System.Windows.Forms.Cursors.Cross;
             this.q6_button6.Enabled = false;
             this.q6_button6.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q6_button6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_button6.ForeColor = System.Drawing.Color.White;
             this.q6_button6.Location = new System.Drawing.Point(491, 607);
             this.q6_button6.Name = "q6_button6";
             this.q6_button6.Size = new System.Drawing.Size(55, 55);
@@ -377,10 +677,12 @@
             // q6_button5
             // 
             this.q6_button5.AllowDrop = true;
+            this.q6_button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_button5.Cursor = System.Windows.Forms.Cursors.Cross;
             this.q6_button5.Enabled = false;
             this.q6_button5.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q6_button5.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_button5.ForeColor = System.Drawing.Color.White;
             this.q6_button5.Location = new System.Drawing.Point(491, 546);
             this.q6_button5.Name = "q6_button5";
             this.q6_button5.Size = new System.Drawing.Size(55, 55);
@@ -393,8 +695,10 @@
             // q6_label15
             // 
             this.q6_label15.AutoSize = true;
+            this.q6_label15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label15.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.q6_label15.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label15.ForeColor = System.Drawing.Color.White;
             this.q6_label15.Location = new System.Drawing.Point(723, 496);
             this.q6_label15.Name = "q6_label15";
             this.q6_label15.Size = new System.Drawing.Size(39, 32);
@@ -406,8 +710,10 @@
             // q6_label14
             // 
             this.q6_label14.AutoSize = true;
+            this.q6_label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label14.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.q6_label14.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label14.ForeColor = System.Drawing.Color.White;
             this.q6_label14.Location = new System.Drawing.Point(723, 312);
             this.q6_label14.Name = "q6_label14";
             this.q6_label14.Size = new System.Drawing.Size(39, 32);
@@ -419,8 +725,10 @@
             // q6_label13
             // 
             this.q6_label13.AutoSize = true;
+            this.q6_label13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label13.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.q6_label13.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label13.ForeColor = System.Drawing.Color.White;
             this.q6_label13.Location = new System.Drawing.Point(723, 436);
             this.q6_label13.Name = "q6_label13";
             this.q6_label13.Size = new System.Drawing.Size(39, 32);
@@ -432,8 +740,10 @@
             // q6_label12
             // 
             this.q6_label12.AutoSize = true;
+            this.q6_label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label12.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.q6_label12.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label12.ForeColor = System.Drawing.Color.White;
             this.q6_label12.Location = new System.Drawing.Point(723, 378);
             this.q6_label12.Name = "q6_label12";
             this.q6_label12.Size = new System.Drawing.Size(39, 32);
@@ -445,7 +755,9 @@
             // q6_label11
             // 
             this.q6_label11.AutoSize = true;
+            this.q6_label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label11.ForeColor = System.Drawing.Color.White;
             this.q6_label11.Location = new System.Drawing.Point(446, 678);
             this.q6_label11.Name = "q6_label11";
             this.q6_label11.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -459,7 +771,9 @@
             // q6_label10
             // 
             this.q6_label10.AutoSize = true;
+            this.q6_label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label10.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label10.ForeColor = System.Drawing.Color.White;
             this.q6_label10.Location = new System.Drawing.Point(446, 618);
             this.q6_label10.Name = "q6_label10";
             this.q6_label10.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -473,7 +787,9 @@
             // q6_label9
             // 
             this.q6_label9.AutoSize = true;
+            this.q6_label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label9.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label9.ForeColor = System.Drawing.Color.White;
             this.q6_label9.Location = new System.Drawing.Point(447, 558);
             this.q6_label9.Name = "q6_label9";
             this.q6_label9.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -487,7 +803,9 @@
             // q6_label8
             // 
             this.q6_label8.AutoSize = true;
+            this.q6_label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label8.ForeColor = System.Drawing.Color.White;
             this.q6_label8.Location = new System.Drawing.Point(562, 496);
             this.q6_label8.Name = "q6_label8";
             this.q6_label8.Size = new System.Drawing.Size(42, 32);
@@ -498,7 +816,9 @@
             // q6_label4
             // 
             this.q6_label4.AutoSize = true;
+            this.q6_label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label4.ForeColor = System.Drawing.Color.White;
             this.q6_label4.Location = new System.Drawing.Point(446, 496);
             this.q6_label4.Name = "q6_label4";
             this.q6_label4.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -511,10 +831,12 @@
             // q6_button4
             // 
             this.q6_button4.AllowDrop = true;
+            this.q6_button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_button4.Cursor = System.Windows.Forms.Cursors.Cross;
             this.q6_button4.Enabled = false;
             this.q6_button4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q6_button4.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_button4.ForeColor = System.Drawing.Color.White;
             this.q6_button4.Location = new System.Drawing.Point(491, 486);
             this.q6_button4.Name = "q6_button4";
             this.q6_button4.Size = new System.Drawing.Size(55, 55);
@@ -526,10 +848,12 @@
             // q6_button3
             // 
             this.q6_button3.AllowDrop = true;
+            this.q6_button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_button3.Cursor = System.Windows.Forms.Cursors.Cross;
             this.q6_button3.Enabled = false;
             this.q6_button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q6_button3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_button3.ForeColor = System.Drawing.Color.White;
             this.q6_button3.Location = new System.Drawing.Point(491, 425);
             this.q6_button3.Name = "q6_button3";
             this.q6_button3.Size = new System.Drawing.Size(55, 55);
@@ -541,10 +865,12 @@
             // q6_button2
             // 
             this.q6_button2.AllowDrop = true;
+            this.q6_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_button2.Cursor = System.Windows.Forms.Cursors.Cross;
             this.q6_button2.Enabled = false;
             this.q6_button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q6_button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_button2.ForeColor = System.Drawing.Color.White;
             this.q6_button2.Location = new System.Drawing.Point(491, 364);
             this.q6_button2.Name = "q6_button2";
             this.q6_button2.Size = new System.Drawing.Size(55, 55);
@@ -556,10 +882,12 @@
             // q6_button1
             // 
             this.q6_button1.AllowDrop = true;
+            this.q6_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_button1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.q6_button1.Enabled = false;
             this.q6_button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q6_button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_button1.ForeColor = System.Drawing.Color.White;
             this.q6_button1.Location = new System.Drawing.Point(491, 303);
             this.q6_button1.Name = "q6_button1";
             this.q6_button1.Size = new System.Drawing.Size(55, 55);
@@ -571,7 +899,9 @@
             // q6_label7
             // 
             this.q6_label7.AutoSize = true;
+            this.q6_label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label7.ForeColor = System.Drawing.Color.White;
             this.q6_label7.Location = new System.Drawing.Point(562, 436);
             this.q6_label7.Name = "q6_label7";
             this.q6_label7.Size = new System.Drawing.Size(42, 32);
@@ -582,7 +912,9 @@
             // q6_label6
             // 
             this.q6_label6.AutoSize = true;
+            this.q6_label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label6.ForeColor = System.Drawing.Color.White;
             this.q6_label6.Location = new System.Drawing.Point(562, 377);
             this.q6_label6.Name = "q6_label6";
             this.q6_label6.Size = new System.Drawing.Size(42, 32);
@@ -593,7 +925,9 @@
             // q6_label5
             // 
             this.q6_label5.AutoSize = true;
+            this.q6_label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label5.ForeColor = System.Drawing.Color.White;
             this.q6_label5.Location = new System.Drawing.Point(562, 312);
             this.q6_label5.Name = "q6_label5";
             this.q6_label5.Size = new System.Drawing.Size(42, 32);
@@ -604,7 +938,9 @@
             // q6_label3
             // 
             this.q6_label3.AutoSize = true;
+            this.q6_label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label3.ForeColor = System.Drawing.Color.White;
             this.q6_label3.Location = new System.Drawing.Point(446, 436);
             this.q6_label3.Name = "q6_label3";
             this.q6_label3.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -617,7 +953,9 @@
             // q6_label2
             // 
             this.q6_label2.AutoSize = true;
+            this.q6_label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label2.ForeColor = System.Drawing.Color.White;
             this.q6_label2.Location = new System.Drawing.Point(446, 377);
             this.q6_label2.Name = "q6_label2";
             this.q6_label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -630,7 +968,9 @@
             // q6_label1
             // 
             this.q6_label1.AutoSize = true;
+            this.q6_label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q6_label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q6_label1.ForeColor = System.Drawing.Color.White;
             this.q6_label1.Location = new System.Drawing.Point(446, 315);
             this.q6_label1.Name = "q6_label1";
             this.q6_label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -642,9 +982,10 @@
             // 
             // question6_richTextBox
             // 
-            this.question6_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question6_richTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.question6_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.question6_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question6_richTextBox.ForeColor = System.Drawing.Color.White;
             this.question6_richTextBox.HideSelection = false;
             this.question6_richTextBox.Location = new System.Drawing.Point(353, 225);
             this.question6_richTextBox.Name = "question6_richTextBox";
@@ -655,9 +996,10 @@
             // 
             // richTextBox6
             // 
-            this.richTextBox6.BackColor = System.Drawing.Color.Lavender;
+            this.richTextBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.richTextBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox6.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox6.ForeColor = System.Drawing.Color.White;
             this.richTextBox6.HideSelection = false;
             this.richTextBox6.Location = new System.Drawing.Point(353, 156);
             this.richTextBox6.Name = "richTextBox6";
@@ -669,7 +1011,9 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.label11.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(101, 23);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(234, 32);
@@ -679,7 +1023,7 @@
             // panel5
             // 
             this.panel5.AllowDrop = true;
-            this.panel5.BackColor = System.Drawing.Color.Lavender;
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.panel5.Controls.Add(this.q5_QTip_RichTextBox);
             this.panel5.Controls.Add(this.q5_button3);
             this.panel5.Controls.Add(this.q5_button2);
@@ -704,9 +1048,10 @@
             // 
             // q5_QTip_RichTextBox
             // 
-            this.q5_QTip_RichTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.q5_QTip_RichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q5_QTip_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.q5_QTip_RichTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_QTip_RichTextBox.ForeColor = System.Drawing.Color.White;
             this.q5_QTip_RichTextBox.HideSelection = false;
             this.q5_QTip_RichTextBox.Location = new System.Drawing.Point(359, 679);
             this.q5_QTip_RichTextBox.Name = "q5_QTip_RichTextBox";
@@ -719,10 +1064,12 @@
             // q5_button3
             // 
             this.q5_button3.AllowDrop = true;
+            this.q5_button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q5_button3.Cursor = System.Windows.Forms.Cursors.Cross;
             this.q5_button3.Enabled = false;
             this.q5_button3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q5_button3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_button3.ForeColor = System.Drawing.Color.White;
             this.q5_button3.Location = new System.Drawing.Point(595, 544);
             this.q5_button3.Name = "q5_button3";
             this.q5_button3.Size = new System.Drawing.Size(168, 59);
@@ -734,10 +1081,12 @@
             // q5_button2
             // 
             this.q5_button2.AllowDrop = true;
+            this.q5_button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q5_button2.Cursor = System.Windows.Forms.Cursors.Cross;
             this.q5_button2.Enabled = false;
             this.q5_button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q5_button2.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_button2.ForeColor = System.Drawing.Color.White;
             this.q5_button2.Location = new System.Drawing.Point(595, 451);
             this.q5_button2.Name = "q5_button2";
             this.q5_button2.Size = new System.Drawing.Size(168, 59);
@@ -749,10 +1098,12 @@
             // q5_button1
             // 
             this.q5_button1.AllowDrop = true;
+            this.q5_button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q5_button1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.q5_button1.Enabled = false;
             this.q5_button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q5_button1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_button1.ForeColor = System.Drawing.Color.White;
             this.q5_button1.Location = new System.Drawing.Point(595, 358);
             this.q5_button1.Name = "q5_button1";
             this.q5_button1.Size = new System.Drawing.Size(168, 59);
@@ -764,8 +1115,10 @@
             // q5_label6
             // 
             this.q5_label6.AutoSize = true;
+            this.q5_label6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q5_label6.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.q5_label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_label6.ForeColor = System.Drawing.Color.White;
             this.q5_label6.Location = new System.Drawing.Point(1051, 545);
             this.q5_label6.Name = "q5_label6";
             this.q5_label6.Size = new System.Drawing.Size(113, 32);
@@ -776,8 +1129,10 @@
             // q5_label5
             // 
             this.q5_label5.AutoSize = true;
+            this.q5_label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q5_label5.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.q5_label5.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_label5.ForeColor = System.Drawing.Color.White;
             this.q5_label5.Location = new System.Drawing.Point(1051, 453);
             this.q5_label5.Name = "q5_label5";
             this.q5_label5.Size = new System.Drawing.Size(113, 32);
@@ -788,8 +1143,10 @@
             // q5_label4
             // 
             this.q5_label4.AutoSize = true;
+            this.q5_label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q5_label4.Cursor = System.Windows.Forms.Cursors.SizeAll;
             this.q5_label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_label4.ForeColor = System.Drawing.Color.White;
             this.q5_label4.Location = new System.Drawing.Point(1051, 374);
             this.q5_label4.Name = "q5_label4";
             this.q5_label4.Size = new System.Drawing.Size(113, 32);
@@ -836,7 +1193,9 @@
             // q5_label3
             // 
             this.q5_label3.AutoSize = true;
+            this.q5_label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q5_label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_label3.ForeColor = System.Drawing.Color.White;
             this.q5_label3.Location = new System.Drawing.Point(439, 557);
             this.q5_label3.Name = "q5_label3";
             this.q5_label3.Size = new System.Drawing.Size(114, 32);
@@ -847,7 +1206,9 @@
             // q5_label2
             // 
             this.q5_label2.AutoSize = true;
+            this.q5_label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q5_label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_label2.ForeColor = System.Drawing.Color.White;
             this.q5_label2.Location = new System.Drawing.Point(439, 464);
             this.q5_label2.Name = "q5_label2";
             this.q5_label2.Size = new System.Drawing.Size(114, 32);
@@ -858,7 +1219,9 @@
             // q5_label1
             // 
             this.q5_label1.AutoSize = true;
+            this.q5_label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q5_label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q5_label1.ForeColor = System.Drawing.Color.White;
             this.q5_label1.Location = new System.Drawing.Point(439, 381);
             this.q5_label1.Name = "q5_label1";
             this.q5_label1.Size = new System.Drawing.Size(114, 32);
@@ -868,9 +1231,10 @@
             // 
             // question5_richTextBox
             // 
-            this.question5_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question5_richTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.question5_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.question5_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question5_richTextBox.ForeColor = System.Drawing.Color.White;
             this.question5_richTextBox.HideSelection = false;
             this.question5_richTextBox.Location = new System.Drawing.Point(353, 225);
             this.question5_richTextBox.Name = "question5_richTextBox";
@@ -881,9 +1245,10 @@
             // 
             // richTextBox5
             // 
-            this.richTextBox5.BackColor = System.Drawing.Color.Lavender;
+            this.richTextBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.richTextBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox5.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox5.ForeColor = System.Drawing.Color.White;
             this.richTextBox5.HideSelection = false;
             this.richTextBox5.Location = new System.Drawing.Point(353, 156);
             this.richTextBox5.Name = "richTextBox5";
@@ -895,7 +1260,9 @@
             // label8
             // 
             this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.label8.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(101, 23);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(234, 32);
@@ -904,7 +1271,7 @@
             // 
             // panel4
             // 
-            this.panel4.BackColor = System.Drawing.Color.Lavender;
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.panel4.Controls.Add(this.q4_QTip_PictureBox);
             this.panel4.Controls.Add(this.q4_QTip_RichTextBox);
             this.panel4.Controls.Add(this.q4_textBox4);
@@ -926,6 +1293,7 @@
             // 
             // q4_QTip_PictureBox
             // 
+            this.q4_QTip_PictureBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q4_QTip_PictureBox.Location = new System.Drawing.Point(1086, 358);
             this.q4_QTip_PictureBox.Name = "q4_QTip_PictureBox";
             this.q4_QTip_PictureBox.Size = new System.Drawing.Size(234, 231);
@@ -936,9 +1304,10 @@
             // 
             // q4_QTip_RichTextBox
             // 
-            this.q4_QTip_RichTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.q4_QTip_RichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q4_QTip_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.q4_QTip_RichTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_QTip_RichTextBox.ForeColor = System.Drawing.Color.White;
             this.q4_QTip_RichTextBox.HideSelection = false;
             this.q4_QTip_RichTextBox.Location = new System.Drawing.Point(353, 658);
             this.q4_QTip_RichTextBox.Name = "q4_QTip_RichTextBox";
@@ -950,6 +1319,7 @@
             // 
             // q4_textBox4
             // 
+            this.q4_textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q4_textBox4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.q4_textBox4.Location = new System.Drawing.Point(848, 520);
             this.q4_textBox4.Name = "q4_textBox4";
@@ -958,6 +1328,7 @@
             // 
             // q4_textBox3
             // 
+            this.q4_textBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q4_textBox3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.q4_textBox3.Location = new System.Drawing.Point(848, 478);
             this.q4_textBox3.Name = "q4_textBox3";
@@ -966,6 +1337,7 @@
             // 
             // q4_textBox2
             // 
+            this.q4_textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q4_textBox2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.q4_textBox2.Location = new System.Drawing.Point(848, 444);
             this.q4_textBox2.Name = "q4_textBox2";
@@ -974,6 +1346,7 @@
             // 
             // q4_textBox1
             // 
+            this.q4_textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q4_textBox1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.q4_textBox1.Location = new System.Drawing.Point(848, 407);
             this.q4_textBox1.Name = "q4_textBox1";
@@ -983,7 +1356,9 @@
             // q4_label4
             // 
             this.q4_label4.AutoSize = true;
+            this.q4_label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q4_label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_label4.ForeColor = System.Drawing.Color.White;
             this.q4_label4.Location = new System.Drawing.Point(688, 510);
             this.q4_label4.Name = "q4_label4";
             this.q4_label4.Size = new System.Drawing.Size(148, 32);
@@ -993,7 +1368,9 @@
             // q4_label3
             // 
             this.q4_label3.AutoSize = true;
+            this.q4_label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q4_label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_label3.ForeColor = System.Drawing.Color.White;
             this.q4_label3.Location = new System.Drawing.Point(688, 471);
             this.q4_label3.Name = "q4_label3";
             this.q4_label3.Size = new System.Drawing.Size(148, 32);
@@ -1003,7 +1380,9 @@
             // q4_label2
             // 
             this.q4_label2.AutoSize = true;
+            this.q4_label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q4_label2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_label2.ForeColor = System.Drawing.Color.White;
             this.q4_label2.Location = new System.Drawing.Point(688, 437);
             this.q4_label2.Name = "q4_label2";
             this.q4_label2.Size = new System.Drawing.Size(148, 32);
@@ -1013,7 +1392,9 @@
             // q4_label1
             // 
             this.q4_label1.AutoSize = true;
+            this.q4_label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q4_label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q4_label1.ForeColor = System.Drawing.Color.White;
             this.q4_label1.Location = new System.Drawing.Point(688, 400);
             this.q4_label1.Name = "q4_label1";
             this.q4_label1.Size = new System.Drawing.Size(148, 32);
@@ -1022,9 +1403,10 @@
             // 
             // question4_richTextBox
             // 
-            this.question4_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question4_richTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.question4_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.question4_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question4_richTextBox.ForeColor = System.Drawing.Color.White;
             this.question4_richTextBox.HideSelection = false;
             this.question4_richTextBox.Location = new System.Drawing.Point(353, 225);
             this.question4_richTextBox.Name = "question4_richTextBox";
@@ -1035,9 +1417,10 @@
             // 
             // richTextBox4
             // 
-            this.richTextBox4.BackColor = System.Drawing.Color.Lavender;
+            this.richTextBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.richTextBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox4.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox4.ForeColor = System.Drawing.Color.White;
             this.richTextBox4.HideSelection = false;
             this.richTextBox4.Location = new System.Drawing.Point(353, 156);
             this.richTextBox4.Name = "richTextBox4";
@@ -1049,7 +1432,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(101, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(234, 32);
@@ -1058,7 +1443,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Lavender;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.panel3.Controls.Add(this.panel10);
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.panel8);
@@ -1074,7 +1459,9 @@
             // 
             // panel10
             // 
+            this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.panel10.Controls.Add(this.q3_answer4);
+            this.panel10.ForeColor = System.Drawing.Color.White;
             this.panel10.Location = new System.Drawing.Point(860, 487);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(330, 43);
@@ -1096,7 +1483,9 @@
             // 
             // panel9
             // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.panel9.Controls.Add(this.q3_answer2);
+            this.panel9.ForeColor = System.Drawing.Color.White;
             this.panel9.Location = new System.Drawing.Point(860, 418);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(330, 43);
@@ -1118,7 +1507,9 @@
             // 
             // panel8
             // 
+            this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.panel8.Controls.Add(this.q3_answer3);
+            this.panel8.ForeColor = System.Drawing.Color.White;
             this.panel8.Location = new System.Drawing.Point(499, 486);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(330, 43);
@@ -1140,7 +1531,9 @@
             // 
             // panel7
             // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.panel7.Controls.Add(this.q3_answer1);
+            this.panel7.ForeColor = System.Drawing.Color.White;
             this.panel7.Location = new System.Drawing.Point(499, 419);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(330, 43);
@@ -1162,9 +1555,10 @@
             // 
             // question3_richTextBox
             // 
-            this.question3_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question3_richTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.question3_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.question3_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question3_richTextBox.ForeColor = System.Drawing.Color.White;
             this.question3_richTextBox.HideSelection = false;
             this.question3_richTextBox.Location = new System.Drawing.Point(353, 225);
             this.question3_richTextBox.Name = "question3_richTextBox";
@@ -1175,9 +1569,10 @@
             // 
             // richTextBox3
             // 
-            this.richTextBox3.BackColor = System.Drawing.Color.Lavender;
+            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.richTextBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox3.ForeColor = System.Drawing.Color.White;
             this.richTextBox3.HideSelection = false;
             this.richTextBox3.Location = new System.Drawing.Point(353, 156);
             this.richTextBox3.Name = "richTextBox3";
@@ -1189,7 +1584,9 @@
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.label4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(101, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(234, 32);
@@ -1198,7 +1595,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Lavender;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.panel2.Controls.Add(this.q2_answer4);
             this.panel2.Controls.Add(this.q2_answer3);
             this.panel2.Controls.Add(this.q2_answer1);
@@ -1215,9 +1612,11 @@
             // q2_answer4
             // 
             this.q2_answer4.AutoSize = true;
+            this.q2_answer4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q2_answer4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q2_answer4.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q2_answer4.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q2_answer4.ForeColor = System.Drawing.Color.White;
             this.q2_answer4.Location = new System.Drawing.Point(848, 520);
             this.q2_answer4.Name = "q2_answer4";
             this.q2_answer4.Size = new System.Drawing.Size(184, 37);
@@ -1229,9 +1628,11 @@
             // q2_answer3
             // 
             this.q2_answer3.AutoSize = true;
+            this.q2_answer3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q2_answer3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q2_answer3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q2_answer3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q2_answer3.ForeColor = System.Drawing.Color.White;
             this.q2_answer3.Location = new System.Drawing.Point(511, 520);
             this.q2_answer3.Name = "q2_answer3";
             this.q2_answer3.Size = new System.Drawing.Size(184, 37);
@@ -1243,9 +1644,11 @@
             // q2_answer1
             // 
             this.q2_answer1.AutoSize = true;
+            this.q2_answer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q2_answer1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q2_answer1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q2_answer1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q2_answer1.ForeColor = System.Drawing.Color.White;
             this.q2_answer1.Location = new System.Drawing.Point(511, 418);
             this.q2_answer1.Name = "q2_answer1";
             this.q2_answer1.Size = new System.Drawing.Size(184, 37);
@@ -1257,9 +1660,11 @@
             // q2_answer2
             // 
             this.q2_answer2.AutoSize = true;
+            this.q2_answer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q2_answer2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q2_answer2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q2_answer2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q2_answer2.ForeColor = System.Drawing.Color.White;
             this.q2_answer2.Location = new System.Drawing.Point(848, 419);
             this.q2_answer2.Name = "q2_answer2";
             this.q2_answer2.Size = new System.Drawing.Size(184, 37);
@@ -1270,9 +1675,10 @@
             // 
             // question2Text_richTextBox
             // 
-            this.question2Text_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question2Text_richTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.question2Text_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.question2Text_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question2Text_richTextBox.ForeColor = System.Drawing.Color.White;
             this.question2Text_richTextBox.HideSelection = false;
             this.question2Text_richTextBox.Location = new System.Drawing.Point(353, 225);
             this.question2Text_richTextBox.Name = "question2Text_richTextBox";
@@ -1283,9 +1689,10 @@
             // 
             // richTextBox2
             // 
-            this.richTextBox2.BackColor = System.Drawing.Color.Lavender;
+            this.richTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.richTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.richTextBox2.ForeColor = System.Drawing.Color.White;
             this.richTextBox2.HideSelection = false;
             this.richTextBox2.Location = new System.Drawing.Point(353, 156);
             this.richTextBox2.Name = "richTextBox2";
@@ -1297,7 +1704,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(101, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(234, 32);
@@ -1306,7 +1715,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Lavender;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.panel1.Controls.Add(this.q1_QTip_RichTextBox);
             this.panel1.Controls.Add(this.radio_button_trash);
             this.panel1.Controls.Add(this.q1_false);
@@ -1322,9 +1731,10 @@
             // 
             // q1_QTip_RichTextBox
             // 
-            this.q1_QTip_RichTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.q1_QTip_RichTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q1_QTip_RichTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.q1_QTip_RichTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q1_QTip_RichTextBox.ForeColor = System.Drawing.Color.White;
             this.q1_QTip_RichTextBox.HideSelection = false;
             this.q1_QTip_RichTextBox.Location = new System.Drawing.Point(353, 683);
             this.q1_QTip_RichTextBox.Name = "q1_QTip_RichTextBox";
@@ -1337,8 +1747,10 @@
             // radio_button_trash
             // 
             this.radio_button_trash.AutoSize = true;
+            this.radio_button_trash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.radio_button_trash.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.radio_button_trash.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radio_button_trash.ForeColor = System.Drawing.Color.White;
             this.radio_button_trash.Location = new System.Drawing.Point(704, 563);
             this.radio_button_trash.Name = "radio_button_trash";
             this.radio_button_trash.Size = new System.Drawing.Size(107, 37);
@@ -1351,9 +1763,11 @@
             // q1_false
             // 
             this.q1_false.AutoSize = true;
+            this.q1_false.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q1_false.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q1_false.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q1_false.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q1_false.ForeColor = System.Drawing.Color.White;
             this.q1_false.Location = new System.Drawing.Point(866, 459);
             this.q1_false.Name = "q1_false";
             this.q1_false.Size = new System.Drawing.Size(107, 37);
@@ -1365,9 +1779,11 @@
             // q1_true
             // 
             this.q1_true.AutoSize = true;
+            this.q1_true.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.q1_true.Cursor = System.Windows.Forms.Cursors.Hand;
             this.q1_true.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.q1_true.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.q1_true.ForeColor = System.Drawing.Color.White;
             this.q1_true.Location = new System.Drawing.Point(551, 460);
             this.q1_true.Name = "q1_true";
             this.q1_true.Size = new System.Drawing.Size(109, 37);
@@ -1378,9 +1794,10 @@
             // 
             // question1Text_richTextBox
             // 
-            this.question1Text_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.question1Text_richTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.question1Text_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.question1Text_richTextBox.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.question1Text_richTextBox.ForeColor = System.Drawing.Color.White;
             this.question1Text_richTextBox.HideSelection = false;
             this.question1Text_richTextBox.Location = new System.Drawing.Point(353, 225);
             this.question1Text_richTextBox.Name = "question1Text_richTextBox";
@@ -1391,9 +1808,10 @@
             // 
             // questionType_richTextBox
             // 
-            this.questionType_richTextBox.BackColor = System.Drawing.Color.Lavender;
+            this.questionType_richTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.questionType_richTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.questionType_richTextBox.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.questionType_richTextBox.ForeColor = System.Drawing.Color.White;
             this.questionType_richTextBox.HideSelection = false;
             this.questionType_richTextBox.Location = new System.Drawing.Point(353, 156);
             this.questionType_richTextBox.Name = "questionType_richTextBox";
@@ -1405,288 +1823,21 @@
             // question1_label
             // 
             this.question1_label.AutoSize = true;
+            this.question1_label.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
             this.question1_label.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.question1_label.ForeColor = System.Drawing.Color.White;
             this.question1_label.Location = new System.Drawing.Point(101, 23);
             this.question1_label.Name = "question1_label";
             this.question1_label.Size = new System.Drawing.Size(234, 32);
             this.question1_label.TabIndex = 0;
             this.question1_label.Text = "Ερώτηση 1 (από 6)";
             // 
-            // q_panel
-            // 
-            this.q_panel.AllowDrop = true;
-            this.q_panel.BackColor = System.Drawing.Color.Lavender;
-            this.q_panel.Controls.Add(this.q6_appear_label);
-            this.q_panel.Controls.Add(this.q5_appear_label);
-            this.q_panel.Controls.Add(this.q4_appear_label);
-            this.q_panel.Controls.Add(this.q3_appear_label);
-            this.q_panel.Controls.Add(this.q2_appear_label);
-            this.q_panel.Controls.Add(this.q1_appear_label);
-            this.q_panel.Controls.Add(this.status2_label);
-            this.q_panel.Controls.Add(this.status3_label);
-            this.q_panel.Controls.Add(this.status4_label);
-            this.q_panel.Controls.Add(this.status5_label);
-            this.q_panel.Controls.Add(this.status6_label);
-            this.q_panel.Controls.Add(this.status1_label);
-            this.q_panel.Controls.Add(this.label14);
-            this.q_panel.Controls.Add(this.label13);
-            this.q_panel.Controls.Add(this.label12);
-            this.q_panel.Controls.Add(this.label10);
-            this.q_panel.Controls.Add(this.label9);
-            this.q_panel.Controls.Add(this.label7);
-            this.q_panel.Controls.Add(this.label6);
-            this.q_panel.Controls.Add(this.label5);
-            this.q_panel.Controls.Add(this.label2);
-            this.q_panel.Controls.Add(this.results_pictureBox);
-            this.q_panel.Location = new System.Drawing.Point(119, 67);
-            this.q_panel.Name = "q_panel";
-            this.q_panel.Size = new System.Drawing.Size(1600, 800);
-            this.q_panel.TabIndex = 40;
-            this.q_panel.Visible = false;
-            // 
-            // q6_appear_label
-            // 
-            this.q6_appear_label.AutoSize = true;
-            this.q6_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q6_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q6_appear_label.Location = new System.Drawing.Point(999, 620);
-            this.q6_appear_label.Name = "q6_appear_label";
-            this.q6_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q6_appear_label.TabIndex = 39;
-            this.q6_appear_label.Text = "Πατήστε εδώ";
-            this.q6_appear_label.Click += new System.EventHandler(this.Q6_appear_label_Click);
-            // 
-            // q5_appear_label
-            // 
-            this.q5_appear_label.AutoSize = true;
-            this.q5_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q5_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q5_appear_label.Location = new System.Drawing.Point(999, 518);
-            this.q5_appear_label.Name = "q5_appear_label";
-            this.q5_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q5_appear_label.TabIndex = 38;
-            this.q5_appear_label.Text = "Πατήστε εδώ";
-            this.q5_appear_label.Click += new System.EventHandler(this.Q5_appear_label_Click);
-            // 
-            // q4_appear_label
-            // 
-            this.q4_appear_label.AutoSize = true;
-            this.q4_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q4_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q4_appear_label.Location = new System.Drawing.Point(999, 414);
-            this.q4_appear_label.Name = "q4_appear_label";
-            this.q4_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q4_appear_label.TabIndex = 37;
-            this.q4_appear_label.Text = "Πατήστε εδώ";
-            this.q4_appear_label.Click += new System.EventHandler(this.Q4_appear_label_Click);
-            // 
-            // q3_appear_label
-            // 
-            this.q3_appear_label.AutoSize = true;
-            this.q3_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q3_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q3_appear_label.Location = new System.Drawing.Point(999, 312);
-            this.q3_appear_label.Name = "q3_appear_label";
-            this.q3_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q3_appear_label.TabIndex = 36;
-            this.q3_appear_label.Text = "Πατήστε εδώ";
-            this.q3_appear_label.Click += new System.EventHandler(this.Q3_appear_label_Click);
-            // 
-            // q2_appear_label
-            // 
-            this.q2_appear_label.AutoSize = true;
-            this.q2_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q2_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q2_appear_label.Location = new System.Drawing.Point(999, 210);
-            this.q2_appear_label.Name = "q2_appear_label";
-            this.q2_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q2_appear_label.TabIndex = 35;
-            this.q2_appear_label.Text = "Πατήστε εδώ";
-            this.q2_appear_label.Click += new System.EventHandler(this.Q2_appear_label_Click);
-            // 
-            // q1_appear_label
-            // 
-            this.q1_appear_label.AutoSize = true;
-            this.q1_appear_label.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.q1_appear_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.q1_appear_label.Location = new System.Drawing.Point(999, 108);
-            this.q1_appear_label.Name = "q1_appear_label";
-            this.q1_appear_label.Size = new System.Drawing.Size(162, 32);
-            this.q1_appear_label.TabIndex = 34;
-            this.q1_appear_label.Text = "Πατήστε εδώ";
-            this.q1_appear_label.Click += new System.EventHandler(this.Q1_appear_label_Click);
-            // 
-            // status2_label
-            // 
-            this.status2_label.AutoSize = true;
-            this.status2_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status2_label.Location = new System.Drawing.Point(321, 210);
-            this.status2_label.Name = "status2_label";
-            this.status2_label.Size = new System.Drawing.Size(30, 32);
-            this.status2_label.TabIndex = 33;
-            this.status2_label.Text = "[]";
-            // 
-            // status3_label
-            // 
-            this.status3_label.AutoSize = true;
-            this.status3_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status3_label.Location = new System.Drawing.Point(321, 312);
-            this.status3_label.Name = "status3_label";
-            this.status3_label.Size = new System.Drawing.Size(30, 32);
-            this.status3_label.TabIndex = 32;
-            this.status3_label.Text = "[]";
-            // 
-            // status4_label
-            // 
-            this.status4_label.AutoSize = true;
-            this.status4_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status4_label.Location = new System.Drawing.Point(321, 420);
-            this.status4_label.Name = "status4_label";
-            this.status4_label.Size = new System.Drawing.Size(30, 32);
-            this.status4_label.TabIndex = 31;
-            this.status4_label.Text = "[]";
-            // 
-            // status5_label
-            // 
-            this.status5_label.AutoSize = true;
-            this.status5_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status5_label.Location = new System.Drawing.Point(321, 518);
-            this.status5_label.Name = "status5_label";
-            this.status5_label.Size = new System.Drawing.Size(30, 32);
-            this.status5_label.TabIndex = 30;
-            this.status5_label.Text = "[]";
-            // 
-            // status6_label
-            // 
-            this.status6_label.AutoSize = true;
-            this.status6_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status6_label.Location = new System.Drawing.Point(321, 616);
-            this.status6_label.Name = "status6_label";
-            this.status6_label.Size = new System.Drawing.Size(30, 32);
-            this.status6_label.TabIndex = 29;
-            this.status6_label.Text = "[]";
-            // 
-            // status1_label
-            // 
-            this.status1_label.AutoSize = true;
-            this.status1_label.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.status1_label.Location = new System.Drawing.Point(321, 108);
-            this.status1_label.Name = "status1_label";
-            this.status1_label.Size = new System.Drawing.Size(30, 32);
-            this.status1_label.TabIndex = 28;
-            this.status1_label.Text = "[]";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label14.Location = new System.Drawing.Point(221, 30);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(313, 37);
-            this.label14.TabIndex = 27;
-            this.label14.Text = "Κατάσταση ερωτήσεων";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label13.Location = new System.Drawing.Point(924, 30);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(271, 37);
-            this.label13.TabIndex = 26;
-            this.label13.Text = "Εμφάνιση ερώτησης";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label12.Location = new System.Drawing.Point(568, 30);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(289, 37);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Διαθέσιμες ερωτήσεις";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label10.Location = new System.Drawing.Point(649, 210);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 32);
-            this.label10.TabIndex = 24;
-            this.label10.Text = "Ερώτηση 2";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label9.Location = new System.Drawing.Point(649, 312);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 32);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "Ερώτηση 3";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(649, 420);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(135, 32);
-            this.label7.TabIndex = 22;
-            this.label7.Text = "Ερώτηση 4";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(649, 518);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(134, 32);
-            this.label6.TabIndex = 21;
-            this.label6.Text = "Ερώτηση 5";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(649, 616);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(134, 32);
-            this.label5.TabIndex = 20;
-            this.label5.Text = "Ερώτηση 6";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(649, 108);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(131, 32);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "Ερώτηση 1";
-            // 
-            // results_pictureBox
-            // 
-            this.results_pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.results_pictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.results_pictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.results_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("results_pictureBox.Image")));
-            this.results_pictureBox.Location = new System.Drawing.Point(688, 737);
-            this.results_pictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.results_pictureBox.Name = "results_pictureBox";
-            this.results_pictureBox.Size = new System.Drawing.Size(66, 52);
-            this.results_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.results_pictureBox.TabIndex = 18;
-            this.results_pictureBox.TabStop = false;
-            this.results_pictureBox.Click += new System.EventHandler(this.Results_pictureBox_Click);
-            // 
             // totalTimeTimer_label
             // 
             this.totalTimeTimer_label.AutoSize = true;
             this.totalTimeTimer_label.BackColor = System.Drawing.Color.Transparent;
             this.totalTimeTimer_label.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.totalTimeTimer_label.ForeColor = System.Drawing.Color.DarkGoldenrod;
+            this.totalTimeTimer_label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(192)))), ((int)(((byte)(225)))));
             this.totalTimeTimer_label.Location = new System.Drawing.Point(972, 6);
             this.totalTimeTimer_label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalTimeTimer_label.Name = "totalTimeTimer_label";
@@ -1698,20 +1849,40 @@
             this.questionTimeTimer_Label.AutoSize = true;
             this.questionTimeTimer_Label.BackColor = System.Drawing.Color.Transparent;
             this.questionTimeTimer_Label.Font = new System.Drawing.Font("Comic Sans MS", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.questionTimeTimer_Label.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(229)))), ((int)(((byte)(233)))));
             this.questionTimeTimer_Label.Location = new System.Drawing.Point(972, 39);
             this.questionTimeTimer_Label.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.questionTimeTimer_Label.Name = "questionTimeTimer_Label";
             this.questionTimeTimer_Label.Size = new System.Drawing.Size(0, 27);
             this.questionTimeTimer_Label.TabIndex = 21;
             // 
+            // backgroundQuestionDesign
+            // 
+            this.backgroundQuestionDesign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(147)))), ((int)(((byte)(227)))));
+            this.backgroundQuestionDesign.CornerRadius = 80;
+            this.backgroundQuestionDesign.Location = new System.Drawing.Point(29, 24);
+            this.backgroundQuestionDesign.Name = "backgroundQuestionDesign";
+            this.backgroundQuestionDesign.Size = new System.Drawing.Size(67, 42);
+            this.backgroundQuestionDesign.TabIndex = 41;
+            // 
+            // backgroundFormDesign
+            // 
+            this.backgroundFormDesign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(95)))), ((int)(((byte)(131)))));
+            this.backgroundFormDesign.CornerRadius = 100;
+            this.backgroundFormDesign.Location = new System.Drawing.Point(63, 35);
+            this.backgroundFormDesign.Name = "backgroundFormDesign";
+            this.backgroundFormDesign.Size = new System.Drawing.Size(1900, 1100);
+            this.backgroundFormDesign.TabIndex = 22;
+            // 
             // Questions_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(65)))), ((int)(((byte)(92)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(2163, 1061);
             this.Controls.Add(this.background_panel);
+            this.Controls.Add(this.backgroundFormDesign);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1728,6 +1899,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.tip_pictureBox)).EndInit();
             this.background_panel.ResumeLayout(false);
             this.background_panel.PerformLayout();
+            this.q_panel.ResumeLayout(false);
+            this.q_panel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.results_pictureBox)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -1752,9 +1926,6 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.q_panel.ResumeLayout(false);
-            this.q_panel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.results_pictureBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1880,5 +2051,7 @@
         private RichTextBox q5_QTip_RichTextBox;
         private RichTextBox q4_QTip_RichTextBox;
         private PictureBox q4_QTip_PictureBox;
+        private CustomControls.BackgroundDesign backgroundFormDesign;
+        private CustomControls.BackgroundDesign backgroundQuestionDesign;
     }
 }
