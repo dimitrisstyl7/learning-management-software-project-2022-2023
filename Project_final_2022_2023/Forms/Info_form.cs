@@ -6,10 +6,12 @@ namespace Project_final_2022_2023
 {
     public partial class Info_form : Form
     {
-        public Info_form()
+        private readonly Button main_start_button;
+
+        public Info_form(Button button)
         {
+            main_start_button = button;
             InitializeComponent();
-            this.DoubleBuffered = true;
         }
 
         private void Info_form_Load(object sender, EventArgs e)
@@ -41,6 +43,14 @@ namespace Project_final_2022_2023
         private void Start_pictureBox_MouseHover(object sender, EventArgs e)
         {
             start_pictureBox.Cursor = Cursors.Hand;
+        }
+
+        private void Start_pictureBox_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            var _ = ImportData.finalQuestions;
+            main_start_button.Visible = false;
+            new Questions_form(this).ShowDialog();
         }
     }
 }
