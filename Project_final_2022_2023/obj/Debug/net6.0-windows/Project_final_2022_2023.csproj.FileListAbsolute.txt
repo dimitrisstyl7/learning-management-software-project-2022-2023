@@ -46,7 +46,6 @@ C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-wi
 C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.csproj.ResolveComReference.cache
 C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.info_form.resources
 C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.main_form.resources
-C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.Forms.Questions_layout_form.resources
 C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.Properties.Resources.resources
 C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.csproj.GenerateResource.cache
 C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.GeneratedMSBuildEditorConfig.editorconfig
@@ -83,3 +82,5 @@ C:\Users\theok\OneDrive\5o Εξάμηνο\Λογισμικό Διαχείρισ�
 C:\Users\theok\OneDrive\5o Εξάμηνο\Λογισμικό Διαχείρισης Μάθησης\Απαλλακτική Εργασία 2022\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.pdb
 C:\Users\theok\OneDrive\5o Εξάμηνο\Λογισμικό Διαχείρισης Μάθησης\Απαλλακτική Εργασία 2022\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.genruntimeconfig.cache
 C:\Users\theok\OneDrive\5o Εξάμηνο\Λογισμικό Διαχείρισης Μάθησης\Απαλλακτική Εργασία 2022\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\ref\Project_final_2022_2023.dll
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.Forms.Questions_form.resources
+C:\Users\dimit\Desktop\project_final\Project_final_2022_2023\obj\Debug\net6.0-windows\Project_final_2022_2023.Forms.Results_form.resources

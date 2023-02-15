@@ -26,9 +26,7 @@ namespace Project_final_2022_2023.Classes
         {
             _Application excel = new _Excel.Application();
             try
-            {
-                //open and read the file
-
+            {   //open and read the file
                 string path = Path.GetFullPath("questions.xlsx"); //copy relative path of excel file
                 Workbook workbook = excel.Workbooks.Open(path); //open it
                 Worksheet worksheet = workbook.Worksheets.get_Item(1); //open the first sheet
@@ -37,7 +35,8 @@ namespace Project_final_2022_2023.Classes
             }
             catch
             {
-                /////// SOMETHING WENT WRONG MESSAGE //////
+                MessageBox.Show("Something went wrong, try again!");
+                System.Windows.Forms.Application.Exit();
             }
             finally
             {

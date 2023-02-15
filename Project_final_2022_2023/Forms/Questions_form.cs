@@ -1,28 +1,30 @@
 ﻿using Microsoft.Office.Interop.Excel;
 using Project_final_2022_2023.Classes;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using Button = System.Windows.Forms.Button;
 using Label = System.Windows.Forms.Label;
 using Point = System.Drawing.Point;
 
 namespace Project_final_2022_2023.Forms
 {
-    public partial class Questions_layout_form : Form
+    public partial class Questions_form : Form
     {
         private int qNumber; //it keeps the question that is running right now
         private int tm, ts; //totalTimer -> tm = minutes and ts = seconds
         private int qm, qs; //questionTimer -> qm = minutes and qs = seconds
         private Panel currentPanel;
-
-        public Questions_layout_form(Info_form form)
+        private bool[] gotHelp;
+        public Questions_form(Info_form form)
         {
             InitializeComponent();
-            this.DoubleBuffered = true;
             form.Dispose();
             qNumber = 1; //start from question1
+            gotHelp = new bool[] { false, false, false, false, false, false }; // true if question[i] got help.
             currentPanel = panel1;
         }
 
@@ -727,21 +729,26 @@ namespace Project_final_2022_2023.Forms
             switch (qNumber)
             {
                 case 1:
+                    gotHelp[0] = true;
                     q1_QTip_RichTextBox.Visible = true;
                     break;
                 case 2:
+                    gotHelp[1] = true;
                     HideAvailableChoiceQ2(ImportData.finalQuestions[1].QTip);
                     break;
                 case 3:
+                    gotHelp[2] = true;
                     HideAvailableChoiceQ3(ImportData.finalQuestions[2].QTip);
                     break;
                 case 4:
+                    gotHelp[3] = true;
                     if (String.IsNullOrEmpty(q4_QTip_RichTextBox.Text))
                         q4_QTip_PictureBox.Visible = true;
                     else
                         q4_QTip_RichTextBox.Visible = true;
                     break;
                 case 5:
+                    gotHelp[4] = true;
                     if (q5_QTip_RichTextBox.Text.Equals("Μέτρησε τις γωνιές."))
                         q5_QTip_RichTextBox.Visible = true;
                     else if (q5_QTip_RichTextBox.Text.Equals("Θεώρημα"))
@@ -750,6 +757,7 @@ namespace Project_final_2022_2023.Forms
                         q5_button3.Text = q5_QTip_RichTextBox.Text;
                     break;
                 case 6:
+                    gotHelp[5] = true;
                     if (q6_QTip_RichTextBox.Text.Equals("x"))
                         q6_button1.Text = q6_QTip_RichTextBox.Text;
                     else
@@ -775,7 +783,7 @@ namespace Project_final_2022_2023.Forms
             }
         }
 
-        private void HideAvailableChoiceQ3(string hideAnswer) // The same as the HideAvailableChoiceQ2
+        private void HideAvailableChoiceQ3(string hideAnswer)
         {
             switch (hideAnswer)
             {
@@ -789,6 +797,13 @@ namespace Project_final_2022_2023.Forms
                     q3_answer4.Visible = false;
                     break;
             }
+        }
+
+        private void Results_pictureBox_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            CalculateResults();//calculate results
+            new Results_form(this).ShowDialog();
         }
 
         private void UnhidePanelButtons()
@@ -899,6 +914,167 @@ namespace Project_final_2022_2023.Forms
             {
                 status6_label.Text = "Δεν απαντήθηκε";
                 status6_label.ForeColor = Color.Red;
+            }
+        }
+
+        private void CalculateResults()
+        {
+            int panel_no = 1; //start panel, increase by one in each loop.
+            Question.QTotalMarks = 0;
+            foreach (var x in ImportData.finalQuestions)
+            {
+                var QCorrectAns = x.QCorrectAns;
+                string student_choice = "-1";
+                int counter = 0;
+                string[] buttons_text;
+                switch (panel_no++)
+                {
+                    case 1:
+                        if (q1_true.Checked) student_choice = "1";
+                        else if (q1_false.Checked) student_choice = "2";
+
+                        if (student_choice.Equals(x.QCorrectAns[0]))
+                            if (gotHelp[0])
+                                Question.QTotalMarks += 1.0;
+                            else
+                                Question.QTotalMarks += 2.0;
+                        break;
+
+                    case 2:
+                        if (q2_answer1.Checked) student_choice = "1";
+                        else if (q2_answer2.Checked) student_choice = "2";
+                        else if (q2_answer3.Checked) student_choice = "3";
+                        else if (q2_answer4.Checked) student_choice = "4";
+
+                        if (student_choice.Equals(x.QCorrectAns[0]))
+                            if (gotHelp[1])
+                                Question.QTotalMarks += 1.5;
+                            else
+                                Question.QTotalMarks += 2.0;
+                        break;
+
+                    case 3:
+                        bool[] choice = new bool[] { q3_answer1.Checked, q3_answer1.Checked,
+                                                     q3_answer3.Checked, q3_answer4.Checked};
+
+                        bool matching_one = false, matching_two = false;
+                        for (int i = 0; i < choice.Length; i++)
+                        {
+                            for (int j = i + 1; j < choice.Length; j++)
+                            {
+                                matching_two = choice[i].Equals(x.QCorrectAns[0]) && choice[j].Equals(x.QCorrectAns[1]);
+                                if (choice[i].Equals(x.QCorrectAns[0]) || choice[j].Equals(x.QCorrectAns[1]))
+                                    matching_one = true;
+                            }
+                            if (matching_two) break;
+                        }
+
+                        if (matching_two || matching_one)
+                            if (gotHelp[2])
+                                if (matching_two)
+                                    Question.QTotalMarks += 1.5;
+                                else // matching_one with tip
+                                    Question.QTotalMarks += 0.5;
+                            else if (matching_two)
+                                Question.QTotalMarks += 2.0;
+                            else // matching one without tip
+                                Question.QTotalMarks += 1.0;
+                        break;
+
+                    case 4:
+                        string[] inputs = new string[] { q4_textBox1.Text, q4_textBox2.Text,
+                                                         q4_textBox3.Text, q4_textBox4.Text };
+
+                        for (int i = 0; i < inputs.Length; i++) counter += inputs[i].Equals(x.QCorrectAns[i]) ? 1 : 0;
+
+                        if (counter > 0)
+                            if (gotHelp[3])
+                                if (counter == 2) Question.QTotalMarks += 0.5;
+                                else if (counter == 3) Question.QTotalMarks += 1;
+                                else if (counter == 4) Question.QTotalMarks += 1.5;
+                                else Question.QTotalMarks += 0.0; // if counter == 1
+                            else if (counter == 1) Question.QTotalMarks += 0.5;
+                            else if (counter == 2) Question.QTotalMarks += 1.0;
+                            else if (counter == 3) Question.QTotalMarks += 1.5;
+                            else Question.QTotalMarks += 2.0; // if counter == 4
+                        break;
+
+                    case 5:
+                        buttons_text = new string[] { q5_button1.Text, q5_button2.Text, q5_button3.Text };
+                        
+                        bool[] choice_is_correct = new bool[] { buttons_text[0].Equals(q5_label5.Text),
+                                                                buttons_text[1].Equals(q5_label6.Text),
+                                                                buttons_text[2].Equals(q5_label4.Text) };
+
+                        foreach (var b in choice_is_correct) counter += b ? 1 : 0; // count the correct answers.
+
+                        if (counter > 0)
+                            if (gotHelp[4])
+                                if (counter == 1) Question.QTotalMarks += 0.2;
+                                else if (counter == 2) Question.QTotalMarks += 0.9;
+                                else Question.QTotalMarks += 1.5;
+                            else if (counter == 1) Question.QTotalMarks += 0.7;
+                            else if (counter == 2) Question.QTotalMarks += 1.4;
+                            else Question.QTotalMarks += 2.0;
+                        break;
+
+                    case 6:
+                        if (q6_button7.Visible) // 3rd question of type 6.
+                        {
+                            buttons_text = new string[] { q6_button1.Text, q6_button2.Text, q6_button3.Text, q6_button4.Text,
+                                                          q6_button5.Text, q6_button6.Text, q6_button7.Text };
+                            for (int i = 0; i < buttons_text.Length; i++) 
+                                counter += buttons_text[i].Equals(x.QAnswers[i]) ? 1 : 0; // count the correct answers.
+                        }
+                        else if (q6_label15.Visible) // 1st question of type 6.
+                        {
+                            buttons_text = new string[] { q6_button1.Text, q6_button2.Text, q6_button3.Text, q6_button4.Text };
+                            // count the correct answers
+                            counter += (buttons_text[0]).Equals(q6_label13.Text) ? 1 : 0; // if button text == 'x'.
+                            counter += (buttons_text[1]).Equals(q6_label14.Text) ? 1 : 0; // if button text == '+'.
+                            counter += (buttons_text[2]).Equals(q6_label15.Text) ? 1 : 0; // if button text == '/'.
+                            counter += (buttons_text[3]).Equals(q6_label12.Text) ? 1 : 0; // if button text == '-'.
+                        }
+                        else // 2nd question of type 6.
+                        {
+                            buttons_text = new string[] { q6_button1.Text, q6_button2.Text, q6_button3.Text, q6_button4.Text };
+                            // count the correct answers
+                            counter += (buttons_text[0]).Equals(q6_label12.Text) ? 1 : 0; // if button text == '<'.
+                            counter += (buttons_text[1]).Equals(q6_label13.Text) ? 1 : 0; // if button text == '>'.
+                            counter += (buttons_text[2]).Equals(q6_label12.Text) ? 1 : 0; // if button text == '<'.
+                            counter += (buttons_text[3]).Equals(q6_label13.Text) ? 1 : 0; // if button text == '>'.
+                        }
+
+                        if (counter > 0)
+                            if (gotHelp[5])
+                                if (buttons_text.Length == 7) // 3rd question of type 6, with tip.
+                                    if (counter == 2) Question.QTotalMarks += 0.1;
+                                    else if (counter == 3) Question.QTotalMarks += 0.4;
+                                    else if (counter == 4) Question.QTotalMarks += 0.7;
+                                    else if (counter == 5) Question.QTotalMarks += 1.0;
+                                    else if (counter == 6) Question.QTotalMarks += 1.3;
+                                    else if (counter == 7) Question.QTotalMarks += 1.5;
+                                    else Question.QTotalMarks += 0.0; // if counter < 2
+                                else // 1st or 2nd question of type 6, with tip.
+                                    if (counter == 2) Question.QTotalMarks += 0.5;
+                                    else if (counter == 3) Question.QTotalMarks += 1.0;
+                                    else if (counter == 4) Question.QTotalMarks += 1.5;
+                                    else Question.QTotalMarks += 0.0; // if counter == 1
+                            else if (buttons_text.Length == 7) // 3rd question of type 6, without tip.
+                                if (counter == 1) Question.QTotalMarks += 0.3;
+                                else if (counter == 2) Question.QTotalMarks += 0.6;
+                                else if (counter == 3) Question.QTotalMarks += 0.9;
+                                else if (counter == 4) Question.QTotalMarks += 1.2;
+                                else if (counter == 5) Question.QTotalMarks += 1.5;
+                                else if (counter == 6) Question.QTotalMarks += 1.8;
+                                else Question.QTotalMarks += 2.0; // if counter == 7
+                            else // 1st or 2nd question of type 6, without tip.
+                                if (counter == 1) Question.QTotalMarks += 0.5;
+                                else if (counter == 2) Question.QTotalMarks += 1.0;
+                                else if (counter == 3) Question.QTotalMarks += 1.5;
+                                else Question.QTotalMarks += 2.0; // if counter == 4
+                        break;
+                }
             }
         }
     }

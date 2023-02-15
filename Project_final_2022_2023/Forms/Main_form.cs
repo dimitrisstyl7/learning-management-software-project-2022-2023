@@ -21,7 +21,7 @@ namespace Project_final_2022_2023
 
         private void StartButton_Click(object sender, EventArgs e)
         {
-            new Info_form().ShowDialog();
+            new Info_form(start_button).ShowDialog();
         }
         private void AlignButtons()
         {

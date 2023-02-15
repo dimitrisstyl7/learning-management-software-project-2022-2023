@@ -280,7 +280,7 @@
             this.start_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.start_pictureBox.TabIndex = 17;
             this.start_pictureBox.TabStop = false;
-            this.start_pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Start_pictureBox_MouseClick);
+            this.start_pictureBox.Click += new System.EventHandler(this.Start_pictureBox_Click);
             this.start_pictureBox.MouseHover += new System.EventHandler(this.Start_pictureBox_MouseHover);
             // 
             // cancel_pictureBox
