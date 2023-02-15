@@ -1,6 +1,6 @@
 ﻿namespace Project_final_2022_2023.Forms
 {
-    partial class Questions_layout_form
+    partial class Questions_form
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Questions_layout_form));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Questions_form));
             this.left_arrow_pictureBox = new System.Windows.Forms.PictureBox();
             this.refresh_pictureBox = new System.Windows.Forms.PictureBox();
             this.right_arrow_pictureBox = new System.Windows.Forms.PictureBox();

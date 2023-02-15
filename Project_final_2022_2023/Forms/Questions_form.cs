@@ -10,14 +10,14 @@ using Point = System.Drawing.Point;
 
 namespace Project_final_2022_2023.Forms
 {
-    public partial class Questions_layout_form : Form
+    public partial class Questions_form : Form
     {
         private int qNumber; //it keeps the question that is running right now
         private int tm, ts; //totalTimer -> tm = minutes and ts = seconds
         private int qm, qs; //questionTimer -> qm = minutes and qs = seconds
         private Panel currentPanel;
 
-        public Questions_layout_form(Info_form form)
+        public Questions_form(Info_form form)
         {
             InitializeComponent();
             this.DoubleBuffered = true;
