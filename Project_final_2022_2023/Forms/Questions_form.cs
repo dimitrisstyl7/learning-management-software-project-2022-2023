@@ -429,6 +429,9 @@ namespace Project_final_2022_2023.Forms
 
         private void Q1_appear_label_Click(object sender, EventArgs e)
         {
+            questionTime_label.Visible = true;
+            questionTimeTimer_Label.Visible = true;
+            questionTimer.Enabled = true;
             panel1.Visible = true;
             q_panel.Visible = false;
             qNumber = 1;
@@ -437,6 +440,9 @@ namespace Project_final_2022_2023.Forms
 
         private void Q2_appear_label_Click(object sender, EventArgs e)
         {
+            questionTime_label.Visible = true;
+            questionTimeTimer_Label.Visible = true;
+            questionTimer.Enabled = true;
             panel2.Visible = true;
             q_panel.Visible = false;
             qNumber = 2;
@@ -445,6 +451,9 @@ namespace Project_final_2022_2023.Forms
 
         private void Q3_appear_label_Click(object sender, EventArgs e)
         {
+            questionTime_label.Visible = true;
+            questionTimeTimer_Label.Visible = true;
+            questionTimer.Enabled = true;
             panel3.Visible = true;
             q_panel.Visible = false;
             qNumber = 3;
@@ -453,6 +462,9 @@ namespace Project_final_2022_2023.Forms
 
         private void Q4_appear_label_Click(object sender, EventArgs e)
         {
+            questionTime_label.Visible = true;
+            questionTimeTimer_Label.Visible = true;
+            questionTimer.Enabled = true;
             panel4.Visible = true;
             q_panel.Visible = false;
             qNumber = 4;
@@ -461,6 +473,9 @@ namespace Project_final_2022_2023.Forms
 
         private void Q5_appear_label_Click(object sender, EventArgs e)
         {
+            questionTime_label.Visible = true;
+            questionTimeTimer_Label.Visible = true;
+            questionTimer.Enabled = true;
             panel5.Visible = true;
             q_panel.Visible = false;
             qNumber = 5;
@@ -469,6 +484,9 @@ namespace Project_final_2022_2023.Forms
 
         private void Q6_appear_label_Click(object sender, EventArgs e)
         {
+            questionTime_label.Visible = true;
+            questionTimeTimer_Label.Visible = true;
+            questionTimer.Enabled = true;
             panel6.Visible = true;
             q_panel.Visible = false;
             qNumber = 6;

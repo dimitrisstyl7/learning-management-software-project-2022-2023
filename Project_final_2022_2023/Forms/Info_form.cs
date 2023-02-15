@@ -30,7 +30,6 @@ namespace Project_final_2022_2023
         private void Cancel_pictureBox_MouseHover(object sender, EventArgs e)
         {
             cancel_pictureBox.Cursor = Cursors.Hand;
-            
         }
 
         private void Start_pictureBox_MouseClick(object sender, MouseEventArgs e)

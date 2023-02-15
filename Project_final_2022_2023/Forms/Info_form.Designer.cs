@@ -223,7 +223,6 @@
             this.start_pictureBox.TabIndex = 17;
             this.start_pictureBox.TabStop = false;
             this.start_pictureBox.Click += new System.EventHandler(this.Start_pictureBox_Click);
-            this.start_pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Start_pictureBox_MouseClick);
             this.start_pictureBox.MouseHover += new System.EventHandler(this.Start_pictureBox_MouseHover);
             // 
             // pictureBox7
@@ -365,7 +364,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(11)))), ((int)(((byte)(95)))), ((int)(((byte)(131)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1887, 1148);
+            this.ClientSize = new System.Drawing.Size(1887, 1061);
             this.Controls.Add(this.info_panel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
