@@ -215,13 +215,14 @@
             // 
             this.start_pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.start_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("start_pictureBox.Image")));
-            this.start_pictureBox.Location = new System.Drawing.Point(824, 922);
+            this.start_pictureBox.Location = new System.Drawing.Point(819, 855);
             this.start_pictureBox.Margin = new System.Windows.Forms.Padding(2);
             this.start_pictureBox.Name = "start_pictureBox";
             this.start_pictureBox.Size = new System.Drawing.Size(66, 52);
             this.start_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.start_pictureBox.TabIndex = 17;
             this.start_pictureBox.TabStop = false;
+            this.start_pictureBox.Click += new System.EventHandler(this.Start_pictureBox_Click);
             this.start_pictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Start_pictureBox_MouseClick);
             this.start_pictureBox.MouseHover += new System.EventHandler(this.Start_pictureBox_MouseHover);
             // 
@@ -348,20 +349,6 @@
             this.backgroundDesign1.Name = "backgroundDesign1";
             this.backgroundDesign1.Size = new System.Drawing.Size(592, 641);
             this.backgroundDesign1.TabIndex = 18;
-            // 
-            // start_pictureBox
-            // 
-            this.start_pictureBox.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.start_pictureBox.Image = ((System.Drawing.Image)(resources.GetObject("start_pictureBox.Image")));
-            this.start_pictureBox.Location = new System.Drawing.Point(809, 750);
-            this.start_pictureBox.Margin = new System.Windows.Forms.Padding(2);
-            this.start_pictureBox.Name = "start_pictureBox";
-            this.start_pictureBox.Size = new System.Drawing.Size(66, 52);
-            this.start_pictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.start_pictureBox.TabIndex = 17;
-            this.start_pictureBox.TabStop = false;
-            this.start_pictureBox.Click += new System.EventHandler(this.Start_pictureBox_Click);
-            this.start_pictureBox.MouseHover += new System.EventHandler(this.Start_pictureBox_MouseHover);
             // 
             // backgroundDesign2
             // 
