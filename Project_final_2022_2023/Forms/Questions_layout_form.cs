@@ -33,6 +33,9 @@ namespace Project_final_2022_2023.Forms
             int width = this.Width / 2 - background_panel.Width / 2;
             int height = this.Height / 2 - background_panel.Height / 2;
             background_panel.Location = new Point(width, height);
+            backgroundFormDesign.Location = new Point(width - 50, height - 50);
+            backgroundQuestionDesign.Size = new Size(1650, 820);
+            backgroundQuestionDesign.Location = new Point(122 - 20, 75 - 10);
             FillData(); //Fill panels data
             CreateTotalTimer();
             CreateQuestionTimer();
