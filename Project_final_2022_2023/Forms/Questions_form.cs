@@ -526,9 +526,16 @@ namespace Project_final_2022_2023.Forms
                 questionTimer.Stop();
                 totalTimeTimer_label.Text = "Τέλος Χρόνου";
                 CalculateResults();//calculate results
-                q_panel.Visible = false;
                 submited = true;
                 a_panel.Visible = true;
+                q_panel.Visible = false;
+                panel1.Enabled = false;
+                panel2.Enabled = false;
+                panel3.Enabled = false;
+                panel4.Enabled = false;
+                panel5.Enabled = false;
+                panel6.Enabled = false;
+                questionTimeTimer_Label.Visible = false;
             }
         }
 
@@ -849,6 +856,12 @@ namespace Project_final_2022_2023.Forms
             this.Cursor = Cursors.Arrow;
             CalculateResults();//calculate results
             q_panel.Visible = false;
+            panel1.Enabled = false;
+            panel2.Enabled = false;
+            panel3.Enabled = false;
+            panel4.Enabled = false;
+            panel5.Enabled = false;
+            panel6.Enabled = false;
             submited = true;
             a_panel.Visible = true;
             totalTimer.Stop();            
