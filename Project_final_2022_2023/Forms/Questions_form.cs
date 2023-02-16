@@ -846,7 +846,7 @@ namespace Project_final_2022_2023.Forms
 
         private void Results_pictureBox_Click(object sender, EventArgs e)
         {
-            //this.Cursor = Cursors.WaitCursor;
+            this.Cursor = Cursors.Arrow;
             CalculateResults();//calculate results
             q_panel.Visible = false;
             submited = true;
@@ -923,11 +923,11 @@ namespace Project_final_2022_2023.Forms
 
         }
 
-        private void exit_button_Click(object sender, EventArgs e)
+        private void exit_button_Click_1(object sender, EventArgs e)
         {
             System.Windows.Forms.Application.Exit();
         }
-        
+
         private void FillStatusColumn()
         {
             if (q1_true.Checked || q1_false.Checked)
