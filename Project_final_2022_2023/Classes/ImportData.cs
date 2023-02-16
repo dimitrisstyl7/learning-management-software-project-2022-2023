@@ -26,9 +26,7 @@ namespace Project_final_2022_2023.Classes
         {
             _Application excel = new _Excel.Application();
             try
-            {
-                //open and read the file
-
+            {   //open and read the file
                 string path = Path.GetFullPath("questions.xlsx"); //copy relative path of excel file
                 Workbook workbook = excel.Workbooks.Open(path); //open it
                 Worksheet worksheet = workbook.Worksheets.get_Item(1); //open the first sheet
@@ -37,7 +35,8 @@ namespace Project_final_2022_2023.Classes
             }
             catch
             {
-                /////// SOMETHING WENT WRONG MESSAGE //////
+                MessageBox.Show("Something went wrong, try again!");
+                System.Windows.Forms.Application.Exit();
             }
             finally
             {
@@ -54,6 +53,7 @@ namespace Project_final_2022_2023.Classes
             }
             workbook.Close(false);
         }
+        //Dimitris Stylianou P20004, Theodoros Koxanoglou P20094, Panagiota  Nicolaou P20009, Rafaela Karapetsa-Lazaridou P20078, Sotiris Chatzikyriakou P20011
 
         private static Question ReadQuestion(_Excel.Range xlRange, Worksheet worksheet, int row)
         {
@@ -75,17 +75,17 @@ namespace Project_final_2022_2023.Classes
                     case 3:
                         List<string[]> list = new();
 
-                        // Example : 10+5=|6-3=|9x3=!9÷3|25-10|15+12
+                        //Example : 10+5=|6-3=|9x3=!9÷3|25-10|15+12
                         string[] listElement = value.Split("!");
-                        // listElement[0] = 10+5=|6-3=|9x3=
-                        // listElement[1] = 9÷3|25-10|15+12
+                        //listElement[0] = 10+5=|6-3=|9x3=
+                        //listElement[1] = 9÷3|25-10|15+12
 
-                        string[] colA = listElement[0].Split("|"); // colA = { 10+5=,6-3=,9x3= }
+                        string[] colA = listElement[0].Split("|"); //colA = { 10+5=,6-3=,9x3= }
                         list.Add(colA);
 
-                        if (listElement.Length == 2) // Type 5,6.
+                        if (listElement.Length == 2) //Type 5,6.
                         {
-                            string[] colB = listElement[1].Split("|"); // colB = { 9÷3,25-10,15+12 }
+                            string[] colB = listElement[1].Split("|"); //colB = { 9÷3,25-10,15+12 }
                             list.Add(colB);
                         }
                         question.QAnswers = list;
@@ -95,6 +95,10 @@ namespace Project_final_2022_2023.Classes
                         break;
                     case 5:
                         question.QTime = Int32.Parse(value);
+                        question.QTimeRemaining = Int32.Parse(value);
+                        break;
+                    case 6:
+                        question.QTip = value;
                         break;
                 }
             }
@@ -128,44 +132,30 @@ namespace Project_final_2022_2023.Classes
 
         private static void SelectQuestions()
         {
-            int duration = 0;
             Question question;
 
             question = questionsType1[RndIndex(questionsType1.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
 
             question = questionsType2[RndIndex(questionsType2.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
 
             question = questionsType3[RndIndex(questionsType3.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
 
             question = questionsType4[RndIndex(questionsType4.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
 
             question = questionsType5[RndIndex(questionsType5.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
 
             question = questionsType6[RndIndex(questionsType6.Count)];
             finalQuestions.Add(question);
-            duration += question.QTime;
-
-            SetTotalTime(duration);
         }
 
         private static int RndIndex(int length)
         {
             return new Random().Next(length);
-        }
-
-        private static void SetTotalTime(int duration)
-        {
-            Question.QTotalTime = duration;
         }
     }
 }
