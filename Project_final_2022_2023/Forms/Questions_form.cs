@@ -923,6 +923,11 @@ namespace Project_final_2022_2023.Forms
 
         }
 
+        private void exit_button_Click(object sender, EventArgs e)
+        {
+            System.Windows.Forms.Application.Exit();
+        }
+        
         private void FillStatusColumn()
         {
             if (q1_true.Checked || q1_false.Checked)
@@ -1086,22 +1091,18 @@ namespace Project_final_2022_2023.Forms
                                                      q3_answer3.Checked, q3_answer4.Checked};
 
                         bool matching_one = false, matching_two = false;
+
                         for (int i = 0; i < choice.Length; i++)
                         {
-                            for (int j = i + 1; j < choice.Length; j++)
+                            foreach (var ans in QCorrectAns)
                             {
-                                matching_two = choice[i] && x.QCorrectAns[0].Equals((i + 1).ToString())
-                                               && choice[j] && x.QCorrectAns[1].Equals((j + 1).ToString());
-
-                                if (
-                                    choice[i] && x.QCorrectAns[0].Equals((i + 1).ToString())
-                                    || choice[j] && x.QCorrectAns[1].Equals((j + 1).ToString())
-                                    )
-                                    matching_one = true;
+                                bool temp_matching = choice[i] && i + 1 == Int32.Parse(ans);
+                                matching_one = !matching_one ? temp_matching : matching_one;
+                                matching_two = temp_matching && matching_one;
                             }
                             if (matching_two) break;
                         }
-
+                      
                         if (matching_two || matching_one)
                             if (gotHelp[2])
                                 if (matching_two)
@@ -1116,13 +1117,13 @@ namespace Project_final_2022_2023.Forms
                                 }
                             else if (matching_two)
                             {
-                                Question.QTotalMarks += 1.0;
-                                label22.Text = "Μέτρια";
-                            }
-                            else
-                            {// matching one without tip
                                 Question.QTotalMarks += 2.0;
                                 label22.Text = "Άριστα";
+                            }
+                            else 
+                            {// matching one without tip
+                                Question.QTotalMarks += 1.0;
+                                label22.Text = "Μέτρια";
                             }
                         else
                         {
