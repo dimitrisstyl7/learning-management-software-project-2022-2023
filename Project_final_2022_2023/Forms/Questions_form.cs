@@ -824,7 +824,6 @@ namespace Project_final_2022_2023.Forms
         {
             this.Cursor = Cursors.WaitCursor;
             CalculateResults();//calculate results
-            new Results_form(this).ShowDialog();
         }
 
         private void UnhidePanelButtons()
@@ -947,7 +946,6 @@ namespace Project_final_2022_2023.Forms
                 var QCorrectAns = x.QCorrectAns;
                 string student_choice = "-1";
                 int counter = 0;
-                string[] buttons_text;
                 switch (panel_no++)
                 {
                     case 1:
@@ -1026,11 +1024,11 @@ namespace Project_final_2022_2023.Forms
                         break;
 
                     case 5:
-                        buttons_text = new string[] { q5_button1.Text, q5_button2.Text, q5_button3.Text };
+                        string[] buttons_text1 = new string[] { q5_button1.Text, q5_button2.Text, q5_button3.Text };
                         
-                        bool[] choice_is_correct = new bool[] { buttons_text[0].Equals(q5_label5.Text),
-                                                                buttons_text[1].Equals(q5_label6.Text),
-                                                                buttons_text[2].Equals(q5_label4.Text) };
+                        bool[] choice_is_correct = new bool[] { buttons_text1[0].Equals(q5_label5.Text),
+                                                                buttons_text1[1].Equals(q5_label6.Text),
+                                                                buttons_text1[2].Equals(q5_label4.Text) };
 
                         foreach (var b in choice_is_correct) counter += b ? 1 : 0; // count the correct answers.
 
@@ -1045,35 +1043,31 @@ namespace Project_final_2022_2023.Forms
                         break;
 
                     case 6:
-                        if (q6_button7.Visible) // 3rd question of type 6.
+                        if (q6_label12.Text.Equals("[Γ]")) // 3rd question of type 6.
                         {
-                            buttons_text = new string[] { q6_button1.Text, q6_button2.Text, q6_button3.Text, q6_button4.Text,
+                            string[] buttons_text2 = new string[] { q6_button1.Text, q6_button2.Text, q6_button3.Text, q6_button4.Text,
                                                           q6_button5.Text, q6_button6.Text, q6_button7.Text };
-                            for (int i = 0; i < buttons_text.Length; i++) 
-                                counter += buttons_text[i].Equals(x.QAnswers[i]) ? 1 : 0; // count the correct answers.
+                            for (int i = 0; i < buttons_text2.Length; i++) 
+                                counter += buttons_text2[i].Equals(x.QCorrectAns[i]) ? 1 : 0; // count the correct answers.
                         }
-                        else if (q6_label15.Visible) // 1st question of type 6.
-                        {
-                            buttons_text = new string[] { q6_button1.Text, q6_button2.Text, q6_button3.Text, q6_button4.Text };
-                            // count the correct answers
-                            counter += (buttons_text[0]).Equals(q6_label13.Text) ? 1 : 0; // if button text == 'x'.
-                            counter += (buttons_text[1]).Equals(q6_label14.Text) ? 1 : 0; // if button text == '+'.
-                            counter += (buttons_text[2]).Equals(q6_label15.Text) ? 1 : 0; // if button text == '/'.
-                            counter += (buttons_text[3]).Equals(q6_label12.Text) ? 1 : 0; // if button text == '-'.
+                        else if (q6_label15.Text.Equals("[Γ]")) // 2nd question of type 6.
+                        {   // count the correct answers
+                            counter += q6_button1.Text.Equals(q6_label12.Text) ? 1 : 0; // if button text == '<'.
+                            counter += q6_button2.Text.Equals(q6_label13.Text) ? 1 : 0; // if button text == '>'.
+                            counter += q6_button3.Text.Equals(q6_label12.Text) ? 1 : 0; // if button text == '<'.
+                            counter += q6_button4.Text.Equals(q6_label13.Text) ? 1 : 0; // if button text == '>'.
                         }
-                        else // 2nd question of type 6.
-                        {
-                            buttons_text = new string[] { q6_button1.Text, q6_button2.Text, q6_button3.Text, q6_button4.Text };
-                            // count the correct answers
-                            counter += (buttons_text[0]).Equals(q6_label12.Text) ? 1 : 0; // if button text == '<'.
-                            counter += (buttons_text[1]).Equals(q6_label13.Text) ? 1 : 0; // if button text == '>'.
-                            counter += (buttons_text[2]).Equals(q6_label12.Text) ? 1 : 0; // if button text == '<'.
-                            counter += (buttons_text[3]).Equals(q6_label13.Text) ? 1 : 0; // if button text == '>'.
+                        else // 1st question of type 6.
+                        {   // count the correct answers
+                            counter += q6_button3.Text.Equals(q6_label15.Text) ? 1 : 0; // if button text == '/'.
+                            counter += q6_button1.Text.Equals(q6_label14.Text) ? 1 : 0; // if button text == 'x'.
+                            counter += q6_button4.Text.Equals(q6_label13.Text) ? 1 : 0; // if button text == '-'.
+                            counter += q6_button2.Text.Equals(q6_label12.Text) ? 1 : 0; // if button text == '+'.
                         }
 
                         if (counter > 0)
                             if (gotHelp[5])
-                                if (buttons_text.Length == 7) // 3rd question of type 6, with tip.
+                                if (q6_label12.Text.Equals("[Γ]")) // 3rd question of type 6, with tip.
                                     if (counter == 2) Question.QTotalMarks += 0.1;
                                     else if (counter == 3) Question.QTotalMarks += 0.4;
                                     else if (counter == 4) Question.QTotalMarks += 0.7;
@@ -1086,7 +1080,7 @@ namespace Project_final_2022_2023.Forms
                                     else if (counter == 3) Question.QTotalMarks += 1.0;
                                     else if (counter == 4) Question.QTotalMarks += 1.5;
                                     else Question.QTotalMarks += 0.0; // if counter == 1
-                            else if (buttons_text.Length == 7) // 3rd question of type 6, without tip.
+                            else if (q6_label12.Text.Equals("[Γ]")) // 3rd question of type 6, without tip.
                                 if (counter == 1) Question.QTotalMarks += 0.3;
                                 else if (counter == 2) Question.QTotalMarks += 0.6;
                                 else if (counter == 3) Question.QTotalMarks += 0.9;

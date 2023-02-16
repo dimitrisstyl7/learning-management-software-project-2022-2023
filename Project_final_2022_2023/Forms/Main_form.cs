@@ -14,15 +14,6 @@ namespace Project_final_2022_2023
             AlignTitle();
         }
 
-        private void ExitButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void StartButton_Click(object sender, EventArgs e)
-        {
-            new Info_form(start_button).ShowDialog();
-        }
         private void AlignButtons()
         {
             int X = this.Width / 2 - start_button.Width / 2;
@@ -39,7 +30,7 @@ namespace Project_final_2022_2023
 
         private void customButton1_Click(object sender, EventArgs e)
         {
-            new Info_form(start_button).ShowDialog();
+            new Info_form(start_button, exit_button).ShowDialog();
         }
 
         private void customButton2_Click(object sender, EventArgs e)

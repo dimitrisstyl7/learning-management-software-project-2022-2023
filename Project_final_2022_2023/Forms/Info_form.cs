@@ -6,11 +6,12 @@ namespace Project_final_2022_2023
 {
     public partial class Info_form : Form
     {
-        private readonly Button main_start_button;
+        private readonly Button main_start_button, main_exit_button;
 
-        public Info_form(Button button)
+        public Info_form(Button b1, Button b2)
         {
-            main_start_button = button;
+            main_start_button = b1;
+            main_exit_button = b2;
             InitializeComponent();
         }
 
@@ -49,6 +50,7 @@ namespace Project_final_2022_2023
             this.Cursor = Cursors.WaitCursor;
             var _ = ImportData.finalQuestions;
             main_start_button.Visible = false;
+            main_exit_button.Location = new Point(this.Width/2 - main_exit_button.Width/2, main_exit_button.Location.Y);
             new Questions_form(this).ShowDialog();
         }
     }
