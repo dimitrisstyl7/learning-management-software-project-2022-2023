@@ -7,9 +7,10 @@ namespace Project_final_2022_2023
     public partial class Info_form : Form
     {
         private readonly Button main_start_button, main_exit_button;
-
-        public Info_form(Button b1, Button b2)
+        private readonly Main_form main_form;
+        public Info_form(Button b1, Button b2, Main_form form)
         {
+            main_form = form;
             main_start_button = b1;
             main_exit_button = b2;
             InitializeComponent();
@@ -33,13 +34,6 @@ namespace Project_final_2022_2023
             cancel_pictureBox.Cursor = Cursors.Hand;
         }
 
-        private void Start_pictureBox_MouseClick(object sender, MouseEventArgs e)
-        {
-            this.Cursor = Cursors.WaitCursor;
-            var _ = ImportData.finalQuestions;
-            new Questions_form(this).ShowDialog();
-        }
-
         private void Start_pictureBox_MouseHover(object sender, EventArgs e)
         {
             start_pictureBox.Cursor = Cursors.Hand;
@@ -50,8 +44,10 @@ namespace Project_final_2022_2023
             this.Cursor = Cursors.WaitCursor;
             var _ = ImportData.finalQuestions;
             main_start_button.Visible = false;
-            main_exit_button.Location = new Point(this.Width/2 - main_exit_button.Width/2, main_exit_button.Location.Y);
-            new Questions_form(this).ShowDialog();
+            main_exit_button.Location = 
+                new Point(this.Width/2 - main_exit_button.Width/2, main_exit_button.Location.Y);
+            main_form.Visible = false;
+            new Questions_form(this, main_form).ShowDialog();
         }
     }
 }

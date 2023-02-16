@@ -32,6 +32,7 @@
             this.title_label = new System.Windows.Forms.Label();
             this.start_button = new Project_final_2022_2023.CustomControls.CustomButton();
             this.exit_button = new Project_final_2022_2023.CustomControls.CustomButton();
+            this.result_label = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // title_label
@@ -61,7 +62,7 @@
             this.start_button.TabIndex = 3;
             this.start_button.Text = "Έναρξη";
             this.start_button.UseVisualStyleBackColor = false;
-            this.start_button.Click += new System.EventHandler(this.customButton1_Click);
+            this.start_button.Click += new System.EventHandler(this.CustomButton1_Click);
             // 
             // exit_button
             // 
@@ -76,7 +77,19 @@
             this.exit_button.TabIndex = 4;
             this.exit_button.Text = "Έξοδος";
             this.exit_button.UseVisualStyleBackColor = false;
-            this.exit_button.Click += new System.EventHandler(this.customButton2_Click);
+            this.exit_button.Click += new System.EventHandler(this.CustomButton2_Click);
+            // 
+            // result_label
+            // 
+            this.result_label.AutoSize = true;
+            this.result_label.BackColor = System.Drawing.Color.Transparent;
+            this.result_label.Font = new System.Drawing.Font("Comic Sans MS", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.result_label.Location = new System.Drawing.Point(463, 285);
+            this.result_label.Name = "result_label";
+            this.result_label.Size = new System.Drawing.Size(159, 51);
+            this.result_label.TabIndex = 5;
+            this.result_label.Text = "[Result]";
+            this.result_label.Visible = false;
             // 
             // Main_form
             // 
@@ -86,6 +99,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1085, 419);
+            this.Controls.Add(this.result_label);
             this.Controls.Add(this.exit_button);
             this.Controls.Add(this.start_button);
             this.Controls.Add(this.title_label);
@@ -99,6 +113,7 @@
             this.Text = "Ερωτηματολόγιο Μαθηματικών";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Main_form_Load);
+            this.VisibleChanged += new System.EventHandler(this.Main_form_VisibleChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,5 +123,6 @@
         private Label title_label;
         private CustomControls.CustomButton start_button;
         private CustomControls.CustomButton exit_button;
+        private Label result_label;
     }
 }

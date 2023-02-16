@@ -6,6 +6,7 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
+using System.Xml;
 using Button = System.Windows.Forms.Button;
 using Label = System.Windows.Forms.Label;
 using Point = System.Drawing.Point;
@@ -19,10 +20,12 @@ namespace Project_final_2022_2023.Forms
         private int qm, qs; //questionTimer -> qm = minutes and qs = seconds
         private Panel currentPanel;
         private bool[] gotHelp;
-        public Questions_form(Info_form form)
+        private readonly Main_form main_form;
+        public Questions_form(Info_form info_form, Main_form main_form)
         {
             InitializeComponent();
-            form.Dispose();
+            this.main_form = main_form;
+            info_form.Dispose();
             qNumber = 1; //start from question1
             gotHelp = new bool[] { false, false, false, false, false, false }; // true if question[i] got help.
             currentPanel = panel1;
@@ -508,10 +511,13 @@ namespace Project_final_2022_2023.Forms
             }
             else
             {
+                totalTimeTimer_label.Text = "Τέλος Χρόνου";
                 totalTimer.Stop();
                 questionTimer.Stop();
-                totalTimeTimer_label.Text = "Τέλος Χρόνου";
-                //ADD CODE HERE
+                this.Cursor = Cursors.WaitCursor;
+                CalculateResults();//calculate results
+                main_form.Visible = true;
+                this.Dispose();
             }
         }
 
@@ -824,6 +830,8 @@ namespace Project_final_2022_2023.Forms
         {
             this.Cursor = Cursors.WaitCursor;
             CalculateResults();//calculate results
+            main_form.Visible = true;
+            this.Dispose();
         }
 
         private void UnhidePanelButtons()
@@ -979,16 +987,11 @@ namespace Project_final_2022_2023.Forms
                         bool matching_one = false, matching_two = false;
                         for (int i = 0; i < choice.Length; i++)
                         {
-                            for (int j = i + 1; j < choice.Length; j++)
+                            foreach (var ans in QCorrectAns)
                             {
-                                matching_two = choice[i] && x.QCorrectAns[0].Equals((i + 1).ToString())
-                                               && choice[j] && x.QCorrectAns[1].Equals((j + 1).ToString());
-
-                                if (
-                                    choice[i] && x.QCorrectAns[0].Equals((i + 1).ToString()) 
-                                    || choice[j] && x.QCorrectAns[1].Equals((j + 1).ToString())
-                                    )
-                                    matching_one = true;
+                                bool temp_matching = choice[i] && i + 1 == Int32.Parse(ans);
+                                matching_one = !matching_one ? temp_matching : matching_one;
+                                matching_two = temp_matching && matching_one;
                             }
                             if (matching_two) break;
                         }
@@ -1045,10 +1048,17 @@ namespace Project_final_2022_2023.Forms
                     case 6:
                         if (q6_label12.Text.Equals("[Γ]")) // 3rd question of type 6.
                         {
+                            int temp_counter = 0;
                             string[] buttons_text2 = new string[] { q6_button1.Text, q6_button2.Text, q6_button3.Text, q6_button4.Text,
                                                           q6_button5.Text, q6_button6.Text, q6_button7.Text };
-                            for (int i = 0; i < buttons_text2.Length; i++) 
-                                counter += buttons_text2[i].Equals(x.QCorrectAns[i]) ? 1 : 0; // count the correct answers.
+                            for (int i = 0; i < buttons_text2.Length; i++)
+                            {
+                                counter += buttons_text2[i].Equals(x.QCorrectAns[i]) ? 1 : 0; // count the correct answers (ascending).
+                                int j = buttons_text2.Length - 1 - i;
+                                temp_counter += buttons_text2[i].Equals(x.QCorrectAns[j]) ? 1 : 0; // count the correct answers (descending).
+                            }
+                            counter = counter >= temp_counter ? counter : temp_counter;
+
                         }
                         else if (q6_label15.Text.Equals("[Γ]")) // 2nd question of type 6.
                         {   // count the correct answers
