@@ -16,8 +16,5 @@
     <Compile Update="Forms\Questions_form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\Results_form.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

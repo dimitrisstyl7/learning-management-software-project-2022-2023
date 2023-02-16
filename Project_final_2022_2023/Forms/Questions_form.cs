@@ -19,6 +19,9 @@ namespace Project_final_2022_2023.Forms
         private int qm, qs; //questionTimer -> qm = minutes and qs = seconds
         private Panel currentPanel;
         private bool[] gotHelp;
+
+        private bool submited = false;
+
         public Questions_form(Info_form form)
         {
             InitializeComponent();
@@ -168,14 +171,25 @@ namespace Project_final_2022_2023.Forms
                     CreateQuestionTimer();
                     break;
                 case 6:
-                    panel6.Visible = false;
-                    ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
-                    HidePanelButtons();
-                    FillStatusColumn();
-                    q_panel.Visible = true;
-                    questionTimer.Enabled = false;
-                    questionTime_label.Visible = false;
-                    questionTimeTimer_Label.Visible = false;
+                    if (!submited)
+                    {
+                        panel6.Visible = false;
+                        ImportData.finalQuestions[qNumber - 1].QTimeRemaining = qm * 60 + qs;
+                        HidePanelButtons();
+                        FillStatusColumn();
+                        q_panel.Visible = true;
+                        questionTimer.Enabled = false;
+                        questionTime_label.Visible = false;
+                        questionTimeTimer_Label.Visible = false;
+                    }
+                    else
+                    {
+                        panel6.Visible = false;
+                        a_panel.Visible = true;
+                        questionTimer.Enabled = false;
+                        questionTime_label.Visible = false;
+                        questionTimeTimer_Label.Visible = false;
+                    }
                     break;
             }
         }
@@ -511,7 +525,10 @@ namespace Project_final_2022_2023.Forms
                 totalTimer.Stop();
                 questionTimer.Stop();
                 totalTimeTimer_label.Text = "Τέλος Χρόνου";
-                //ADD CODE HERE
+                CalculateResults();//calculate results
+                q_panel.Visible = false;
+                submited = true;
+                a_panel.Visible = true;
             }
         }
 
@@ -581,12 +598,19 @@ namespace Project_final_2022_2023.Forms
             radio_button_trash.Checked = true;
             panel1.Visible = true;
 
+            //disable answers button
+            back_to_a_button.Visible = false;
+            
             //disable the left arrow
             left_arrow_pictureBox.Visible = false;
 
             //align q_panel to center, change size
             q_panel.Location = new Point(122, 75);
             q_panel.Size = new Size(1600, 800);
+
+            //align q_panel to center, change size
+            a_panel.Location = new Point(122, 75);
+            a_panel.Size = new Size(1600, 800);
 
             //align panel 1 to center, change size
             panel1.Location = new Point(122, 75);
@@ -822,8 +846,12 @@ namespace Project_final_2022_2023.Forms
 
         private void Results_pictureBox_Click(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.WaitCursor;
+            //this.Cursor = Cursors.WaitCursor;
             CalculateResults();//calculate results
+            q_panel.Visible = false;
+            submited = true;
+            a_panel.Visible = true;
+            totalTimer.Stop();            
         }
 
         private void UnhidePanelButtons()
@@ -832,6 +860,67 @@ namespace Project_final_2022_2023.Forms
             right_arrow_pictureBox.Visible = true;
             tip_pictureBox.Visible = true;
             refresh_pictureBox.Visible = true;
+        }
+
+        private void label20_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = true;
+            a_panel.Visible = false;
+            back_to_a_button.Visible = true;
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+            panel2.Visible = true;
+            a_panel.Visible = false;
+            back_to_a_button.Visible = true;
+
+
+        }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            panel3.Visible = true;
+            a_panel.Visible = false;
+            back_to_a_button.Visible = true;
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            panel4.Visible = true;
+            a_panel.Visible = false;
+            back_to_a_button.Visible = true;
+
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            panel5.Visible = true;
+            a_panel.Visible = false;
+            back_to_a_button.Visible = true;
+
+        }
+
+        private void label15_Click(object sender, EventArgs e)
+        {
+            panel6.Visible = true;
+            a_panel.Visible = false;
+            back_to_a_button.Visible = true;
+
+        }
+
+        private void back_to_a_button_Click(object sender, EventArgs e)
+        {
+            panel1.Visible = false;
+            panel2.Visible = false;
+            panel3.Visible = false;
+            panel4.Visible = false;
+            panel5.Visible = false;
+            panel6.Visible = false;
+            a_panel.Visible = true;
+            back_to_a_button.Visible = false;
+
         }
 
         private void FillStatusColumn()
@@ -954,9 +1043,19 @@ namespace Project_final_2022_2023.Forms
 
                         if (student_choice.Equals(x.QCorrectAns[0]))
                             if (gotHelp[0])
+                            {
                                 Question.QTotalMarks += 1.0;
+                                label26.Text = "Μέτρια";
+                            }
                             else
+                            {
                                 Question.QTotalMarks += 2.0;
+                                label26.Text = "Άριστα";
+                            }
+                        else
+                        {
+                            label26.Text = "Λανθασμένη απάντηση";
+                        }
                         break;
 
                     case 2:
@@ -967,9 +1066,19 @@ namespace Project_final_2022_2023.Forms
 
                         if (student_choice.Equals(x.QCorrectAns[0]))
                             if (gotHelp[1])
+                            {
                                 Question.QTotalMarks += 1.5;
+                                label21.Text = "Καλά";
+                            }
                             else
+                            {
                                 Question.QTotalMarks += 2.0;
+                                label21.Text = "Άριστα";
+                            }
+                        else
+                        {
+                            label21.Text = "Λανθασμένη απάντηση";
+                        }
                         break;
 
                     case 3:
@@ -985,7 +1094,7 @@ namespace Project_final_2022_2023.Forms
                                                && choice[j] && x.QCorrectAns[1].Equals((j + 1).ToString());
 
                                 if (
-                                    choice[i] && x.QCorrectAns[0].Equals((i + 1).ToString()) 
+                                    choice[i] && x.QCorrectAns[0].Equals((i + 1).ToString())
                                     || choice[j] && x.QCorrectAns[1].Equals((j + 1).ToString())
                                     )
                                     matching_one = true;
@@ -996,13 +1105,29 @@ namespace Project_final_2022_2023.Forms
                         if (matching_two || matching_one)
                             if (gotHelp[2])
                                 if (matching_two)
+                                {
                                     Question.QTotalMarks += 1.5;
-                                else // matching_one with tip
+                                    label22.Text = "Καλά";
+                                }
+                                else
+                                {// matching_one with tip
                                     Question.QTotalMarks += 0.5;
+                                    label22.Text = "Θα μπορούσες και καλύτερα";
+                                }
                             else if (matching_two)
-                                Question.QTotalMarks += 2.0;
-                            else // matching one without tip
+                            {
                                 Question.QTotalMarks += 1.0;
+                                label22.Text = "Μέτρια";
+                            }
+                            else
+                            {// matching one without tip
+                                Question.QTotalMarks += 2.0;
+                                label22.Text = "Άριστα";
+                            }
+                        else
+                        {
+                            label22.Text = "Λανθασμένη απάντηση";
+                        }
                         break;
 
                     case 4:
@@ -1013,14 +1138,50 @@ namespace Project_final_2022_2023.Forms
 
                         if (counter > 0)
                             if (gotHelp[3])
-                                if (counter == 2) Question.QTotalMarks += 0.5;
-                                else if (counter == 3) Question.QTotalMarks += 1;
-                                else if (counter == 4) Question.QTotalMarks += 1.5;
-                                else Question.QTotalMarks += 0.0; // if counter == 1
-                            else if (counter == 1) Question.QTotalMarks += 0.5;
-                            else if (counter == 2) Question.QTotalMarks += 1.0;
-                            else if (counter == 3) Question.QTotalMarks += 1.5;
-                            else Question.QTotalMarks += 2.0; // if counter == 4
+                                if (counter == 2)
+                                {
+                                    Question.QTotalMarks += 0.5;
+                                    label23.Text = "Καλή Προσπάθεια";
+                                }
+                                else if (counter == 3)
+                                {
+                                    Question.QTotalMarks += 1;
+                                    label23.Text = "Καλά";
+                                }
+                                else if (counter == 4)
+                                {
+                                    Question.QTotalMarks += 1.5;
+                                    label23.Text = "Μέτρια";
+                                }
+                                else
+                                {
+                                    Question.QTotalMarks += 0.0; // if counter == 1
+                                    label23.Text = "Άριστα";
+                                }
+                            else if (counter == 1)
+                            {
+                                Question.QTotalMarks += 0.5;
+                                label23.Text = "Καλή Προσπάθεια";
+                            }
+                            else if (counter == 2)
+                            {
+                                Question.QTotalMarks += 1.0;
+                                label23.Text = "Μέτρια";
+                            }
+                            else if (counter == 3)
+                            {
+                                Question.QTotalMarks += 1.5;
+                                label23.Text = "Καλά";
+                            }
+                            else
+                            {
+                                Question.QTotalMarks += 2.0; // if counter == 4
+                                label23.Text = "Άριστα";
+                            }
+                        else
+                        {
+                            label23.Text = "Λανθασμένη απάντηση";
+                        }
                         break;
 
                     case 5:
@@ -1034,12 +1195,34 @@ namespace Project_final_2022_2023.Forms
 
                         if (counter > 0)
                             if (gotHelp[4])
-                                if (counter == 1) Question.QTotalMarks += 0.2;
-                                else if (counter == 2) Question.QTotalMarks += 0.9;
-                                else Question.QTotalMarks += 1.5;
-                            else if (counter == 1) Question.QTotalMarks += 0.7;
-                            else if (counter == 2) Question.QTotalMarks += 1.4;
-                            else Question.QTotalMarks += 2.0;
+                                if (counter == 1) { 
+                                    Question.QTotalMarks += 0.2; 
+                                    label24.Text = "Μπορούσες και καλύτερα"; 
+                                }
+                                else if (counter == 2) { 
+                                    Question.QTotalMarks += 0.9; 
+                                    label24.Text = "Μέτρια"; 
+                                }
+                                else { 
+                                    Question.QTotalMarks += 1.5; 
+                                    label24.Text = "Καλά"; 
+                                }
+                            else if (counter == 1) { 
+                                Question.QTotalMarks += 0.7;
+                                label24.Text = "Καλή Προσπάθεια";
+                            }
+                            else if (counter == 2) { 
+                                Question.QTotalMarks += 1.4;
+                                label24.Text = "Καλά"; 
+                            }
+                            else { 
+                                Question.QTotalMarks += 2.0; 
+                                label24.Text = "Άριστα"; 
+                            }
+                        else
+                        {
+                            label24.Text = "Λανθασμένη απάντηση";
+                        }
                         break;
 
                     case 6:
@@ -1068,34 +1251,108 @@ namespace Project_final_2022_2023.Forms
                         if (counter > 0)
                             if (gotHelp[5])
                                 if (q6_label12.Text.Equals("[Γ]")) // 3rd question of type 6, with tip.
-                                    if (counter == 2) Question.QTotalMarks += 0.1;
-                                    else if (counter == 3) Question.QTotalMarks += 0.4;
-                                    else if (counter == 4) Question.QTotalMarks += 0.7;
-                                    else if (counter == 5) Question.QTotalMarks += 1.0;
-                                    else if (counter == 6) Question.QTotalMarks += 1.3;
-                                    else if (counter == 7) Question.QTotalMarks += 1.5;
-                                    else Question.QTotalMarks += 0.0; // if counter < 2
+                                    if (counter == 2)
+                                    {
+                                        Question.QTotalMarks += 0.1;
+                                        label25.Text = "Μπορούσες και καλύτερα";
+                                    }
+                                    else if (counter == 3) {
+                                        Question.QTotalMarks += 0.4;
+                                        label25.Text = "Καλή Προσπάθεια";
+                                    }
+                                    else if (counter == 4) { 
+                                        Question.QTotalMarks += 0.7;
+                                        label25.Text = "Καλή Προσπάθεια";
+                                    }
+                                    else if (counter == 5) { 
+                                        Question.QTotalMarks += 1.0;
+                                        label25.Text = "Μέτρια";
+                                    }
+                                    else if (counter == 6) { 
+                                        Question.QTotalMarks += 1.3;
+                                        label25.Text = "Μέτρια";
+                                    }
+                                    else if (counter == 7) { 
+                                        Question.QTotalMarks += 1.5;
+                                        label25.Text = "Καλά";
+                                    }
+                                    else {
+                                        Question.QTotalMarks += 0.0;
+                                        label25.Text = "Μπορούσες και καλύτερα";
+                                    } // if counter < 2
                                 else // 1st or 2nd question of type 6, with tip.
-                                    if (counter == 2) Question.QTotalMarks += 0.5;
-                                    else if (counter == 3) Question.QTotalMarks += 1.0;
-                                    else if (counter == 4) Question.QTotalMarks += 1.5;
-                                    else Question.QTotalMarks += 0.0; // if counter == 1
+                                    if (counter == 2) {
+                                    Question.QTotalMarks += 0.5;
+                                    label25.Text = "Καλή Προσπάθεια";
+                                }
+                                else if (counter == 3) { 
+                                    Question.QTotalMarks += 1.0;
+                                    label25.Text = "Μέτρια";
+                                }
+                                else if (counter == 4) {
+                                    Question.QTotalMarks += 1.5;
+                                    label25.Text = "Καλά";
+                                }
+                                else { 
+                                    Question.QTotalMarks += 0.0;
+                                    label25.Text = "Μπορούσες και καλύτερα";
+                                } // if counter == 1
                             else if (q6_label12.Text.Equals("[Γ]")) // 3rd question of type 6, without tip.
-                                if (counter == 1) Question.QTotalMarks += 0.3;
-                                else if (counter == 2) Question.QTotalMarks += 0.6;
-                                else if (counter == 3) Question.QTotalMarks += 0.9;
-                                else if (counter == 4) Question.QTotalMarks += 1.2;
-                                else if (counter == 5) Question.QTotalMarks += 1.5;
-                                else if (counter == 6) Question.QTotalMarks += 1.8;
-                                else Question.QTotalMarks += 2.0; // if counter == 7
+                                if (counter == 1) { 
+                                    Question.QTotalMarks += 0.3;
+                                    label25.Text = "Μπορούσες και καλύτερα";
+                                }
+                                else if (counter == 2) { 
+                                    Question.QTotalMarks += 0.6;
+                                    label25.Text = "Καλή Προσπάθεια";
+                                }
+                                else if (counter == 3) { 
+                                    Question.QTotalMarks += 0.9;
+                                    label25.Text = "Μέτρια";
+                                }
+                                else if (counter == 4) {
+                                    Question.QTotalMarks += 1.2;
+                                    label25.Text = "Μέτρια";
+                                }
+                                else if (counter == 5) { 
+                                    Question.QTotalMarks += 1.5;
+                                    label25.Text = "Καλά";
+                                }
+                                else if (counter == 6) { 
+                                    Question.QTotalMarks += 1.8;
+                                    label25.Text = "Μέτρια";
+                                }
+                                else { 
+                                    Question.QTotalMarks += 2.0;
+                                    label25.Text = "Άριστα";
+                                } // if counter == 7
                             else // 1st or 2nd question of type 6, without tip.
-                                if (counter == 1) Question.QTotalMarks += 0.5;
-                                else if (counter == 2) Question.QTotalMarks += 1.0;
-                                else if (counter == 3) Question.QTotalMarks += 1.5;
-                                else Question.QTotalMarks += 2.0; // if counter == 4
+                                if (counter == 1) {
+                                Question.QTotalMarks += 0.5;
+                                label25.Text = "Καλή Προσπάθεια";
+                            }
+                            else if (counter == 2) { 
+                                Question.QTotalMarks += 1.0;
+                                label25.Text = "Μέτρια";
+                            }
+                            else if (counter == 3) {
+                                Question.QTotalMarks += 1.5;
+                                label25.Text = "Καλά";
+                            }
+                            else {
+                                Question.QTotalMarks += 2.0;
+                                label25.Text = "Άριστα";
+                            } // if counter == 4
+                        else
+                        {
+                            label25.Text = "Λανθασμένη απάντηση";
+                        }
                         break;
                 }
             }
+            double temp_result = Question.QTotalMarks;
+            int result = temp_result == 12 ? 100 : (int)(Math.Round(Question.QTotalMarks) * 25 / 3);
+            result_Label.Text = "Αποτέλεσμα: " + result + " %";
         }
     }
 }
