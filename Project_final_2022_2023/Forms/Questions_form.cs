@@ -1,14 +1,9 @@
-﻿using Microsoft.Office.Interop.Excel;
-using Project_final_2022_2023.Classes;
-using System.Diagnostics.Metrics;
-using System.Drawing;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
+﻿using Project_final_2022_2023.Classes;
 using Button = System.Windows.Forms.Button;
 using Label = System.Windows.Forms.Label;
 using Point = System.Drawing.Point;
+
+//Dimitris Stylianou P20004, Theodoros Koxanoglou P20094, Panagiota Nicolaou P20009,  Rafaela Karapetsa-Lazaridou P20078, Sotiris Chatzikyriakou P20011
 
 namespace Project_final_2022_2023.Forms
 {
@@ -242,7 +237,7 @@ namespace Project_final_2022_2023.Forms
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
             QDisableButtons(5);
         }
-
+        //Dimitris Stylianou P20004, Theodoros Koxanoglou P20094, Panagiota Nicolaou P20009, Rafaela Karapetsa-Lazaridou P20078, Sotiris Chatzikyriakou P20011
         private void DropButtton3_DragDrop(object sender, DragEventArgs e)
         {
             ((Button)sender).Text = e.Data.GetData(DataFormats.Text).ToString();
@@ -599,7 +594,7 @@ namespace Project_final_2022_2023.Forms
                 q6_button7.Enabled = false;
             }
         }
-    
+
         private void FillData()
         {
             radio_button_trash.Checked = true;
@@ -607,7 +602,7 @@ namespace Project_final_2022_2023.Forms
 
             //disable answers button
             back_to_a_button.Visible = false;
-            
+
             //disable the left arrow
             left_arrow_pictureBox.Visible = false;
 
@@ -864,7 +859,7 @@ namespace Project_final_2022_2023.Forms
             panel6.Enabled = false;
             submited = true;
             a_panel.Visible = true;
-            totalTimer.Stop();            
+            totalTimer.Stop();
         }
 
         private void UnhidePanelButtons()
@@ -1007,7 +1002,7 @@ namespace Project_final_2022_2023.Forms
                 status4_label.Text = "Δεν απαντήθηκε";
                 status4_label.ForeColor = Color.Red;
             }
-            
+
             if (!String.IsNullOrEmpty(q5_button1.Text) || !String.IsNullOrEmpty(q5_button2.Text) || !String.IsNullOrEmpty(q5_button3.Text))
             {
                 status5_label.Text = "Απαντήθηκε";
@@ -1115,7 +1110,7 @@ namespace Project_final_2022_2023.Forms
                             }
                             if (matching_two) break;
                         }
-                      
+
                         if (matching_two || matching_one)
                             if (gotHelp[2])
                                 if (matching_two)
@@ -1133,7 +1128,7 @@ namespace Project_final_2022_2023.Forms
                                 Question.QTotalMarks += 2.0;
                                 label22.Text = "Άριστα";
                             }
-                            else 
+                            else
                             {// matching one without tip
                                 Question.QTotalMarks += 1.0;
                                 label22.Text = "Μέτρια";
@@ -1200,7 +1195,7 @@ namespace Project_final_2022_2023.Forms
 
                     case 5:
                         string[] buttons_text1 = new string[] { q5_button1.Text, q5_button2.Text, q5_button3.Text };
-                        
+
                         bool[] choice_is_correct = new bool[] { buttons_text1[0].Equals(q5_label5.Text),
                                                                 buttons_text1[1].Equals(q5_label6.Text),
                                                                 buttons_text1[2].Equals(q5_label4.Text) };
@@ -1209,29 +1204,35 @@ namespace Project_final_2022_2023.Forms
 
                         if (counter > 0)
                             if (gotHelp[4])
-                                if (counter == 1) { 
-                                    Question.QTotalMarks += 0.2; 
-                                    label24.Text = "Μπορούσες και καλύτερα"; 
+                                if (counter == 1)
+                                {
+                                    Question.QTotalMarks += 0.2;
+                                    label24.Text = "Μπορούσες και καλύτερα";
                                 }
-                                else if (counter == 2) { 
-                                    Question.QTotalMarks += 0.9; 
-                                    label24.Text = "Μέτρια"; 
+                                else if (counter == 2)
+                                {
+                                    Question.QTotalMarks += 0.9;
+                                    label24.Text = "Μέτρια";
                                 }
-                                else { 
-                                    Question.QTotalMarks += 1.5; 
-                                    label24.Text = "Καλά"; 
+                                else
+                                {
+                                    Question.QTotalMarks += 1.5;
+                                    label24.Text = "Καλά";
                                 }
-                            else if (counter == 1) { 
+                            else if (counter == 1)
+                            {
                                 Question.QTotalMarks += 0.7;
                                 label24.Text = "Καλή Προσπάθεια";
                             }
-                            else if (counter == 2) { 
+                            else if (counter == 2)
+                            {
                                 Question.QTotalMarks += 1.4;
-                                label24.Text = "Καλά"; 
+                                label24.Text = "Καλά";
                             }
-                            else { 
-                                Question.QTotalMarks += 2.0; 
-                                label24.Text = "Άριστα"; 
+                            else
+                            {
+                                Question.QTotalMarks += 2.0;
+                                label24.Text = "Άριστα";
                             }
                         else
                         {
@@ -1244,7 +1245,7 @@ namespace Project_final_2022_2023.Forms
                         {
                             string[] buttons_text2 = new string[] { q6_button1.Text, q6_button2.Text, q6_button3.Text, q6_button4.Text,
                                                           q6_button5.Text, q6_button6.Text, q6_button7.Text };
-                            for (int i = 0; i < buttons_text2.Length; i++) 
+                            for (int i = 0; i < buttons_text2.Length; i++)
                                 counter += buttons_text2[i].Equals(x.QCorrectAns[i]) ? 1 : 0; // count the correct answers.
                         }
                         else if (q6_label15.Text.Equals("[Γ]")) // 2nd question of type 6.
@@ -1270,90 +1271,111 @@ namespace Project_final_2022_2023.Forms
                                         Question.QTotalMarks += 0.1;
                                         label25.Text = "Μπορούσες και καλύτερα";
                                     }
-                                    else if (counter == 3) {
+                                    else if (counter == 3)
+                                    {
                                         Question.QTotalMarks += 0.4;
                                         label25.Text = "Καλή Προσπάθεια";
                                     }
-                                    else if (counter == 4) { 
+                                    else if (counter == 4)
+                                    {
                                         Question.QTotalMarks += 0.7;
                                         label25.Text = "Καλή Προσπάθεια";
                                     }
-                                    else if (counter == 5) { 
+                                    else if (counter == 5)
+                                    {
                                         Question.QTotalMarks += 1.0;
                                         label25.Text = "Μέτρια";
                                     }
-                                    else if (counter == 6) { 
+                                    else if (counter == 6)
+                                    {
                                         Question.QTotalMarks += 1.3;
                                         label25.Text = "Μέτρια";
                                     }
-                                    else if (counter == 7) { 
+                                    else if (counter == 7)
+                                    {
                                         Question.QTotalMarks += 1.5;
                                         label25.Text = "Καλά";
                                     }
-                                    else {
+                                    else
+                                    {
                                         Question.QTotalMarks += 0.0;
                                         label25.Text = "Μπορούσες και καλύτερα";
                                     } // if counter < 2
                                 else // 1st or 2nd question of type 6, with tip.
-                                    if (counter == 2) {
+                                    if (counter == 2)
+                                {
                                     Question.QTotalMarks += 0.5;
                                     label25.Text = "Καλή Προσπάθεια";
                                 }
-                                else if (counter == 3) { 
+                                else if (counter == 3)
+                                {
                                     Question.QTotalMarks += 1.0;
                                     label25.Text = "Μέτρια";
                                 }
-                                else if (counter == 4) {
+                                else if (counter == 4)
+                                {
                                     Question.QTotalMarks += 1.5;
                                     label25.Text = "Καλά";
                                 }
-                                else { 
+                                else
+                                {
                                     Question.QTotalMarks += 0.0;
                                     label25.Text = "Μπορούσες και καλύτερα";
                                 } // if counter == 1
                             else if (q6_label12.Text.Equals("[Γ]")) // 3rd question of type 6, without tip.
-                                if (counter == 1) { 
+                                if (counter == 1)
+                                {
                                     Question.QTotalMarks += 0.3;
                                     label25.Text = "Μπορούσες και καλύτερα";
                                 }
-                                else if (counter == 2) { 
+                                else if (counter == 2)
+                                {
                                     Question.QTotalMarks += 0.6;
                                     label25.Text = "Καλή Προσπάθεια";
                                 }
-                                else if (counter == 3) { 
+                                else if (counter == 3)
+                                {
                                     Question.QTotalMarks += 0.9;
                                     label25.Text = "Μέτρια";
                                 }
-                                else if (counter == 4) {
+                                else if (counter == 4)
+                                {
                                     Question.QTotalMarks += 1.2;
                                     label25.Text = "Μέτρια";
                                 }
-                                else if (counter == 5) { 
+                                else if (counter == 5)
+                                {
                                     Question.QTotalMarks += 1.5;
                                     label25.Text = "Καλά";
                                 }
-                                else if (counter == 6) { 
+                                else if (counter == 6)
+                                {
                                     Question.QTotalMarks += 1.8;
                                     label25.Text = "Μέτρια";
                                 }
-                                else { 
+                                else
+                                {
                                     Question.QTotalMarks += 2.0;
                                     label25.Text = "Άριστα";
                                 } // if counter == 7
                             else // 1st or 2nd question of type 6, without tip.
-                                if (counter == 1) {
+                                if (counter == 1)
+                            {
                                 Question.QTotalMarks += 0.5;
                                 label25.Text = "Καλή Προσπάθεια";
                             }
-                            else if (counter == 2) { 
+                            else if (counter == 2)
+                            {
                                 Question.QTotalMarks += 1.0;
                                 label25.Text = "Μέτρια";
                             }
-                            else if (counter == 3) {
+                            else if (counter == 3)
+                            {
                                 Question.QTotalMarks += 1.5;
                                 label25.Text = "Καλά";
                             }
-                            else {
+                            else
+                            {
                                 Question.QTotalMarks += 2.0;
                                 label25.Text = "Άριστα";
                             } // if counter == 4

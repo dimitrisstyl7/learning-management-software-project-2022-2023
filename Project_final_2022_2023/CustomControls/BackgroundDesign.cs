@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//Dimitris Stylianou P20004, Theodoros Koxanoglou P20094, Panagiota Nicolaou P20009, Rafaela Karapetsa-Lazaridou P20078, Sotiris Chatzikyriakou P20011
 
 namespace Project_final_2022_2023.CustomControls
 {
