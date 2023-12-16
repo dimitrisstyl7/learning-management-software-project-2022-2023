@@ -1,17 +1,6 @@
-# learning_management_software_project_2022-2023
-<h3>Πανεπιστήμιο Πειραιώς</h3>
-
-<h3>Τμήμα Πληροφορικής</h3>
-
-<h3>Μάθημα:</h3>&nbsp;&nbsp;Λογισμίκο Διαχείρισης Μάθησης / Learning Management Software
-
-<h3>Έτος:</h3>&nbsp;&nbsp;2022 - 2023
-
-<h3>Εξάμηνο:</h3>&nbsp;&nbsp;5ο
-
-<h3>Ομάδα Εργασίας:</h3>
-&nbsp;&nbsp;Δημήτρης Στυλιανού Π20004,<br>
-&nbsp;&nbsp;Θεόδωρος Κοξάνογλου Π20094,<br>
-&nbsp;&nbsp;Παναγιώτα Νικολάου Π20009,<br>
-&nbsp;&nbsp;Ραφαηλία Καραπέτσα-Λαζαρίδου Π20078,<br>
-&nbsp;&nbsp;Σωτήρης Χατζηκυριάκου Π20011
+# learning-management-software-project-2022-2023
+## [Universirty of Piraeus](https://www.unipi.gr/unipi/en/)<br>[Department of Informatics](https://www.cs.unipi.gr/index.php?lang=en)
+### Course: Learning Management Software
+### Semester: 5
+### Project Completion Year: 2023
+### Project Team: [Dimitris Stylianou](https://github.com/dimitrisstyl7) | [Sotiris Chatzikyriakou](https://github.com/IamInloveWitheCode) | [Theodoros Koxanoglou](https://github.com/thkox) | [Panagiota Nicolaou](https://github.com/panagiota02) | [Rafailia Karapetsa-Lazaridou](https://github.com/PetsasBros)
