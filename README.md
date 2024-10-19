@@ -6,8 +6,8 @@ This project is a team assignment for the "Learning Management Software Project"
 
 ## Course Information
 
-- **Institution:** University of Piraeus
-- **Department:** Department of Informatics
+- **Institution:** [University of Piraeus](https://www.unipi.gr/en/)
+- **Department:** [Department of Informatics](https://cs.unipi.gr/en/)
 - **Course:** Learning Management Software Project (2022)
 - **Semester:** 5th
 
