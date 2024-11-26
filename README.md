@@ -6,7 +6,7 @@ This project is a team assignment for the "Learning Management Software Project"
 ## Course Information
 - **Institution:** [University of Piraeus](https://www.unipi.gr/en/)
 - **Department:** [Department of Informatics](https://cs.unipi.gr/en/)
-- **Course:** Learning Management Software Project (2022)
+- **BSc course:** Learning Management Software Project (2022)
 - **Semester:** 5th
 
 ## Technologies Used
@@ -84,7 +84,7 @@ This project is a team assignment for the "Learning Management Software Project"
 </table>
 
 ## Acknowledgments
-This project was developed as part of the "Learning Management Software Project" course at the University of Piraeus. Contributions and feedback are always welcome!
+This project was developed as part of the "Learning Management Software Project" BSc course at the University of Piraeus. Contributions and feedback are always welcome!
 
 ## License
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
